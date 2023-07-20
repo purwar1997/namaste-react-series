@@ -1,0 +1,14 @@
+{
+  "name": "episode-5",
+  "version": "1.0.0",
+  "description": "Episode 5 of Namaste React series by Akshay Saini",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Shubham Purwar",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
