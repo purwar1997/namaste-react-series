@@ -1,0 +1,2320 @@
+[
+  {
+    "info": {
+      "id": "726145",
+      "name": "Theobroma",
+      "cloudinaryImageId": "4636cc69bbd8245604f7bc4c4d36df55",
+      "locality": "SECTOR 135",
+      "areaName": "Gautam Buddha Nagar",
+      "costForTwo": "₹300 for two",
+      "cuisines": ["Desserts"],
+      "avgRating": 4.3,
+      "feeDetails": {
+        "restaurantId": "726145",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "1040",
+      "avgRatingString": "4.3",
+      "totalRatingsString": "50+",
+      "promoted": true,
+      "adTrackingId": "cid=7564816~p=1~eid=00000189-7dc3-b382-2a7a-8edf00060110~srvts=1690032124802~45826",
+      "sla": {
+        "deliveryTime": 17,
+        "lastMileTravel": 1.6,
+        "serviceability": "SERVICEABLE",
+        "slaString": "17 mins",
+        "lastMileTravelString": "1.6 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-22 23:00:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {},
+          "textExtendedBadges": {},
+          "textBased": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "isNewlyOnboarded": true,
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=726145",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "424003",
+      "name": "Domino's Pizza",
+      "cloudinaryImageId": "imwjxwgdjhakubamronk",
+      "locality": "Tower C",
+      "areaName": "Sector 51",
+      "costForTwo": "₹400 for two",
+      "cuisines": ["Pizzas", "Italian", "Pastas", "Desserts"],
+      "avgRating": 3.9,
+      "feeDetails": {
+        "restaurantId": "424003",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "2456",
+      "avgRatingString": "3.9",
+      "totalRatingsString": "1K+",
+      "sla": {
+        "deliveryTime": 25,
+        "serviceability": "SERVICEABLE",
+        "slaString": "25 mins",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-22 23:59:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textBased": {},
+          "imageBased": {},
+          "textExtendedBadges": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "₹150 OFF",
+        "subHeader": "ABOVE ₹699",
+        "discountTag": "FLAT DEAL",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=424003",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "94383",
+      "name": "KFC",
+      "cloudinaryImageId": "56c9ab92bd79745fd152a30fa2525426",
+      "locality": "North Eye Mall",
+      "areaName": "Sector 72",
+      "costForTwo": "₹400 for two",
+      "cuisines": ["Burgers", "Biryani", "American", "Snacks", "Fast Food"],
+      "avgRating": 3.8,
+      "feeDetails": {
+        "restaurantId": "94383",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "547",
+      "avgRatingString": "3.8",
+      "totalRatingsString": "10K+",
+      "sla": {
+        "deliveryTime": 20,
+        "lastMileTravel": 2.3,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20 mins",
+        "lastMileTravelString": "2.3 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-23 02:00:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textBased": {},
+          "imageBased": {},
+          "textExtendedBadges": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "20% OFF",
+        "subHeader": "UPTO ₹50",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=94383",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "418331",
+      "name": "Cake'O'Clocks",
+      "cloudinaryImageId": "berfozivzxzovuxc2rgt",
+      "locality": "Sarfabad",
+      "areaName": "Sector 72",
+      "costForTwo": "₹600 for two",
+      "cuisines": ["Bakery"],
+      "avgRating": 4,
+      "veg": true,
+      "feeDetails": {
+        "restaurantId": "418331",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "55230",
+      "avgRatingString": "4.0",
+      "totalRatingsString": "500+",
+      "promoted": true,
+      "adTrackingId": "cid=7467941~p=2~eid=00000189-7dc3-b382-2a7a-8ee000060229~srvts=1690032124802~45826",
+      "sla": {
+        "deliveryTime": 25,
+        "lastMileTravel": 1.8,
+        "serviceability": "SERVICEABLE",
+        "slaString": "25 mins",
+        "lastMileTravelString": "1.8 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-22 23:00:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {},
+          "textExtendedBadges": {},
+          "textBased": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "₹125 OFF",
+        "subHeader": "ABOVE ₹199",
+        "discountTag": "FLAT DEAL",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=418331",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "510870",
+      "name": "Kwality Walls Frozen Dessert and Ice Cream Shop",
+      "cloudinaryImageId": "mqvqotwdufcthnw45yov",
+      "locality": "Sector 78",
+      "areaName": "Gautam Buddha Nagar",
+      "costForTwo": "₹200 for two",
+      "cuisines": ["Desserts", "Ice Cream", "Ice Cream Cakes"],
+      "avgRating": 4.5,
+      "veg": true,
+      "feeDetails": {
+        "restaurantId": "510870",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3900
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3900
+      },
+      "parentId": "582",
+      "avgRatingString": "4.5",
+      "totalRatingsString": "500+",
+      "sla": {
+        "deliveryTime": 20,
+        "lastMileTravel": 3,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20 mins",
+        "lastMileTravelString": "3.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-22 23:55:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textBased": {},
+          "imageBased": {},
+          "textExtendedBadges": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "40% OFF",
+        "subHeader": "UPTO ₹80",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=510870",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "619774",
+      "name": "La Pino'z Pizza",
+      "cloudinaryImageId": "ayvcoyhiloweyurunrrw",
+      "locality": "Sector 74",
+      "areaName": "Sector 72",
+      "costForTwo": "₹400 for two",
+      "cuisines": ["Pizzas", "Pastas", "Italian", "Desserts", "Beverages"],
+      "avgRating": 3.5,
+      "feeDetails": {
+        "restaurantId": "619774",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "4961",
+      "avgRatingString": "3.5",
+      "totalRatingsString": "1K+",
+      "sla": {
+        "deliveryTime": 27,
+        "lastMileTravel": 2.8,
+        "serviceability": "SERVICEABLE",
+        "slaString": "27 mins",
+        "lastMileTravelString": "2.8 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-23 04:00:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textBased": {},
+          "imageBased": {},
+          "textExtendedBadges": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "60% OFF",
+        "subHeader": "UPTO ₹120",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=619774",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "34935",
+      "name": "Chanda Food",
+      "cloudinaryImageId": "ulbwapqz0ldfhcf9ruyd",
+      "locality": "Amrapali Princely Estate",
+      "areaName": "Sector 72",
+      "costForTwo": "₹350 for two",
+      "cuisines": ["Chinese", "Indian"],
+      "avgRating": 3.8,
+      "feeDetails": {
+        "restaurantId": "34935",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "9040",
+      "avgRatingString": "3.8",
+      "totalRatingsString": "10K+",
+      "promoted": true,
+      "adTrackingId": "cid=7527389~p=3~eid=00000189-7dc3-b382-2a7a-8ee100060347~srvts=1690032124802~45826",
+      "sla": {
+        "deliveryTime": 23,
+        "lastMileTravel": 2.1,
+        "serviceability": "SERVICEABLE",
+        "slaString": "23 mins",
+        "lastMileTravelString": "2.1 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-23 00:00:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textBased": {},
+          "imageBased": {},
+          "textExtendedBadges": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=34935",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "595304",
+      "name": "Wow! Momo",
+      "cloudinaryImageId": "0984acc0ed7b914206dbbcb90297becc",
+      "locality": "Sector 76",
+      "areaName": "Sector 76",
+      "costForTwo": "₹300 for two",
+      "cuisines": [
+        "Tibetan",
+        "Healthy Food",
+        "Asian",
+        "Chinese",
+        "Snacks",
+        "Continental",
+        "Desserts",
+        "Beverages"
+      ],
+      "avgRating": 3.8,
+      "feeDetails": {
+        "restaurantId": "595304",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "1776",
+      "avgRatingString": "3.8",
+      "totalRatingsString": "100+",
+      "sla": {
+        "deliveryTime": 26,
+        "lastMileTravel": 0.7,
+        "serviceability": "SERVICEABLE",
+        "slaString": "26 mins",
+        "lastMileTravelString": "0.7 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-23 02:00:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {},
+          "textExtendedBadges": {},
+          "textBased": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "₹125 OFF",
+        "subHeader": "ABOVE ₹249",
+        "discountTag": "FLAT DEAL",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=595304",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "76663",
+      "name": "Subway",
+      "cloudinaryImageId": "1ace5fa65eff3e1223feb696c956b38b",
+      "locality": "Ach Market",
+      "areaName": "Sector 72",
+      "costForTwo": "₹350 for two",
+      "cuisines": ["Salads", "Snacks", "Desserts", "Beverages"],
+      "avgRating": 3.6,
+      "feeDetails": {
+        "restaurantId": "76663",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "2",
+      "avgRatingString": "3.6",
+      "totalRatingsString": "10K+",
+      "sla": {
+        "deliveryTime": 26,
+        "lastMileTravel": 0.5,
+        "serviceability": "SERVICEABLE",
+        "slaString": "26 mins",
+        "lastMileTravelString": "0.5 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-22 23:59:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textBased": {},
+          "imageBased": {},
+          "textExtendedBadges": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "50% OFF",
+        "subHeader": "UPTO ₹100",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=76663",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "32634",
+      "name": "221B Baker Street",
+      "cloudinaryImageId": "m09hqreqoclawjilx0yf",
+      "locality": "Amarpali Silicon City",
+      "areaName": "Sector 72",
+      "costForTwo": "₹150 for two",
+      "cuisines": ["Bakery"],
+      "avgRating": 4.2,
+      "feeDetails": {
+        "restaurantId": "32634",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "2664",
+      "avgRatingString": "4.2",
+      "totalRatingsString": "1K+",
+      "promoted": true,
+      "adTrackingId": "cid=7552543~p=4~eid=00000189-7dc3-b382-2a7a-8ee200060464~srvts=1690032124802~45826",
+      "sla": {
+        "deliveryTime": 14,
+        "lastMileTravel": 0.6,
+        "serviceability": "SERVICEABLE",
+        "slaString": "14 mins",
+        "lastMileTravelString": "0.6 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-22 22:00:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textBased": {},
+          "imageBased": {},
+          "textExtendedBadges": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "₹125 OFF",
+        "subHeader": "ABOVE ₹199",
+        "discountTag": "FLAT DEAL",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=32634",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "98999",
+      "name": "Pizza Hut",
+      "cloudinaryImageId": "2b4f62d606d1b2bfba9ba9e5386fabb7",
+      "locality": "North Eye Mall",
+      "areaName": "Sector 72",
+      "costForTwo": "₹350 for two",
+      "cuisines": ["Pizzas"],
+      "avgRating": 3.5,
+      "feeDetails": {
+        "restaurantId": "98999",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "721",
+      "avgRatingString": "3.5",
+      "totalRatingsString": "1K+",
+      "sla": {
+        "deliveryTime": 26,
+        "lastMileTravel": 2.3,
+        "serviceability": "SERVICEABLE",
+        "slaString": "26 mins",
+        "lastMileTravelString": "2.3 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-23 01:00:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {},
+          "textExtendedBadges": {},
+          "textBased": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "50% OFF",
+        "subHeader": "UPTO ₹100",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=98999",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "126657",
+      "name": "Chaayos Chai+Snacks=Relax",
+      "cloudinaryImageId": "2beebd3688e63e027ee8a11c1c8a72c8",
+      "locality": "B Block",
+      "areaName": "Sector 50",
+      "costForTwo": "₹250 for two",
+      "cuisines": [
+        "Bakery",
+        "Beverages",
+        "Chaat",
+        "Desserts",
+        "Fast Food",
+        "Home Food",
+        "Italian",
+        "Maharashtrian",
+        "Snacks",
+        "Street Food",
+        "Sweets"
+      ],
+      "avgRating": 4.2,
+      "feeDetails": {
+        "restaurantId": "126657",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3900
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3900
+      },
+      "parentId": "281782",
+      "avgRatingString": "4.2",
+      "totalRatingsString": "10K+",
+      "sla": {
+        "deliveryTime": 26,
+        "lastMileTravel": 3.7,
+        "serviceability": "SERVICEABLE",
+        "slaString": "26 mins",
+        "lastMileTravelString": "3.7 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-23 02:00:00",
+        "opened": true
+      },
+      "badges": {
+        "textExtendedBadges": [
+          {
+            "iconId": "guiltfree/GF_Logo_android_3x",
+            "shortDescription": "options available",
+            "fontColor": "#7E808C"
+          }
+        ]
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textBased": {},
+          "imageBased": {},
+          "textExtendedBadges": {
+            "badgeObject": [
+              {
+                "attributes": {
+                  "fontColor": "#7E808C",
+                  "iconId": "guiltfree/GF_Logo_android_3x",
+                  "description": "",
+                  "shortDescription": "options available"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "40% OFF",
+        "subHeader": "UPTO ₹80",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=126657",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "341799",
+      "name": "Oic Kitchen Desire To Fire",
+      "cloudinaryImageId": "xbg8owfdynucfgqzqlsv",
+      "locality": "Sunder Shopping Complex",
+      "areaName": "Sector 72",
+      "costForTwo": "₹400 for two",
+      "cuisines": ["Chinese", "Thai", "Seafood"],
+      "avgRating": 4.1,
+      "feeDetails": {
+        "restaurantId": "341799",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "151207",
+      "avgRatingString": "4.1",
+      "totalRatingsString": "500+",
+      "promoted": true,
+      "adTrackingId": "cid=7488139~p=5~eid=00000189-7dc3-b382-2a7a-8ee30006052c~srvts=1690032124802~45826",
+      "sla": {
+        "deliveryTime": 26,
+        "lastMileTravel": 2.1,
+        "serviceability": "SERVICEABLE",
+        "slaString": "26 mins",
+        "lastMileTravelString": "2.1 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-22 23:59:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textExtendedBadges": {},
+          "textBased": {},
+          "imageBased": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "₹125 OFF",
+        "subHeader": "ABOVE ₹249",
+        "discountTag": "FLAT DEAL",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=341799",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "621721",
+      "name": "Starbucks Coffee",
+      "cloudinaryImageId": "4df3497f1460dfd1ecd8125222f6d362",
+      "locality": "Sector 75",
+      "areaName": "Sector 50",
+      "costForTwo": "₹400 for two",
+      "cuisines": ["Beverages", "Cafe", "Snacks", "Desserts", "Bakery", "Ice Cream"],
+      "avgRating": 4.2,
+      "feeDetails": {
+        "restaurantId": "621721",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "195515",
+      "avgRatingString": "4.2",
+      "totalRatingsString": "100+",
+      "sla": {
+        "deliveryTime": 17,
+        "lastMileTravel": 0.5,
+        "serviceability": "SERVICEABLE",
+        "slaString": "17 mins",
+        "lastMileTravelString": "0.5 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-22 22:55:00",
+        "opened": true
+      },
+      "badges": {
+        "textExtendedBadges": [
+          {
+            "iconId": "guiltfree/GF_Logo_android_3x",
+            "shortDescription": "options available",
+            "fontColor": "#7E808C"
+          }
+        ]
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textBased": {},
+          "imageBased": {},
+          "textExtendedBadges": {
+            "badgeObject": [
+              {
+                "attributes": {
+                  "iconId": "guiltfree/GF_Logo_android_3x",
+                  "description": "",
+                  "shortDescription": "options available",
+                  "fontColor": "#7E808C"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "₹125 OFF",
+        "subHeader": "ABOVE ₹319",
+        "discountTag": "FLAT DEAL",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=621721",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "707878",
+      "name": "Baskin Robbins - Ice Cream Desserts",
+      "cloudinaryImageId": "85ccae4e3576f9330af102c46ca85395",
+      "locality": "Spectrum Metro",
+      "areaName": "Sector-75",
+      "costForTwo": "₹250 for two",
+      "cuisines": ["Desserts", "Ice Cream"],
+      "avgRating": 3.8,
+      "veg": true,
+      "feeDetails": {
+        "restaurantId": "707878",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "5588",
+      "avgRatingString": "3.8",
+      "totalRatingsString": "10+",
+      "sla": {
+        "deliveryTime": 19,
+        "lastMileTravel": 1,
+        "serviceability": "SERVICEABLE",
+        "slaString": "19 mins",
+        "lastMileTravelString": "1.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-22 22:30:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textExtendedBadges": {},
+          "textBased": {},
+          "imageBased": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "isNewlyOnboarded": true,
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=707878",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "219179",
+      "name": "Al Nawab Biryani",
+      "cloudinaryImageId": "zxr8ukrkau8mt5jqfamy",
+      "areaName": "Sector 72",
+      "costForTwo": "₹300 for two",
+      "cuisines": ["Indian", "Biryani", "Mughlai", "North Indian"],
+      "avgRating": 3.8,
+      "feeDetails": {
+        "restaurantId": "219179",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "29341",
+      "avgRatingString": "3.8",
+      "totalRatingsString": "1K+",
+      "promoted": true,
+      "adTrackingId": "cid=7553683~p=6~eid=00000189-7dc3-b382-2a7a-8ee400060661~srvts=1690032124802~45826",
+      "sla": {
+        "deliveryTime": 17,
+        "lastMileTravel": 2,
+        "serviceability": "SERVICEABLE",
+        "slaString": "17 mins",
+        "lastMileTravelString": "2.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-23 01:00:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textExtendedBadges": {},
+          "textBased": {},
+          "imageBased": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "₹125 OFF",
+        "subHeader": "ABOVE ₹249",
+        "discountTag": "FLAT DEAL",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=219179",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "435727",
+      "name": "BOX8 - Desi Meals",
+      "cloudinaryImageId": "69a061b7e0f951cef2b4947946f94ec6",
+      "locality": "Anand Complex",
+      "areaName": "Sector 49",
+      "costForTwo": "₹250 for two",
+      "cuisines": ["North Indian", "Biryani", "Thalis", "Home Food"],
+      "avgRating": 4.2,
+      "feeDetails": {
+        "restaurantId": "435727",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3900
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3900
+      },
+      "parentId": "10655",
+      "avgRatingString": "4.2",
+      "totalRatingsString": "1K+",
+      "sla": {
+        "deliveryTime": 23,
+        "lastMileTravel": 3,
+        "serviceability": "SERVICEABLE",
+        "slaString": "18-28 mins",
+        "lastMileTravelString": "3.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-23 00:00:00",
+        "opened": true
+      },
+      "badges": {
+        "textExtendedBadges": [
+          {
+            "iconId": "guiltfree/GF_Logo_android_3x",
+            "shortDescription": "options available",
+            "fontColor": "#7E808C"
+          }
+        ]
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textExtendedBadges": {
+            "badgeObject": [
+              {
+                "attributes": {
+                  "shortDescription": "options available",
+                  "fontColor": "#7E808C",
+                  "iconId": "guiltfree/GF_Logo_android_3x",
+                  "description": ""
+                }
+              }
+            ]
+          },
+          "textBased": {},
+          "imageBased": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "40% OFF",
+        "subHeader": "UPTO ₹80",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=435727",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "557782",
+      "name": "Gianis - Ice Cream, Shakes & Sundaes",
+      "cloudinaryImageId": "gm9pz7adqi7yxyld4mfo",
+      "areaName": "Sector 50",
+      "costForTwo": "₹250 for two",
+      "cuisines": ["Ice Cream", "Desserts", "Beverages"],
+      "avgRating": 4.3,
+      "veg": true,
+      "feeDetails": {
+        "restaurantId": "557782",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "380244",
+      "avgRatingString": "4.3",
+      "totalRatingsString": "20+",
+      "sla": {
+        "deliveryTime": 18,
+        "lastMileTravel": 0.5,
+        "serviceability": "SERVICEABLE",
+        "slaString": "18 mins",
+        "lastMileTravelString": "0.5 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-22 22:00:00",
+        "opened": true
+      },
+      "badges": {
+        "textExtendedBadges": [
+          {
+            "iconId": "guiltfree/GF_Logo_android_3x",
+            "shortDescription": "options available",
+            "fontColor": "#7E808C"
+          }
+        ]
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textBased": {},
+          "imageBased": {},
+          "textExtendedBadges": {
+            "badgeObject": [
+              {
+                "attributes": {
+                  "iconId": "guiltfree/GF_Logo_android_3x",
+                  "description": "",
+                  "shortDescription": "options available",
+                  "fontColor": "#7E808C"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=557782",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "200697",
+      "name": "Chinese Junction",
+      "cloudinaryImageId": "xch8ndfa2xdxea4fibap",
+      "locality": "C Block",
+      "areaName": "Sector 71",
+      "costForTwo": "₹100 for two",
+      "cuisines": ["Chinese", "North Indian", "Tandoor"],
+      "avgRating": 3.6,
+      "feeDetails": {
+        "restaurantId": "200697",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3900
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3900
+      },
+      "parentId": "14386",
+      "avgRatingString": "3.6",
+      "totalRatingsString": "1K+",
+      "promoted": true,
+      "adTrackingId": "cid=7548359~p=7~eid=00000189-7dc3-b382-2a7a-8ee500060757~srvts=1690032124802~45826",
+      "sla": {
+        "deliveryTime": 25,
+        "lastMileTravel": 3.5,
+        "serviceability": "SERVICEABLE",
+        "slaString": "25 mins",
+        "lastMileTravelString": "3.5 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-23 04:00:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {},
+          "textExtendedBadges": {},
+          "textBased": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "40% OFF",
+        "discountTag": "FLAT DEAL",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=200697",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "175024",
+      "name": "Keventers - Milkshakes & Desserts",
+      "cloudinaryImageId": "af8216b15abde417bb0e1d8fc44fb877",
+      "locality": "Sundar Shopping Complex",
+      "areaName": "Sector 72",
+      "costForTwo": "₹200 for two",
+      "cuisines": ["Beverages", "Ice Cream", "Desserts", "Healthy Food"],
+      "avgRating": 4,
+      "veg": true,
+      "feeDetails": {
+        "restaurantId": "175024",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "268997",
+      "avgRatingString": "4.0",
+      "totalRatingsString": "1K+",
+      "sla": {
+        "deliveryTime": 20,
+        "lastMileTravel": 2.1,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20 mins",
+        "lastMileTravelString": "2.1 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-23 05:00:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textExtendedBadges": {},
+          "textBased": {},
+          "imageBased": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "40% OFF",
+        "subHeader": "UPTO ₹80",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=175024",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "206843",
+      "name": "Shahi Muradabadi Chicken Biryani Corner",
+      "cloudinaryImageId": "rdxmzu14nvgnszcl3oou",
+      "locality": "Hoshiarpur Village",
+      "areaName": "Sector 51",
+      "costForTwo": "₹250 for two",
+      "cuisines": ["Hyderabadi", "Biryani"],
+      "avgRating": 3.9,
+      "feeDetails": {
+        "restaurantId": "206843",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3900
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3900
+      },
+      "parentId": "180787",
+      "avgRatingString": "3.9",
+      "totalRatingsString": "1K+",
+      "promoted": true,
+      "adTrackingId": "cid=7300855~p=10~eid=00000189-7dc3-b382-2a7a-8ee800060a5a~srvts=1690032124802~45826",
+      "sla": {
+        "deliveryTime": 23,
+        "lastMileTravel": 3.5,
+        "serviceability": "SERVICEABLE",
+        "slaString": "23 mins",
+        "lastMileTravelString": "3.5 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-22 23:00:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textBased": {},
+          "imageBased": {},
+          "textExtendedBadges": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=206843",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "328051",
+      "name": "SashMicks Bakery (Cake)",
+      "cloudinaryImageId": "0cb9293ff7ec5559f898add049b547a7",
+      "locality": "Sundar Shopping Complex",
+      "areaName": "Sector 72",
+      "costForTwo": "₹300 for two",
+      "cuisines": ["Bakery", "Desserts"],
+      "avgRating": 4.3,
+      "feeDetails": {
+        "restaurantId": "328051",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "11784",
+      "avgRatingString": "4.3",
+      "totalRatingsString": "1K+",
+      "sla": {
+        "deliveryTime": 20,
+        "lastMileTravel": 2,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20 mins",
+        "lastMileTravelString": "2.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-22 23:59:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textBased": {},
+          "imageBased": {},
+          "textExtendedBadges": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "30% OFF",
+        "subHeader": "UPTO ₹75",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=328051",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "247713",
+      "name": "Wake Up Sid",
+      "cloudinaryImageId": "tbikwlzi1hhuip4mvvrj",
+      "locality": "Gardenia Gateway",
+      "areaName": "Sector 72",
+      "costForTwo": "₹400 for two",
+      "cuisines": [
+        "North Indian",
+        "Chinese",
+        "Continental",
+        "Italian",
+        "Snacks",
+        "Beverages",
+        "Indian",
+        "Biryani",
+        "Mughlai",
+        "Mexican",
+        "Seafood",
+        "Punjabi",
+        "Tandoor",
+        "Salads",
+        "Tibetan"
+      ],
+      "avgRating": 4,
+      "feeDetails": {
+        "restaurantId": "247713",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "16411",
+      "avgRatingString": "4.0",
+      "totalRatingsString": "5K+",
+      "sla": {
+        "deliveryTime": 25,
+        "lastMileTravel": 0.2,
+        "serviceability": "SERVICEABLE",
+        "slaString": "25 mins",
+        "lastMileTravelString": "0.2 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-23 04:00:00",
+        "opened": true
+      },
+      "badges": {
+        "textExtendedBadges": [
+          {
+            "iconId": "guiltfree/GF_Logo_android_3x",
+            "shortDescription": "options available",
+            "fontColor": "#7E808C"
+          }
+        ]
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "imageBased": {},
+          "textExtendedBadges": {
+            "badgeObject": [
+              {
+                "attributes": {
+                  "description": "",
+                  "shortDescription": "options available",
+                  "fontColor": "#7E808C",
+                  "iconId": "guiltfree/GF_Logo_android_3x"
+                }
+              }
+            ]
+          },
+          "textBased": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "₹125 OFF",
+        "subHeader": "ABOVE ₹249",
+        "discountTag": "FLAT DEAL",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=247713",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "56484",
+      "name": "Sagar Ratna",
+      "cloudinaryImageId": "pucc16kmzjhof2kbilio",
+      "locality": "Sundar Market",
+      "areaName": "Sector 72",
+      "costForTwo": "₹600 for two",
+      "cuisines": ["South Indian", "North Indian", "Desserts"],
+      "avgRating": 3.9,
+      "veg": true,
+      "feeDetails": {
+        "restaurantId": "56484",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "793",
+      "avgRatingString": "3.9",
+      "totalRatingsString": "1K+",
+      "sla": {
+        "deliveryTime": 24,
+        "lastMileTravel": 2,
+        "serviceability": "SERVICEABLE",
+        "slaString": "24 mins",
+        "lastMileTravelString": "2.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-22 23:00:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textBased": {},
+          "imageBased": {},
+          "textExtendedBadges": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=56484",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  },
+  {
+    "info": {
+      "id": "322324",
+      "name": "Biryani Blues",
+      "cloudinaryImageId": "aid8xbkoxozzaxje8hap",
+      "locality": "Sarfabad",
+      "areaName": "Sector 72",
+      "costForTwo": "₹400 for two",
+      "cuisines": ["Biryani", "Hyderabadi", "Lucknowi", "Kebabs", "Desserts", "Beverages"],
+      "avgRating": 4,
+      "feeDetails": {
+        "restaurantId": "322324",
+        "fees": [
+          {
+            "name": "BASE_DISTANCE",
+            "fee": 3300
+          },
+          {
+            "name": "BASE_TIME"
+          },
+          {
+            "name": "ANCILLARY_SURGE_FEE"
+          }
+        ],
+        "totalFee": 3300
+      },
+      "parentId": "13813",
+      "avgRatingString": "4.0",
+      "totalRatingsString": "5K+",
+      "sla": {
+        "deliveryTime": 25,
+        "lastMileTravel": 2.1,
+        "serviceability": "SERVICEABLE",
+        "slaString": "25 mins",
+        "lastMileTravelString": "2.1 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2023-07-23 04:00:00",
+        "opened": true
+      },
+      "badges": {
+        "textExtendedBadges": [
+          {
+            "iconId": "guiltfree/GF_Logo_android_3x",
+            "shortDescription": "options available",
+            "fontColor": "#7E808C"
+          }
+        ]
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textBased": {},
+          "imageBased": {},
+          "textExtendedBadges": {
+            "badgeObject": [
+              {
+                "attributes": {
+                  "iconId": "guiltfree/GF_Logo_android_3x",
+                  "description": "",
+                  "shortDescription": "options available",
+                  "fontColor": "#7E808C"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "₹125 OFF",
+        "subHeader": "ABOVE ₹199",
+        "discountTag": "FLAT DEAL",
+        "discountCalloutInfo": {
+          "message": "Free Delivery",
+          "logoCtx": {
+            "logo": "v1655895371/free_delivery_logo_hqipbo.png"
+          }
+        }
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=322324",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    }
+  }
+]
