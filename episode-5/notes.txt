@@ -1,0 +1,1 @@
+ - import and export keywords can only be used inside modules not browser scripts or common JS files. So type='module' attribute is used to convert a brower script into JS module.

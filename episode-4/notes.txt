@@ -8,7 +8,7 @@
 
 - Lists can be rendered in React using map() function. When rendering lists in React, we should provide a unique key to every list item so that React can keep track of every list item. These key values shouldn't be generated on the fly using Math.random() or uuid package because then it will be a different value on every render. Key values should be unique and stable like database ids. 
  
-- When rendering lists, keys should be provided to every list item so that every React can identify and keep track of every item. In the absence of keys if an item is added or removed from the list, React doesn't know which item is added or removed so it re-renders the whole list which makes our app slow. But in the presence of keys if an item is added or removed from the list, then instead of re-rendering whole list, React renders only that specific item. React uses keys to optimize its render cycles.
+- When rendering lists, keys should be provided to every list item so that React can identify and keep track of every item. In the absence of keys if an item is added or removed from the list, React doesn't know which item is added or removed so it re-renders the whole list which makes our app slow. But in the presence of keys if an item is added or removed from the list, then instead of re-rendering whole list, React renders only that specific item. React uses keys to optimize its render cycles.
 
 - React recommends not to use index provided by map() function as a key. But if there is no unique id in a document, then we can use index as a key value. If we don't provide key to a list item, then React uses index as a default key value.
 
