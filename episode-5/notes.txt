@@ -1,7 +1,9 @@
  - import and export keywords can only be used inside modules not browser scripts or common JS files. So type='module' attribute is used to convert a browser script into JS module.
 
- - There are two ways to export modules in JS, default exports and named exports. 
+ - There are two ways to export modules in JS, default exports and named exports. To export only thing from a file, we can use default export but to export multiple things from a file, we have to use named exports.
 
  1. Default export: There can be only one default export in a JS file and default export can be imported using any name. 
 
  2. Named export: There can be multiple named exports in a JS file and they have to be imported using same name by which they are exported.
+
+ - There can be one default export and multiple named exports together in a single file but its better to not have both kinds of exports in a single file.

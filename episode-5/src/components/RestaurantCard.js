@@ -13,7 +13,7 @@ const RestaurantCard = ({ restaurantData }) => {
   return (
     <div className='restaurant-card'>
       <div className='restaurant-image'>
-        <img src={`${CDN_URL}/${cloudinaryImageId}`} alt={name} />
+        <img src={CDN_URL + cloudinaryImageId} alt={name} />
       </div>
 
       <div className='restaurant-details'>
