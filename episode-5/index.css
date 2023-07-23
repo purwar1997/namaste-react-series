@@ -68,7 +68,7 @@
 .restaurant-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 30px;
 }
 
 .restaurant-card {
@@ -83,12 +83,12 @@
 }
 
 .restaurant-image > img {
-  width: 300px;
+  width: 280px;
 }
 
 .restaurant-details {
   margin-top: 8px;
-  width: 300px;
+  width: 280px;
 }
 
 .name {

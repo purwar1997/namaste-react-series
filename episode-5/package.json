@@ -2,6 +2,7 @@
   "name": "episode-5",
   "version": "1.0.0",
   "description": "Episode 5 of Namaste React series by Akshay Saini",
+  "type": "module",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",

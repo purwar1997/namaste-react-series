@@ -7,3 +7,27 @@
  2. Named export: There can be multiple named exports in a JS file and they have to be imported using same name by which they are exported.
 
  - There can be one default export and multiple named exports together in a single file but its better to not have both kinds of exports in a single file.
+
+---- React Hooks ----
+
+- Hooks are normal JS functions provided by React. Hooks always start with the 'use' keyword e.g. useState() and useEffect().
+
+- useState() is used to maintain state of React components. When useState() is called, it returns an array which contains two values, state variable and setter function.
+
+- Syntax: const [stateVariable, setStateVariable] = useState(initialValue);
+
+- State variable: When a component is re-rendered, normal variables present inside react components lose their values from the previous render and are reinitialized. No data is preserved between renders if we are using normal variables to store data. So if we want to preserve some data between renders, we have to use state variables. State variables are like memory units of a component which retains data when the component is being re-rendered. When a component is re-rendered, it means function component is getting called again and it is returning new JSX based on the updated values of state variables. Value passed from useState() is the initial value of a state variable.
+
+- Setter function: Value of state variable is not updated like normal variable (by assigning value). Setter function is used to update the value of state variable. Value passed by the setter function is the next updated value of state variable. Setter function also instructs React to re-render the component so that whatever changes we have done on the data layer can be reflected on the UI layer. Value of state variable is always updated on the next render. So if we try to access the value of state variable in the current render, we get the same value.
+
+- Setter function can pass two kinds of values: normal value and updater function.
+
+---- Virtual DOM ----
+
+- Virtual DOM is an object-form representation of actual DOM. React.createElement or JSX transpiled into JS is Virtual DOM. So virtual DOM is actually a plain JS object.
+
+- To create an element in React, we can use createElement API of React or JSX which gets transpiled into JS by Babel. React elements are plain JS objects. Root level react element is called virtual DOM. Real DOM consists of HTML tags and virtual DOM consists of objects.
+
+- React internally uses diffing algorithm. Whenever a component is re-rendered and UI layer is updated, diffing algorithm calculates the differences between the old virtual DOM (JS object) and new virtual DOM (JS object) and push those differences on the real DOM to update it. React updates real DOM only when there is a difference between the virtual DOMs of two renders. 
+
+- React doesn't calculates the differences between the real DOMs (nested HTML tags) of two renders. Instead it calculates the differences between the virtual DOMs (plain JS objects) of two renders which is much easier and it only updates real DOM if there is a difference between the two virtual DOMs. React doesn't recreate whole DOM when UI is updated. Instead it only updates part of a DOM. React does efficient DOM manipulation. Hence react is fast.

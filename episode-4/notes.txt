@@ -2,7 +2,7 @@
 
 - CSS styles are injected inside JSX tags in the form of JS object to style attribute. This form of styling elements is known as Inline styling.
 
-- UI driven by data is called config driven UI. We write the UI once and change it based on the data we are receiving from backend apis.
+- UI driven by data is called config driven UI. We write the UI once and change it based on the data we are receiving from backend apis. React app has two layers, data layer and UI layer. When these two layers are in sync with each other, we get config driven UI.
 
 - Props are arguments passed to a function component. Whenever we use a function component in the form JSX tag, attributes of JSX tag are passed to that function component in the form of an object called props. Props are used to pass data to the components. Props are the only arguments that can be passed to a function component.
 
