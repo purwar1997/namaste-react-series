@@ -1,6 +1,6 @@
  - import and export keywords can only be used inside modules not browser scripts or common JS files. So type='module' attribute is used to convert a browser script into JS module.
 
- - There are two ways to export modules in JS, default exports and named exports. To export only thing from a file, we can use default export but to export multiple things from a file, we have to use named exports.
+ - There are two ways to export modules in JS, default exports and named exports. To export only one thing from a file, we can use default export but to export multiple things from a file, we have to use named exports.
 
  1. Default export: There can be only one default export in a JS file and default export can be imported using any name. 
 
@@ -28,6 +28,6 @@
 
 - To create an element in React, we can use createElement API of React or JSX which gets transpiled into JS by Babel. React elements are plain JS objects. Root level react element is called virtual DOM. Real DOM consists of HTML tags and virtual DOM consists of objects.
 
-- React internally uses diffing algorithm. Whenever a component is re-rendered and UI layer is updated, diffing algorithm calculates the differences between the old virtual DOM (JS object) and new virtual DOM (JS object) and push those differences on the real DOM to update it. React updates real DOM only when there is a difference between the virtual DOMs of two renders. 
+- React internally uses diffing algorithm. Whenever a component is re-rendered and UI layer is updated, diffing algorithm compares the differences between the old virtual DOM (JS object) and new virtual DOM (JS object) and push those differences on the real DOM to update it. React updates real DOM only when there is a difference between the virtual DOMs of two renders. 
 
-- React doesn't calculates the differences between the real DOMs (nested HTML tags) of two renders. Instead it calculates the differences between the virtual DOMs (plain JS objects) of two renders which is much easier and it only updates real DOM if there is a difference between the two virtual DOMs. React doesn't recreate whole DOM when UI is updated. Instead it only updates part of a DOM. React does efficient DOM manipulation. Hence react is fast.
+- React doesn't compares the differences between the real DOMs (nested HTML tags) of two renders. Instead it compares the differences between the virtual DOMs (plain JS objects) of two renders which is much easier and it only updates real DOM if there is a difference between the two virtual DOMs. React doesn't recreate whole DOM when UI is updated. Instead it only updates part of a DOM. React does efficient DOM manipulation. Hence react is fast.
