@@ -1,14 +1,22 @@
-- JSX is an HTML or XML like syntax which attempts to combine markup(HTML), styles(CSS) and logic(JS) at one place.
+// Styling in React
 
-- CSS styles are injected inside JSX tags in the form of JS object to style attribute. This form of styling elements is known as Inline styling.
+- CSS styles are added to JSX tags in the form of JS object to style attribute. CSS styles in JSX are camelCased. They don't contain hyphen(-). Whatever JSX we write is converted into JS object by Babel and javascript doesn't allow '-' as a special character. It only allows underscore (_) as a special character. Hence CSS styles in JSX are camelCased.
+
+- Because JSX is converted to JS, 'class' and 'for' attributes are also not allowed because these are reserved words in JS. That's why 'className' and 'htmlFor' are used in place of class and for attributes.
+
+// Config driven UI
 
 - UI driven by data is called config driven UI. We write the UI once and change it based on the data we are receiving from backend apis. React app has two layers, data layer and UI layer. When these two layers are in sync with each other, we get config driven UI.
 
-- Props are arguments passed to a function component. Whenever we use a function component in the form JSX tag, attributes of JSX tag are passed to that function component in the form of an object called props. Props are used to pass data to the components. Props are the only arguments that can be passed to a function component.
+// Props
+
+- Props are arguments passed to a function component. Whenever a component is rendered, JSX attributes are passed to that component in the form of JS object called props. Props are used to pass data from parent components to child components. Props are the only arguments that can be passed to a function component.
+
+// Rendering of lists
 
 - Lists can be rendered in React using map() function. When rendering lists in React, we should provide a unique key to every list item so that React can keep track of every list item. These key values shouldn't be generated on the fly using Math.random() or uuid package because then it will be a different value on every render. Key values should be unique and stable like database ids. 
  
-- When rendering lists, keys should be provided to every list item so that React can identify and keep track of every item. In the absence of keys if an item is added or removed from the list, React doesn't know which item is added or removed so it re-renders the whole list which makes our app slow. But in the presence of keys if an item is added or removed from the list, then instead of re-rendering whole list, React renders only that specific item. React uses keys to optimize its render cycles.
+- When rendering lists, keys should be provided to every list item so that React can identify and keep track of every item. In the absence of keys if an item is added or removed from the list, React doesn't know which item is added or removed so it re-renders the whole list which makes our app slow. But in the presence of keys, React precisely knows which item is added or removed. So instead of re-rendering whole list, React renders only that specific item. React uses keys to optimize its render cycles.
 
 - React recommends not to use index provided by map() function as a key. But if there is no unique id in a document, then we can use index as a key value. If we don't provide key to a list item, then React uses index as a default key value.
 

@@ -1,0 +1,23 @@
+// Component Rendering
+
+When function component is called by React and it returns a piece of JSX code, that is known as component rendering.
+
+// Conditional Rendering
+
+If a component is rendered based on a certain condition, it is called conditional rendering. Conditional rendering can be implemented using if-else statement, ternary operator (?:) and AND (&&) operator.
+
+// Why useState() is used to manage state of a component? Why can't normal variables be used for the same purpose?
+
+Ans => If we use normal variables to manage state of a component and update them (by assigning values), then those changes don't get reflected on UI because component is not re-rendered. If component is not re-rendered, then data layer and UI layer of our app are not in sync with each other. So we need a way to to tell React to re-render component whenever local variables are updated. 
+ 
+If we somehow manage to re-render the component, then local variables lose their values from the previous render and get re-initialized. No data is passed from previous render to next render. So we need special variables to retain data whenever component renders. 
+ 
+That's why useState() is used. When useState() is called, it returns an array which contains two values, state variable and setter function. 
+
+State variable: State variables are like the memory units of a program which are used to manage state of a component. When component re-renders, normal variables will lose their value but state variables won't. State variables can retain data between renders.
+
+Setter function: Value of state variable is not updated like normal variable (by assigning value). Setter function is used to update the value of state variable. Value passed by the setter function is the next updated value of state variable. After updating state, setter function instructs React to re-render the component so that state changes can be reflected on the UI. Setter function keeps data layer and UI layer synchronised with each other.  
+
+Note: State variables can be updated by like normal variables (by assigning value), but is is meaningless because component doesn't re-render and UI doesn't update. So it beats the purpose of using useState(). State variables should always be updated using setter function if we want state updates to be reflected on UI.
+
+Note: Value of state variable is always updated on the next render. So if we try to access the value state variable in current render, we get the old value.
