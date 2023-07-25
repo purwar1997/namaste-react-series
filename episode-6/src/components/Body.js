@@ -22,10 +22,8 @@ const Body = () => {
       const restaurantList =
         json?.data?.success?.cards[5]?.gridWidget?.gridElements?.infoWithStyle?.restaurants;
 
-      restaurants = restaurantList;
-      // setRestaurants(restaurantList);
-      // setLoading(false);
-      loading = false;
+      setRestaurants(restaurantList);
+      setLoading(false);
     } catch (err) {
       console.log(err.message);
     }
