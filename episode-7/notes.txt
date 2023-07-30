@@ -1,0 +1,21 @@
+// useEffect() hook
+
+useEffect() is called after the component is rendered and DOM is updated. This hook is commonly used for DOM manipulation and fetching data form an API. useEffect() takes two arguments, callback and dependency array. Callback is manadatory but dependency array is not. 
+
+- If there is no dependency array, useEffect() runs everytime component is rendered.
+
+- If dependency array is empty, useEffect() runs only once when the component is mounted (initially rendered).
+
+- If dependency array contains some values, then useEffect() runs when the component is mounted and values inside dependency array changes.
+
+// Tips for using useState
+
+- useState() can only be called inside components (true for every hook)
+- useState() should be called at the top of components
+- useState() shouldn't be used inside for loop, if-else, switch-case and functions 
+
+// React Router
+
+- createBrowserRouter() is used to define the routing configuration of our app
+- Page is nothing but a composition of resuable components
+
