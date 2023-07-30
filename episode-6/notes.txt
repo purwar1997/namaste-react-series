@@ -4,21 +4,30 @@ When function component is called by React and it returns a piece of JSX code, t
 
 // Conditional Rendering
 
-If a component is rendered based on a certain condition, it is called conditional rendering. Conditional rendering can be implemented using if-else statement, ternary operator (?:) and AND (&&) operator.
+If a component is rendered based on a certain condition, it is known as conditional rendering. Conditional rendering can be implemented using if-else statement, ternary operator (?:) and AND (&&) operator.
 
 // Why useState() is needed to manage state of a component? Why regular JS variables can't be used to manage state?
 
-Ans => If we use normal variables to manage state of a component and update them (by assigning values), then those changes don't get reflected on UI because component doesn't get re-rendered. If component is not re-rendered, then data layer and UI layer of our app are not in sync with each other. So we need a way to to tell React to re-render component whenever local variables are updated. 
+Ans => If we use normal variables to manage state of a component and update them (by assigning values), then those changes don't get reflected on UI because component doesn't get re-rendered. If component is not re-rendered, then data layer and UI layer of our app are not in sync with each other. So we need a way to tell React to re-render component whenever local variables are updated. 
  
 If we somehow manage to re-render the component, then local variables lose their values from the previous render and get re-initialized. No data is passed from previous render to next render. So we need special variables to retain data whenever component renders. 
  
 That's where useState() comes into play. When useState() is called, it returns an array which contains two values, state variable and setter function. 
 
-State variable: State variables are like memory units which are used to manage state of a component. State is like a memory of component. When component re-renders, regular variables will lose their value but state variables won't. State variables can retain data between renders.
+State variable: State variables are like memory units which are used to manage state of a component. State is like the memory of component. When component re-renders, regular variables will lose their values but state variables won't. State variables can retain data between renders.
 
-Setter function: Value of state variable is not updated like normal variable (by assigning value). Setter function is used to update the value of state variable. Value passed by the setter function is the next updated value of state variable. After updating state, setter function instructs React to re-render the component so that state changes can be reflected on UI. Setter function keeps data layer and UI layer synchronised with each other.  
+Setter function: Value of state variable is not updated like normal variable (by assigning value). Setter function is used to update the value of state variable. Value passed by the setter function is the next updated value of state variable. After updating state, setter function instructs React to re-render the component so that state changes can be reflected on UI. Setter function keeps data layer and UI layer synchronised with each other by re-rendering the component.
 
-Note: State variables can be updated by like regular variables (by assigning value), but component doesn't get re-rendered and UI doesn't get updated. So it beats whole purpose of using useState(). State variables should always be updated using setter function if we want state updates to be reflected on UI.
+Note: State variables can be updated by like regular variables (by assigning value), but component doesn't get re-rendered and UI doesn't get updated. So it beats the whole purpose of using useState(). State variables should always be updated using setter function if we want state updates to be reflected on UI.
 
 Note: Value of state variable is always updated on the next render. So if we try to access the value of state variable in current render, we get same old value.
 
+// Fetching data in React app
+
+There are two ways to fetch data in React app:-
+
+1.  When the page loads, before rendering anything on screen an API call is made to fetch data. When the data is returned by the server, we render UI based on the data we receive. If the server is taking some time to return data because of network latency or increased traffic, screen gets freezed for some time because we have nothing to render on screen which makes user experience bad.
+
+2.  When the page loads, we first render a placeholder UI. That placeholder can be a loader, progress bar or skeleton UI to give the user an impression of data being loaded. Then an API request is sent to fetch data. After receiving data from the server, UI that was initially rendered is replaced by an actual UI. Placeholder UI doesn't block the screen if server is taking some time to return data which provides a better user experience.
+
+Shimmer UI is generally used as a placeholder because it gives the user an idea about how data will be displayed on screen after being loaded. Shimmer components resemble the size and shape of actual components that will eventually be rendered. It enhances the perceived performance of an app.

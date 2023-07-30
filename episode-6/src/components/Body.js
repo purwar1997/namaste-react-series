@@ -6,6 +6,7 @@ const Body = () => {
   const [restaurants, setRestaurants] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
+  const [displayedRestaurants, setDisplayedRestaurants] = useState([]);
 
   useEffect(() => {
     fetchRestaurantList();
@@ -23,6 +24,7 @@ const Body = () => {
         json?.data?.success?.cards[5]?.gridWidget?.gridElements?.infoWithStyle?.restaurants;
 
       setRestaurants(restaurantList);
+      setDisplayedRestaurants(restaurantList);
       setLoading(false);
     } catch (err) {
       console.log(err.message);
@@ -36,13 +38,20 @@ const Body = () => {
       const { name, cuisines } = restaurant?.info;
 
       return (
-        name.toLowerCase() === searchString ||
+        name.toLowerCase().includes(searchString) ||
         cuisines.map(cuisine => cuisine.toLowerCase()).includes(searchString)
       );
     });
 
-    setRestaurants(searchResults);
+    setDisplayedRestaurants(searchResults);
   };
+
+  const filterTopRatedRestuarants = () =>
+    setDisplayedRestaurants(
+      restaurants
+        .filter(restaurant => restaurant?.info?.avgRating > 4.0)
+        .sort((res1, res2) => res2.info.avgRating - res1.info.avgRating)
+    );
 
   // Conditional Rendering
   return loading ? (
@@ -64,18 +73,13 @@ const Body = () => {
       </div>
 
       <div className='filters'>
-        <button
-          className='top-rated'
-          onClick={() =>
-            setRestaurants(restaurants.filter(restaurant => restaurant?.info?.avgRating > 4.0))
-          }
-        >
+        <button className='top-rated' onClick={filterTopRatedRestuarants}>
           Top rated
         </button>
       </div>
 
       <div className='restaurant-list'>
-        {restaurants.map(restaurant => (
+        {displayedRestaurants.map(restaurant => (
           <RestaurantCard key={restaurant?.info?.id} restaurantData={restaurant} />
         ))}
       </div>
