@@ -3,8 +3,8 @@ import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
 
 const Body = () => {
-  let [restaurants, setRestaurants] = useState([]);
-  let [loading, setLoading] = useState(true);
+  const [restaurants, setRestaurants] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
 
   useEffect(() => {
