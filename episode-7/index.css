@@ -6,6 +6,15 @@
   font-family: 'Segoe UI';
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.active-link {
+  color: #fc8019;
+}
+
 .header {
   padding: 15px 70px;
   display: flex;
@@ -18,6 +27,11 @@
   width: 30px;
   position: relative;
   top: 3px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
 }
 
 .nav-items {
@@ -26,7 +40,11 @@
   gap: 35px;
 }
 
-.body {
+.nav-items > a:hover {
+  color: #fc8019;
+}
+
+.home {
   padding: 50px 70px;
   display: flex;
   flex-direction: column;

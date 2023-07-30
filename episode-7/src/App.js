@@ -1,41 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Header from './components/Header';
-import Body from './components/Body';
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from 'react-router-dom';
+
+import AppLayout from './components/AppLayout';
+import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 import Error from './components/Error';
 import NotFound from './components/NotFound';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-const AppLayout = () => {
-  return (
-    <>
-      <Header />
-      <Body />
-    </>
-  );
-};
-
-const appRouter = createBrowserRouter([
-  {
-    path: '/',
-    element: <AppLayout />,
-    errorElement: <Error />,
-  },
-  {
-    path: '/about',
-    element: <About />,
-  },
-  {
-    path: '/contact',
-    element: <Contact />,
-  },
-  {
-    path: '*',
-    element: <NotFound />,
-  },
-]);
+const appRouter = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<AppLayout />} errorElement={<Error />}>
+      <Route index element={<Home />} />
+      <Route path='about' element={<About />} />
+      <Route path='contact' element={<Contact />} />
+      <Route path='*' element={<NotFound />} />
+    </Route>
+  )
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<RouterProvider router={appRouter} />);

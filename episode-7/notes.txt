@@ -6,7 +6,7 @@ useEffect() is called after the component is rendered and DOM is updated. This h
 
 - If dependency array is empty, useEffect() runs only once when the component is mounted (initially rendered).
 
-- If dependency array contains some values, then useEffect() runs when the component is mounted and values inside dependency array changes.
+- If dependency array contains some values, then useEffect() runs when the component is mounted or values inside dependency array changes.
 
 // Tips for using useState
 
@@ -16,6 +16,7 @@ useEffect() is called after the component is rendered and DOM is updated. This h
 
 // React Router
 
-- createBrowserRouter() is used to define the routing configuration of our app
+- createBrowserRouter() is used to define the routing configuration of React app
 - Page is nothing but a composition of resuable components
 
+- Never use <a> tag to go to a new route in React app because it will refresh the whole page. Page refresh will reset the value of state variables. Use <Link> or <NavLink> component provided by react-router-dom to navigate to new route without reloading the page.

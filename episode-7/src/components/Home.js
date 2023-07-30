@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
 
-const Body = () => {
+const Home = () => {
   const [restaurants, setRestaurants] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
@@ -57,7 +57,7 @@ const Body = () => {
   return loading ? (
     <Shimmer />
   ) : (
-    <div className='body'>
+    <div className='home'>
       <div className='search-container'>
         <input
           className='search-input'
@@ -87,4 +87,4 @@ const Body = () => {
   );
 };
 
-export default Body;
+export default Home;
