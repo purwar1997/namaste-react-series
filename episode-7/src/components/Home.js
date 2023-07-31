@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
 
@@ -27,7 +28,7 @@ const Home = () => {
       setDisplayedRestaurants(restaurantList);
       setLoading(false);
     } catch (err) {
-      console.log(err.message);
+      console.log(err);
     }
   };
 
@@ -53,7 +54,6 @@ const Home = () => {
         .sort((res1, res2) => res2.info.avgRating - res1.info.avgRating)
     );
 
-  // Conditional Rendering
   return loading ? (
     <Shimmer />
   ) : (
@@ -80,7 +80,9 @@ const Home = () => {
 
       <div className='restaurant-list'>
         {displayedRestaurants.map(restaurant => (
-          <RestaurantCard key={restaurant?.info?.id} restaurantData={restaurant} />
+          <Link to={`restaurants/${restaurant?.info?.id}`} key={restaurant?.info?.id}>
+            <RestaurantCard restaurantData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>

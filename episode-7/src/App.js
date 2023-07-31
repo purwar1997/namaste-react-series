@@ -13,6 +13,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Error from './components/Error';
 import NotFound from './components/NotFound';
+import Restaurant from './components/Restaurant';
 
 const appRouter = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +21,7 @@ const appRouter = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path='about' element={<About />} />
       <Route path='contact' element={<Contact />} />
+      <Route path='restaurants/:restaurantId' element={<Restaurant />} />
       <Route path='*' element={<NotFound />} />
     </Route>
   )
