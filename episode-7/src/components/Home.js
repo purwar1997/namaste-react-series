@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { RESTAURANTS_URL } from '../utils/constants';
 import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
 
@@ -15,9 +16,7 @@ const Home = () => {
 
   const fetchRestaurantList = async () => {
     try {
-      const response = await fetch(
-        'https://www.swiggy.com/mapi/homepage/getCards?lat=28.57157&lng=77.381963'
-      );
+      const response = await fetch(RESTAURANTS_URL);
 
       const json = await response.json();
 

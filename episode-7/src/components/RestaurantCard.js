@@ -1,4 +1,4 @@
-import { CDN_URL } from '../utils/constants';
+import { RESTAURANT_IMAGE_URL } from '../utils/constants';
 
 const RestaurantCard = ({ restaurantData }) => {
   const {
@@ -13,7 +13,7 @@ const RestaurantCard = ({ restaurantData }) => {
   return (
     <div className='restaurant-card'>
       <div className='restaurant-image'>
-        <img src={CDN_URL + cloudinaryImageId} alt={name} />
+        <img src={RESTAURANT_IMAGE_URL + cloudinaryImageId} alt={name} />
       </div>
 
       <div className='restaurant-details'>

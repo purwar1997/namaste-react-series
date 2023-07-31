@@ -33,3 +33,7 @@ useEffect() is called after the component is rendered and DOM is updated. This h
 - In server-side routing, when a link is clicked browser makes an API call to fetch HTML document. HTML page returned by server replaces the old HTML page. When a new page is rendered, browser recreates DOM. 
 
 - When a link is clicked browser sends a GET request to URL present inside href attribute of <a> tag to fetch HTML page. This kind of routing is known as Server-side routing. Page reloads and components of that page are mounted again due to which state variables are reinitialized. In server-side routing, component loses its state.
+
+- useParams() is used to access path parameters
+
+- Link and NavLink are React components provided by react-router-dom which internally uses <a> tag. These components are wrapper over <a> tag. Browser doesn't understand Link or NavLink. It understands <a> tag.
