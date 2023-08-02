@@ -21,7 +21,7 @@ const Home = () => {
       const json = await response.json();
 
       const restaurantList =
-        json?.data?.success?.cards[5]?.gridWidget?.gridElements?.infoWithStyle?.restaurants;
+        json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
       setRestaurants(restaurantList);
       setDisplayedRestaurants(restaurantList);

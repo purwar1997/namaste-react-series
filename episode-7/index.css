@@ -166,3 +166,97 @@ a {
   height: 180px;
   background-color: #f0f0f0;
 }
+
+.restaurant {
+  padding: 30px 150px;
+}
+
+.restaurant-info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px dashed #cdcdcd;
+  padding-bottom: 15px;
+}
+
+.restaurant-name {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.restaurant-cuisines {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.restaurant-address {
+  font-size: 14px;
+}
+
+.restaurant-ratings-wrapper {
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.average-rating {
+  text-align: center;
+  font-weight: 500;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.total-ratings {
+  padding-top: 7px;
+  font-size: 14px;
+}
+
+.restaurant-cost-time-wrapper {
+  padding-top: 15px;
+  display: flex;
+  gap: 30px;
+}
+
+.restaurant-cost-time-wrapper > span {
+  font-weight: 500;
+}
+
+.restaurant-menu {
+  /* margin-top: 30px; */
+}
+
+.menu-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+  padding-block: 30px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.menu-item-type > img {
+  width: 17px;
+  height: 17px;
+}
+
+.menu-item-name {
+  margin-top: 4px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.menu-item-price {
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.menu-item-description {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #616161;
+}
+
+.menu-item-photo > img {
+  width: 130px;
+  border-radius: 8px;
+}

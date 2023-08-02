@@ -21,10 +21,16 @@ const Restaurant = () => {
 
       setRestaurantData(json?.data?.cards[0].card?.card?.info);
 
-      setRestaurantMenu(
-        json?.data?.cards?.at(-1)?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
-          ?.itemCards
-      );
+      const menuData = json?.data?.cards?.at(-1)?.groupedCard?.cardGroupMap?.REGULAR.cards;
+      const index = menuData[1]?.card?.card?.title === 'Top Picks' ? 2 : 1;
+      const menuLists = menuData.slice(index, menuData.length - 2);
+
+      // setRestaurantMenu(
+      //   json?.data?.cards?.at(-1)?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
+      //     ?.itemCards
+      // );
+
+      setRestaurantMenu(menuLists);
 
       setLoading(false);
     } catch (err) {
@@ -57,7 +63,14 @@ const Restaurant = () => {
           </div>
 
           <div className='restaurant-ratings-wrapper'>
-            <h4 className='average-rating'>{avgRating}</h4>
+            <h4
+              className='average-rating'
+              style={{
+                color: avgRating > 4.0 ? '#3D9B6D' : avgRating > 3.0 ? '#db7c38' : ' #f04343',
+              }}
+            >
+              {avgRating}
+            </h4>
             <p className='total-ratings'>{totalRatingsString}</p>
           </div>
         </div>
