@@ -5,8 +5,6 @@ import { MENU_ITEM_IMAGE_URL } from '../utils/constants';
 const MenuItem = ({ menuItem }) => {
   const { name, description, price, isVeg, imageId } = menuItem?.card?.info;
 
-  console.log(menuItem.card.info);
-
   return (
     <div className='menu-item'>
       <div className='menu-item-info'>
@@ -18,9 +16,11 @@ const MenuItem = ({ menuItem }) => {
         <p className='menu-item-description'>{description}</p>
       </div>
 
-      <div className='menu-item-photo'>
-        <img src={MENU_ITEM_IMAGE_URL + imageId} alt={name} />
-      </div>
+      {imageId && (
+        <div className='menu-item-photo'>
+          <img src={MENU_ITEM_IMAGE_URL + imageId} alt={name} />
+        </div>
+      )}
     </div>
   );
 };

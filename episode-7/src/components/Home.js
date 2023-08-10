@@ -17,7 +17,6 @@ const Home = () => {
   const fetchRestaurantList = async () => {
     try {
       const response = await fetch(RESTAURANTS_URL);
-
       const json = await response.json();
 
       const restaurantList =
