@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ItemList from './ItemList';
+import MenuCard from './MenuCard';
 import ItemCategory from './ItemCategory';
 
 const MenuCategory = ({ menuCategory }) => {
@@ -17,7 +17,7 @@ const MenuCategory = ({ menuCategory }) => {
       </div>
 
       {itemCards ? (
-        show && <ItemList menuItems={itemCards} />
+        show && <MenuCard menuItems={itemCards} />
       ) : (
         <div>
           {categories.map((category, index) => (

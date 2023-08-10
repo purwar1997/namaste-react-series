@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ItemList from './ItemList';
+import MenuCard from './MenuCard';
 
 const ItemCategory = ({ category }) => {
   const [show, setShow] = useState(false);
@@ -16,7 +16,7 @@ const ItemCategory = ({ category }) => {
         <span onClick={() => setShow(!show)}>{show ? 'Hide' : 'Show'}</span>
       </div>
 
-      {show && <ItemList menuItems={itemCards} />}
+      {show && <MenuCard menuItems={itemCards} />}
     </div>
   );
 };
