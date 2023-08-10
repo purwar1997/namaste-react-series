@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { MENU_URL } from '../utils/constants';
+import { VegFilterContext } from '../context/VegFilterContext';
 import Shimmer from './Shimmer';
 import MenuCategory from './MenuCategory';
-import MenuItem from './MenuItem';
 
 const Restaurant = () => {
   const [restaurantData, setRestaurantData] = useState(null);
+  const [restaurantOffers, setRestaurantOffers] = useState([]);
   const [restaurantMenu, setRestaurantMenu] = useState([]);
+  const [topPicks, setTopPicks] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [vegFilter, setVegFilter] = useState(false);
   const { restaurantId } = useParams();
 
   useEffect(() => {
@@ -21,19 +24,17 @@ const Restaurant = () => {
       const json = await response.json();
 
       setRestaurantData(json?.data?.cards[0].card?.card?.info);
+      setRestaurantOffers(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.offers);
 
-      const menuData = json?.data?.cards?.at(-1)?.groupedCard?.cardGroupMap?.REGULAR.cards;
-      const index = menuData[1]?.card?.card?.title === 'Recommended' ? 1 : 2;
-      const menuLists = menuData.slice(index, menuData.length - 2);
+      let menuData = json?.data?.cards?.at(-1)?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+      menuData = menuData.slice(1, menuData.length - 2);
 
-      // setRestaurantMenu(
-      //   json?.data?.cards?.at(-1)?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
-      //     ?.itemCards
-      // );
-
-      // console.log(menuLists);
-
-      setRestaurantMenu(menuLists);
+      if (menuData[0]?.card?.card?.title === 'Top Picks') {
+        setTopPicks(menuData[0]?.card?.card?.carousel);
+        setRestaurantMenu(menuData.slice(1));
+      } else {
+        setRestaurantMenu(menuData);
+      }
 
       setLoading(false);
     } catch (err) {
@@ -44,6 +45,8 @@ const Restaurant = () => {
   if (loading) {
     return <Shimmer />;
   }
+
+  console.log(restaurantData, restaurantOffers, restaurantMenu, topPicks);
 
   const {
     name,
@@ -84,11 +87,25 @@ const Restaurant = () => {
         </div>
       </div>
 
+      <div className='restaurant-offers'></div>
+
       <div className='restaurant-menu'>
-        <div className='menu-card'>
-          {restaurantMenu.map((menuCategory, index) => (
-            <MenuCategory key={index} menuCategory={menuCategory} />
-          ))}
+        <div className='veg-filter'>
+          <label>Veg Only</label>
+          <input
+            type='checkbox'
+            name='veg-filter'
+            checked={vegFilter}
+            onChange={e => setVegFilter(e.target.checked)}
+          />
+        </div>
+
+        <div className='menu-categories'>
+          <VegFilterContext.Provider value={vegFilter}>
+            {restaurantMenu.map((menuCategory, index) => (
+              <MenuCategory key={index} menuCategory={menuCategory} />
+            ))}
+          </VegFilterContext.Provider>
         </div>
       </div>
     </div>

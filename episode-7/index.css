@@ -222,7 +222,61 @@ a {
 }
 
 .restaurant-menu {
-  margin-top: 30px;
+  margin-top: 25px;
+}
+
+.veg-filter {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 10px;
+}
+
+.veg-filter > input {
+  position: relative;
+  top: 2px;
+}
+
+.menu-category,
+.item-category {
+  padding-block: 15px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.menu-category:last-of-type {
+  border-bottom: none;
+}
+
+.menu-category-header,
+.item-category-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-category-header > h3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #484848;
+}
+
+.item-categories {
+  margin-top: 8px;
+}
+
+.item-category:last-of-type {
+  border-bottom: none;
+  padding-block: 15px 0px;
+}
+
+.item-category-header > h4 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.accordian-toggler {
+  cursor: pointer;
+  position: relative;
+  top: 3px;
 }
 
 .menu-item {
@@ -230,8 +284,13 @@ a {
   align-items: flex-start;
   justify-content: space-between;
   gap: 60px;
-  padding-block: 30px;
+  padding-block: 25px;
   border-bottom: 1px solid #cdcdcd;
+}
+
+.menu-item:last-of-type {
+  border-bottom: none;
+  padding-block: 25px 0px;
 }
 
 .menu-item-type > img {
