@@ -20,7 +20,7 @@ const Home = () => {
       const json = await response.json();
 
       const restaurantList =
-        json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
       setRestaurants(restaurantList);
       setDisplayedRestaurants(restaurantList);

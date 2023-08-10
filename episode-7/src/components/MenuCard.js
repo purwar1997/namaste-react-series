@@ -1,10 +1,6 @@
-import { useContext } from 'react';
-import { VegFilterContext } from '../context/VegFilterContext';
 import MenuItem from './MenuItem';
 
-const MenuCard = ({ menuItems }) => {
-  const vegFilter = useContext(VegFilterContext);
-
+const MenuCard = ({ menuItems, vegFilter }) => {
   const displayedMenuItems = vegFilter
     ? menuItems.filter(item => item?.card?.info?.isVeg)
     : menuItems;

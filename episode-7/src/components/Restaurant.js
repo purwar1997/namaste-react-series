@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { MENU_URL } from '../utils/constants';
-import { VegFilterContext } from '../context/VegFilterContext';
 import Shimmer from './Shimmer';
 import MenuCategory from './MenuCategory';
 
@@ -46,7 +45,7 @@ const Restaurant = () => {
     return <Shimmer />;
   }
 
-  console.log(restaurantData, restaurantOffers, restaurantMenu, topPicks);
+  // console.log(restaurantData, restaurantOffers, restaurantMenu, topPicks);
 
   const {
     name,
@@ -91,21 +90,20 @@ const Restaurant = () => {
 
       <div className='restaurant-menu'>
         <div className='veg-filter'>
-          <label>Veg Only</label>
+          <label htmlFor='veg-only'>Veg Only</label>
           <input
             type='checkbox'
             name='veg-filter'
+            id='veg-only'
             checked={vegFilter}
             onChange={e => setVegFilter(e.target.checked)}
           />
         </div>
 
         <div className='menu-categories'>
-          <VegFilterContext.Provider value={vegFilter}>
-            {restaurantMenu.map((menuCategory, index) => (
-              <MenuCategory key={index} menuCategory={menuCategory} />
-            ))}
-          </VegFilterContext.Provider>
+          {restaurantMenu.map((menuCategory, index) => (
+            <MenuCategory key={index} menuCategory={menuCategory} vegFilter={vegFilter} />
+          ))}
         </div>
       </div>
     </div>
