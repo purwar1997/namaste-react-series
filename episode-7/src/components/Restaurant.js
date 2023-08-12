@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { MENU_URL } from '../utils/constants';
 import Shimmer from './Shimmer';
 import MenuCategory from './MenuCategory';
+import TopPicksCarousel from './TopPicksCarousel';
 
 const Restaurant = () => {
   const [restaurantInfo, setRestaurantInfo] = useState(null);
@@ -44,8 +45,6 @@ const Restaurant = () => {
   if (loading) {
     return <Shimmer />;
   }
-
-  console.log(restaurantInfo, restaurantOffers, restaurantMenu, topPicks);
 
   const {
     name,
@@ -99,6 +98,8 @@ const Restaurant = () => {
             onChange={e => setVegFilter(e.target.checked)}
           />
         </div>
+
+        {topPicks.length > 0 && <TopPicksCarousel topPicks={topPicks} />}
 
         <div className='menu-categories'>
           {restaurantMenu.map((menuCategory, index) => (

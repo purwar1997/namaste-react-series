@@ -9,3 +9,6 @@ export const MENU_URL =
 
 export const MENU_ITEM_IMAGE_URL =
   'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/';
+
+export const TOP_PICK_IMAGE_URL =
+  'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_628,h_704/';
