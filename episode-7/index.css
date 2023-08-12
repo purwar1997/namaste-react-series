@@ -234,6 +234,7 @@ a {
 .veg-filter > input {
   position: relative;
   top: 2px;
+  cursor: pointer;
 }
 
 .menu-category,

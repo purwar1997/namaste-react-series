@@ -6,22 +6,24 @@ const ItemCategory = ({ category, vegFilter }) => {
   const [show, setShow] = useState(false);
   const { title, itemCards } = category;
 
-  const displayedItems = vegFilter ? itemCards.filter(item => item?.card?.info?.isVeg) : itemCards;
+  const filteredItems = vegFilter ? itemCards.filter(item => item?.card?.info?.isVeg) : itemCards;
 
   return (
-    <div className='item-category'>
-      <div className='item-category-header'>
-        <h4>
-          {title} ({displayedItems.length})
-        </h4>
+    filteredItems.length > 0 && (
+      <div className='item-category'>
+        <div className='item-category-header'>
+          <h4>
+            {title} ({filteredItems.length})
+          </h4>
 
-        <span className='accordian-toggler' onClick={() => setShow(!show)}>
-          {show ? <BsChevronUp /> : <BsChevronDown />}
-        </span>
+          <span className='accordian-toggler' onClick={() => setShow(!show)}>
+            {show ? <BsChevronUp /> : <BsChevronDown />}
+          </span>
+        </div>
+
+        {show && <MenuCard menuItems={itemCards} vegFilter={vegFilter} />}
       </div>
-
-      {show && <MenuCard menuItems={itemCards} vegFilter={vegFilter} />}
-    </div>
+    )
   );
 };
 

@@ -5,7 +5,7 @@ import Shimmer from './Shimmer';
 import MenuCategory from './MenuCategory';
 
 const Restaurant = () => {
-  const [restaurantData, setRestaurantData] = useState(null);
+  const [restaurantInfo, setRestaurantInfo] = useState(null);
   const [restaurantOffers, setRestaurantOffers] = useState([]);
   const [restaurantMenu, setRestaurantMenu] = useState([]);
   const [topPicks, setTopPicks] = useState([]);
@@ -22,7 +22,7 @@ const Restaurant = () => {
       const response = await fetch(MENU_URL + restaurantId);
       const json = await response.json();
 
-      setRestaurantData(json?.data?.cards[0].card?.card?.info);
+      setRestaurantInfo(json?.data?.cards[0].card?.card?.info);
       setRestaurantOffers(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.offers);
 
       let menuData = json?.data?.cards?.at(-1)?.groupedCard?.cardGroupMap?.REGULAR?.cards;
@@ -45,7 +45,7 @@ const Restaurant = () => {
     return <Shimmer />;
   }
 
-  // console.log(restaurantData, restaurantOffers, restaurantMenu, topPicks);
+  console.log(restaurantInfo, restaurantOffers, restaurantMenu, topPicks);
 
   const {
     name,
@@ -55,7 +55,7 @@ const Restaurant = () => {
     locality,
     totalRatingsString,
     sla: { slaString },
-  } = restaurantData;
+  } = restaurantInfo;
 
   return (
     <div className='restaurant'>

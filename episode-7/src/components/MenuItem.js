@@ -3,7 +3,7 @@ import nonVeg from '../assets/non-veg.png';
 import { MENU_ITEM_IMAGE_URL } from '../utils/constants';
 
 const MenuItem = ({ menuItem }) => {
-  const { name, description, price, isVeg, imageId } = menuItem?.card?.info;
+  const { name, description, price, defaultPrice, isVeg, imageId } = menuItem?.card?.info;
 
   return (
     <div className='menu-item'>
@@ -12,7 +12,7 @@ const MenuItem = ({ menuItem }) => {
           <img src={isVeg ? veg : nonVeg} />
         </div>
         <h4 className='menu-item-name'>{name}</h4>
-        <p className='menu-item-price'>₹{price / 100}</p>
+        <p className='menu-item-price'>₹{(price || defaultPrice) / 100}</p>
         <p className='menu-item-description'>{description}</p>
       </div>
 
