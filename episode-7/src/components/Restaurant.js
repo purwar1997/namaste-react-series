@@ -4,6 +4,7 @@ import { MENU_URL } from '../utils/constants';
 import Shimmer from './Shimmer';
 import MenuCategory from './MenuCategory';
 import TopPicksCarousel from './TopPicksCarousel';
+import OfferCarousel from './OfferCarousel';
 
 const Restaurant = () => {
   const [restaurantInfo, setRestaurantInfo] = useState(null);
@@ -56,6 +57,8 @@ const Restaurant = () => {
     sla: { slaString },
   } = restaurantInfo;
 
+  console.log(restaurantOffers);
+
   return (
     <div className='restaurant'>
       <div className='restaurant-info'>
@@ -85,7 +88,7 @@ const Restaurant = () => {
         </div>
       </div>
 
-      <div className='restaurant-offers'></div>
+      {restaurantOffers.length > 0 && <OfferCarousel offers={restaurantOffers} />}
 
       <div className='restaurant-menu'>
         <div className='veg-filter'>
