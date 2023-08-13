@@ -7,7 +7,11 @@ const TopPickCard = ({ topPick }) => {
   return (
     <div className='top-pick-item-card'>
       <img src={TOP_PICK_IMAGE_URL + creativeId} />
-      <span style={{ color: fontColor }}>₹{(price || defaultPrice) / 100}</span>
+
+      <div className='item-card-bottom'>
+        <span style={{ color: fontColor }}>₹{(price || defaultPrice) / 100}</span>
+        <button className='add-item-btn'>ADD</button>
+      </div>
     </div>
   );
 };

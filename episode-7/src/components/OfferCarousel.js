@@ -4,7 +4,6 @@ import OfferCard from './OfferCard';
 
 const OfferCarousel = ({ offers }) => {
   const [carouselBox, setCarouselBox] = useState(null);
-  console.log(carouselBox);
 
   const showPreviousItems = () => {
     carouselBox.scrollLeft -= carouselBox.clientWidth / 2;

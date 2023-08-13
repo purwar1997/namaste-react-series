@@ -16,11 +16,12 @@ const MenuItem = ({ menuItem }) => {
         <p className='menu-item-description'>{description}</p>
       </div>
 
-      {imageId && (
-        <div className='menu-item-photo'>
-          <img src={MENU_ITEM_IMAGE_URL + imageId} alt={name} />
-        </div>
-      )}
+      <div className='add-menu-item'>
+        {imageId && (
+          <img src={MENU_ITEM_IMAGE_URL + imageId} onClick={() => console.log('image clicked')} />
+        )}
+        <button className='add-item-btn'>ADD</button>
+      </div>
     </div>
   );
 };

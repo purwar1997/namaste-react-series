@@ -354,12 +354,32 @@ a {
   width: 350px;
 }
 
-.top-pick-item-card > span {
+.item-card-bottom {
+  width: 100%;
   position: absolute;
-  left: 30px;
   bottom: 30px;
+  padding-inline: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-pick-item-card > span {
   font-size: 15px;
   font-weight: 500;
+}
+
+.add-item-btn {
+  font-size: 13px;
+  font-weight: 600;
+  color: #60b246;
+  text-transform: uppercase;
+  background-color: #fff;
+  padding-block: 8px;
+  width: 80px;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .menu-category,
@@ -410,7 +430,7 @@ a {
   align-items: flex-start;
   justify-content: space-between;
   gap: 60px;
-  padding-block: 25px;
+  padding-block: 25px 0px;
   border-bottom: 1px solid #cdcdcd;
 }
 
@@ -441,7 +461,19 @@ a {
   color: #616161;
 }
 
-.menu-item-photo > img {
+.add-menu-item {
   width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-menu-item > img {
+  width: inherit;
   border-radius: 8px;
+}
+
+.add-menu-item > .add-item-btn {
+  position: relative;
+  bottom: 24px;
 }
