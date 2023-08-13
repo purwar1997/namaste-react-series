@@ -18,12 +18,8 @@ const Header = () => {
           Home
         </NavLink>
 
-        <NavLink to='/about' className={({ isActive }) => (isActive ? 'active-link' : '')}>
-          About
-        </NavLink>
-
-        <NavLink to='/contact' className={({ isActive }) => (isActive ? 'active-link' : '')}>
-          Contact Us
+        <NavLink to='search' className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          Search
         </NavLink>
 
         <button onClick={() => setLoggedIn(!loggedIn)}>{loggedIn ? 'Logout' : 'Login'}</button>

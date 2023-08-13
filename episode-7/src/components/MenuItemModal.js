@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import { MENU_ITEM_MODAL_IMAGE_URL } from '../utils/constants';
+import { disablePageScroll, enablePageScroll } from '../utils/helpers';
 import veg from '../assets/veg.png';
 import nonVeg from '../assets/non-veg.png';
 
@@ -8,8 +10,13 @@ const MenuItemModal = ({ menuItem, setOpenModal }) => {
   const closeModal = event => {
     if (event.target === event.currentTarget) {
       setOpenModal(false);
+      enablePageScroll();
     }
   };
+
+  useEffect(() => {
+    disablePageScroll();
+  }, []);
 
   return (
     <div className='menu-item-modal-background' onClick={closeModal}>

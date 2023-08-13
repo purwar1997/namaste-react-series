@@ -15,6 +15,11 @@ a {
   color: #fc8019;
 }
 
+.disable-scrolling {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .header {
   padding: 15px 70px;
   display: flex;
@@ -399,6 +404,10 @@ a {
   justify-content: space-between;
 }
 
+.item-category-header {
+  cursor: pointer;
+}
+
 .menu-category-header > h3 {
   font-size: 17px;
   font-weight: 500;
@@ -420,7 +429,6 @@ a {
 }
 
 .accordian-toggler {
-  cursor: pointer;
   position: relative;
   top: 3px;
 }

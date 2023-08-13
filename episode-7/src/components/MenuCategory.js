@@ -18,15 +18,17 @@ const MenuCategory = ({ menuCategory, vegFilter }) => {
   return (
     filteredItems.length > 0 && (
       <div className='menu-category'>
-        <div className='menu-category-header'>
+        <div
+          className='menu-category-header'
+          style={{ cursor: itemCards ? 'pointer' : 'default' }}
+          onClick={() => itemCards && setShow(!show)}
+        >
           <h3>
             {title} {itemCards && `(${filteredItems.length})`}
           </h3>
 
           {itemCards && (
-            <span className='accordian-toggler' onClick={() => setShow(!show)}>
-              {show ? <BsChevronUp /> : <BsChevronDown />}
-            </span>
+            <span className='accordian-toggler'>{show ? <BsChevronUp /> : <BsChevronDown />}</span>
           )}
         </div>
 

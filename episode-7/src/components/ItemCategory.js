@@ -11,14 +11,12 @@ const ItemCategory = ({ category, vegFilter }) => {
   return (
     filteredItems.length > 0 && (
       <div className='item-category'>
-        <div className='item-category-header'>
+        <div className='item-category-header' onClick={() => setShow(!show)}>
           <h4>
             {title} ({filteredItems.length})
           </h4>
 
-          <span className='accordian-toggler' onClick={() => setShow(!show)}>
-            {show ? <BsChevronUp /> : <BsChevronDown />}
-          </span>
+          <span className='accordian-toggler'>{show ? <BsChevronUp /> : <BsChevronDown />}</span>
         </div>
 
         {show && <MenuCard menuItems={itemCards} vegFilter={vegFilter} />}
