@@ -223,8 +223,72 @@ a {
   font-weight: 500;
 }
 
-.restaurant-menu {
+.offer-carousel {
+  margin-top: 20px;
+}
+
+.offer-carousel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.offer-carousel-header > h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.restaurant-offers {
   margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.restaurant-offer-card {
+  min-width: 240px;
+  border: 1px solid #dfdfdf;
+  border-radius: 8px;
+  padding: 14px 12px;
+  cursor: pointer;
+}
+
+.offer-card-top {
+  display: flex;
+  gap: 10px;
+}
+
+.offer-logo {
+  width: 22px;
+}
+
+.offer-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #414141;
+}
+
+.offer-card-bottom {
+  margin-top: 5px;
+  display: flex;
+  gap: 8px;
+}
+
+.offer-card-bottom > span {
+  font-size: 13px;
+}
+
+.offer-text-divide {
+  height: 11px;
+  width: 1px;
+  background-color: #000;
+  position: relative;
+  top: 4px;
+}
+
+.restaurant-menu {
+  margin-top: 40px;
 }
 
 .veg-filter {
@@ -238,6 +302,64 @@ a {
   position: relative;
   top: 2px;
   cursor: pointer;
+}
+
+.top-picks-carousel {
+  padding-block: 40px;
+}
+
+.top-picks-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-picks-header > h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.carousel-btns {
+  display: flex;
+  gap: 12px;
+}
+
+.carousel-btns > button {
+  font-size: 20px;
+  color: #414141;
+  background-color: #e1e1e1;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.top-pick-items {
+  margin-top: 30px;
+  display: flex;
+  gap: 50px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.top-pick-item-card {
+  position: relative;
+}
+
+.top-pick-item-card > img {
+  width: 350px;
+}
+
+.top-pick-item-card > span {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .menu-category,
@@ -322,62 +444,4 @@ a {
 .menu-item-photo > img {
   width: 130px;
   border-radius: 8px;
-}
-
-.top-picks-carousel {
-  padding-block: 40px;
-}
-
-.top-picks-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.top-picks-header > h3 {
-  font-size: 22px;
-  font-weight: 500;
-}
-
-.carousel-btns {
-  display: flex;
-  gap: 12px;
-}
-
-.carousel-btns > button {
-  font-size: 20px;
-  color: #414141;
-  background-color: #e1e1e1;
-  border: none;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.top-pick-items {
-  margin-top: 30px;
-  display: flex;
-  gap: 50px;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-.top-pick-item-card {
-  position: relative;
-}
-
-.top-pick-item-card > img {
-  width: 350px;
-}
-
-.top-pick-item-card > span {
-  position: absolute;
-  left: 30px;
-  bottom: 30px;
-  font-size: 15px;
-  font-weight: 500;
 }

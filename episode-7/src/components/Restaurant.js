@@ -57,8 +57,6 @@ const Restaurant = () => {
     sla: { slaString },
   } = restaurantInfo;
 
-  console.log(restaurantOffers);
-
   return (
     <div className='restaurant'>
       <div className='restaurant-info'>
