@@ -10,7 +10,7 @@ const TopPickCard = ({ topPick }) => {
 
       <div className='item-card-bottom'>
         <span style={{ color: fontColor }}>₹{(price || defaultPrice) / 100}</span>
-        <button className='add-item-btn'>ADD</button>
+        <button className='add-item-btn'>Add</button>
       </div>
     </div>
   );

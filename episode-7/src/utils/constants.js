@@ -18,3 +18,6 @@ export const DEFAULT_OFFER_LOGO_URL =
 
 export const CUSTOM_OFFER_LOGO_URL =
   'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_28,h_28/';
+
+export const MENU_ITEM_MODAL_IMAGE_URL =
+  'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/';
