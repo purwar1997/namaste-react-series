@@ -4,13 +4,15 @@
 
 // render() method of ReactDOM
 
-- React element is a regular JS object. render() takes that object, converts it into an HTML element and injects it inside browser DOM.
+- React elements are regular JS objects. render() takes React element, converts it into an HTML element and injects it inside browser DOM.
 
 // cross-origin attribute of script tag
 
-- script tag is used to insert JS code inside HTML document. Either we can write JS code between <script></script> tags or we can link script file using src attribute. src attribute can take 'path' or 'url'. In case of url, browser makes an API call to URL to load script. If that script is hosted on a different domain, then it is a cross origin request. cross-origin attribute is used to handle cross-origin requests. This attribute can take one of two values: anonymous (default value) or use-credentials. If 'anonymous' value is used, then browser doesn't include any client credentials like cookies and tokens in request header because of which client is completely anonymous to the server. But in case of 'use-credentials', it does so.
+- script tag is used to insert JS code inside HTML document. Either we can write JS code between <script></script> tags or we can link script file using src attribute. src attribute can take 'path' or 'url'. In case of url, browser makes an API call to that URL to load script. If that script is hosted on a different domain, then it is a cross origin request. cross-origin attribute of <script> tag is used to handle cross-origin requests. This attribute can take one of two values: anonymous (default value) or use-credentials. If 'anonymous' value is used, then browser doesn't include any client credentials like cookies and tokens in request header because of which client is anonymous to the server. But in case of 'use-credentials', it does so.
 
 // create-react-app
 
-- create-react-app (CRA) is a command that is used to initialize our React app. We can run this command by typing 'npx create-react-app my-app' in our terminal. This utlity automatically installs all the dependencies that are required to create, run and test our app like react, react-dom, react-scripts and @testing-library. It also produce package.json file for npm configuration and lock version no. with their respective dependencies in package-lock.json. It also produces a boilerplate code on top of which we can build our React app. CRA internally uses webpack to bundle files, babel to transpile JSX into JS and ESlint to find errors. So CRA configures everything so that we can focus on building our app. It is kind of like an abstraction layer. If we aren't using CRA, then we have to manually configure our project from scratch. 
+- create-react-app (CRA) is a command that is used to initialize our React app. We can run this command by typing 'npx create-react-app my-app' in our terminal. This utlity automatically installs all the dependencies that are required to create, run and test our app like react, react-dom, react-scripts and @testing-library. It also produce package.json file for npm configuration and lock version no. with their respective dependencies in package-lock.json. It also produces a boilerplate code on top of which we can build our React app. CRA internally uses webpack to bundle files, babel to transpile JSX into JS and ESlint to find errors. So CRA configures everything so that we can focus on building our app. It is kind of like an abstraction layer. If we aren't using CRA, then we have to manually configure our React project from scratch. 
+
+- create-react-app is an npm package
 

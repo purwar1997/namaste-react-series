@@ -9,6 +9,6 @@ console.log(heading);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-// render() takes react element (plain JS object), converts it into an HTML element
-// and injects it inside browser DOM
+// render() takes React element (plain JS object), converts it into an HTML element
+// and injects it inside DOM node
 root.render(heading);

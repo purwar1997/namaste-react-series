@@ -2,13 +2,13 @@
  
  - import and export statements can't be used inside browser scripts or common JS files. They can only be used inside modules. A browser script can be converted into module by adding type='module' attribute to script tag and a common JS file can be converted into module by adding "type": "module" property to package.json file.
 
- - There are two ways to export modules in JS, default exports and named exports. To export only one item from a module, we can use default export. To export multiple items from a module, we have to use named exports.
+ - There are two ways to export values in JS, default exports and named exports. To export only one value from a module, we can use default export. To export multiple values from a module, we have to use named exports.
 
  - Default export: There can be only one default export in a module and default export can be imported using any name. 
 
  - Named export: There can be multiple named exports in a module and they have to be imported using same name by which they are exported.
 
- - We can place one default export and multiple named exports together in a module but it's better to follow the convention of using default export for single item and named exports for multiple items.
+ - We can place one default export and multiple named exports together in a module but it's better to follow the convention of using default export for single value and named exports for multiple values.
 
 // React Hooks
 
@@ -20,7 +20,7 @@
 
 - createElement API: createElement() is the native way to create React elements. It takes three arguments: elementType, object which contain attributes and child. Child can be a plain text or another React element.
 
-- JSX: JSX is not HTML or XML inside javascript. JSX is HTML or XML like syntax which combines markup(HTML) and logic(JS) together at one place. Browser can't understand JSX. It can only understand HTML, CSS and JS. So all the JSX that we write is converted into regular JS objects. Many module bundlers like webpack and parcel internally uses Babel to transpile JSX into JS so that browser can compile it. 
+- JSX: JSX is not HTML or XML inside javascript. JSX is HTML or XML like syntax which combines markup(HTML) and logic(JS) together at one place. Browser can't understand JSX. It can only understand HTML, CSS and JS. So JSX at the end is converted into regular JS objects. Many module bundlers like webpack and parcel internally uses Babel to transpile JSX into JS so that browsers can compile it. 
 
 - Whether we use createElement() or JSX, React elements are plain javascript objects.
 

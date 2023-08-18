@@ -1,6 +1,6 @@
 // Component Rendering
 
-When function component is called by React and it returns a piece of JSX code, that is known as component rendering.
+When function component is called and JSX markup is returned, that is known as component rendering.
 
 // Conditional Rendering
 
@@ -14,13 +14,13 @@ If we somehow manage to re-render the component, then local variables lose their
  
 That's where useState() comes into play. When useState() is called, it returns an array which contains two values, state variable and setter function. 
 
-State variable: State variables are like memory units which are used to manage state of a component. State is like the memory of component. When component re-renders, regular variables will lose their values but state variables won't. State variables can retain data between renders.
+State variable: State variables are like memory units which are used to manage state of a component. State is like the memory of a component. When component re-renders, regular variables will lose their values but state variables won't. State variables can retain data between renders.
 
 Setter function: Value of state variable is not updated like normal variable (by assigning value). Setter function is used to update the value of state variable. Value passed by the setter function is the next updated value of state variable. After updating state, setter function instructs React to re-render the component so that state changes can be reflected on UI. Setter function keeps data layer and UI layer synchronised with each other by re-rendering the component.
 
 Note: State variables can be updated by like regular variables (by assigning value), but component doesn't get re-rendered and UI doesn't get updated. So it beats the whole purpose of using useState(). State variables should always be updated using setter function if we want state updates to be reflected on UI.
 
-Note: Value of state variable is always updated on the next render. So if we try to access the value of state variable in current render, we get same old value.
+Note: Value of state variable is always updated on the next render. So if we try to access the value of state variable in current render, old value is returned.
 
 // Fetching data in React app
 

@@ -14,6 +14,8 @@ useEffect() is called after the component is rendered and DOM is updated. This h
 - useState() should be called at the top of components
 - useState() shouldn't be used inside for loop, if-else, switch-case and functions 
 
+Note: Hooks can only be used inside components
+
 // React Router
 
 - createBrowserRouter() is used to define the routing configuration of React app
