@@ -497,6 +497,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .menu-item-modal {
@@ -523,4 +524,26 @@ a {
 
 .menu-type {
   width: 20px;
+}
+
+.about {
+  padding: 30px 70px;
+}
+
+.about > h1 {
+  font-weight: 500;
+}
+
+.user-card {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #000;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.user-card > h4 {
+  font-weight: 500;
 }

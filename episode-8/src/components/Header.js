@@ -18,6 +18,10 @@ const Header = () => {
           Home
         </NavLink>
 
+        <NavLink to='about' className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          About
+        </NavLink>
+
         <NavLink to='search' className={({ isActive }) => (isActive ? 'active-link' : '')}>
           Search
         </NavLink>
