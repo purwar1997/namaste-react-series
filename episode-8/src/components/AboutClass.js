@@ -31,6 +31,7 @@ class AboutClass extends React.Component {
           Increase count
         </button>
         <UserClass name='Shubham Purwar' location='Bangalore' contact='@shubhampurwar35' />
+        <UserClass name='Jack Dorsey' location='San Jose' contact='@jack' />
       </div>
     );
   }
