@@ -2,25 +2,17 @@ import React from 'react';
 
 class UserClass extends React.Component {
   constructor(props) {
-    console.log('Child Constructor');
+    console.log(`Child ${props.id} constructor`);
 
     // super(props) will call the constructor of parent class and pass props to it
     super(props);
 
-    // this.state will contain all the state variables
+    // this.state contains all the state variables
     this.state = {
       count: 0,
       countTwo: 0,
       number: 1,
     };
-  }
-
-  componentDidMount() {
-    console.log('Child component mounted');
-  }
-
-  componentDidUpdate() {
-    console.log('Child component updated');
   }
 
   increaseCount() {
@@ -31,9 +23,20 @@ class UserClass extends React.Component {
     this.setState({ number: this.state.number + 1 });
   }
 
+  componentDidMount() {
+    console.log(`Child ${this.props.id} mounted`);
+  }
+
+  componentDidUpdate() {
+    console.log(`Child ${this.props.id} updated`);
+  }
+
+  componentWillUnmount() {
+    console.log(`Child ${this.props.id} unmounted`);
+  }
+
   render() {
-    console.log('Child Render');
-    console.log(this);
+    console.log(`Child ${this.props.id} render`);
 
     // this.props holds all the prop values
     const { name, location, contact } = this.props;
