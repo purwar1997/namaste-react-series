@@ -20,7 +20,7 @@ const appRouter = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<AppLayout />} errorElement={<Error />}>
       <Route index element={<Home />} />
-      <Route path='about' element={<AboutClass />} />
+      <Route path='about' element={<About />} />
       <Route path='search' element={<Search />} />
       <Route path='restaurants/:restaurantId' element={<Restaurant />} />
       <Route path='*' element={<NotFound />} />

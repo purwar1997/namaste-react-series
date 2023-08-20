@@ -1,16 +1,19 @@
+import { Component } from 'react';
 import User from './User';
-import UserClass from './UserClass';
 
-const About = () => {
-  return (
-    <div className='about'>
-      <h1>About Us</h1>
-      {/* function is being invoked */}
-      {/* <User name='Shubham Purwar' location='Etawah' contact='@shubhampurwar35' /> */}
-      {/* class is being instantiated */}
-      <UserClass name='Shubham Purwar' location='Etawah' contact='@shubhampurwar35' />
-    </div>
-  );
-};
+class About extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className='about'>
+        <h1>About Us</h1>
+        <User />
+      </div>
+    );
+  }
+}
 
 export default About;

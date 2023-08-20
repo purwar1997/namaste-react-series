@@ -20,6 +20,10 @@ class AboutClass extends React.Component {
     console.log('Parent component updated');
   }
 
+  increaseCountValue() {
+    this.setState({ aboutCount: this.state.aboutCount + 1 });
+  }
+
   render() {
     console.log('Parent Render');
 
@@ -27,11 +31,10 @@ class AboutClass extends React.Component {
       <div className='about'>
         <h1>About Us</h1>
         <h2>About count: {this.state.aboutCount}</h2>
-        <button onClick={() => this.setState({ aboutCount: this.state.aboutCount + 1 })}>
-          Increase count
-        </button>
+        <button onClick={() => this.increaseCountValue.call(this)}>Increase count</button>
         <UserClass name='Shubham Purwar' location='Bangalore' contact='@shubhampurwar35' />
         <UserClass name='Jack Dorsey' location='San Jose' contact='@jack' />
+        <UserClass name='Kunal Shah' location='Bangalore' contact='@kunalb11' />
       </div>
     );
   }

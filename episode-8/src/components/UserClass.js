@@ -23,8 +23,17 @@ class UserClass extends React.Component {
     console.log('Child component updated');
   }
 
+  increaseCount() {
+    this.setState({ count: this.state.count + 1, countTwo: this.state.countTwo + 2 });
+  }
+
+  increaseNumber() {
+    this.setState({ number: this.state.number + 1 });
+  }
+
   render() {
     console.log('Child Render');
+    console.log(this);
 
     // this.props holds all the prop values
     const { name, location, contact } = this.props;
@@ -39,11 +48,9 @@ class UserClass extends React.Component {
         <p>Contact: {contact}</p>
         <h4>Count: {count}</h4>
         <h4>Count Two: {countTwo}</h4>
-        <button onClick={() => this.setState({ count: count + 1, countTwo: countTwo + 2 })}>
-          Increase count
-        </button>
+        <button onClick={() => this.increaseCount.call(this)}>Increase count</button>
         <h4>Number: {number}</h4>
-        <button onClick={() => this.setState({ number: number + 1 })}>Increase number</button>
+        <button onClick={() => this.increaseNumber.call(this)}>Increase number</button>
       </div>
     );
   }
