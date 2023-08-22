@@ -34,7 +34,7 @@ const OfferCarousel = ({ offers }) => {
       </div>
 
       <div className='restaurant-offers'>
-        {offers.map(offer => (
+        {offers.map((offer, index) => (
           <OfferCard key={offer?.info?.offerIds[0]} offer={offer} />
         ))}
       </div>

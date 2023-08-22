@@ -7,16 +7,16 @@ import nonVeg from '../assets/non-veg.png';
 const MenuItemModal = ({ menuItem, setOpenModal }) => {
   const { name, description, price, defaultPrice, isVeg, imageId } = menuItem?.card?.info;
 
+  useEffect(() => {
+    disablePageScroll();
+  }, []);
+
   const closeModal = event => {
     if (event.target === event.currentTarget) {
       setOpenModal(false);
       enablePageScroll();
     }
   };
-
-  useEffect(() => {
-    disablePageScroll();
-  }, []);
 
   return (
     <div className='menu-item-modal-background' onClick={closeModal}>
