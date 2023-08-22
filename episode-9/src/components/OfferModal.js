@@ -1,20 +1,9 @@
-import { useState, useEffect } from 'react';
-import { disablePageScroll, enablePageScroll } from '../utils/helpers';
+import { useState } from 'react';
+import { closeModal } from '../utils/helpers';
 
-const OfferModal = ({ restaurantOffer, setOpenModal }) => {
+const OfferModal = ({ restaurantOffer, setIsModalOpen }) => {
   const [showMessage, setShowMessage] = useState(false);
   const { couponCode, description, header } = restaurantOffer?.info;
-
-  useEffect(() => {
-    disablePageScroll();
-  }, []);
-
-  const closeModal = event => {
-    if (event.target === event.currentTarget) {
-      setOpenModal(false);
-      enablePageScroll();
-    }
-  };
 
   const copyToClipboard = async couponCode => {
     await navigator.clipboard.writeText(couponCode);
@@ -24,7 +13,7 @@ const OfferModal = ({ restaurantOffer, setOpenModal }) => {
   };
 
   return (
-    <div className='offer-modal-background' onClick={closeModal}>
+    <div className='offer-modal-background' onClick={event => closeModal(event, setIsModalOpen)}>
       <div className='offer-modal'>
         <p>{couponCode}</p>
         <button onClick={() => copyToClipboard(couponCode)}>Copy</button>

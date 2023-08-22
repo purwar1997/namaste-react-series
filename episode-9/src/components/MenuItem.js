@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { MENU_ITEM_IMAGE_URL } from '../utils/constants';
+import { openModal } from '../utils/helpers';
 import veg from '../assets/veg.png';
 import nonVeg from '../assets/non-veg.png';
 import MenuItemModal from './MenuItemModal';
 
 const MenuItem = ({ menuItem }) => {
-  const [openModal, setOpenModal] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { name, description, price, defaultPrice, isVeg, imageId } = menuItem?.card?.info;
 
   return (
@@ -20,11 +21,13 @@ const MenuItem = ({ menuItem }) => {
       </div>
 
       <div className='add-menu-item'>
-        {imageId && <img src={MENU_ITEM_IMAGE_URL + imageId} onClick={() => setOpenModal(true)} />}
+        {imageId && (
+          <img src={MENU_ITEM_IMAGE_URL + imageId} onClick={() => openModal(setIsModalOpen)} />
+        )}
         <button className='add-item-btn'>Add</button>
       </div>
 
-      {openModal && <MenuItemModal menuItem={menuItem} setOpenModal={setOpenModal} />}
+      {isModalOpen && <MenuItemModal menuItem={menuItem} setIsModalOpen={setIsModalOpen} />}
     </div>
   );
 };

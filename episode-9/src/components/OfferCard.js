@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { DEFAULT_OFFER_LOGO_URL, CUSTOM_OFFER_LOGO_URL } from '../utils/constants';
+import { openModal } from '../utils/helpers';
 import OfferModal from './OfferModal';
 
 const OfferCard = ({ offer }) => {
-  const [openModal, setOpenModal] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const { header, couponCode, description, logoBottom } = offer?.info;
   const logoUrl = logoBottom ? CUSTOM_OFFER_LOGO_URL + logoBottom : DEFAULT_OFFER_LOGO_URL;
@@ -12,8 +13,8 @@ const OfferCard = ({ offer }) => {
     <>
       <div
         className='restaurant-offer-card'
-        style={{ cursor: openModal ? 'default' : 'pointer' }}
-        onClick={() => setOpenModal(true)}
+        style={{ cursor: isModalOpen ? 'default' : 'pointer' }}
+        onClick={() => openModal(setIsModalOpen)}
       >
         <div className='offer-card-top'>
           <img className='offer-logo' src={logoUrl} />
@@ -27,7 +28,7 @@ const OfferCard = ({ offer }) => {
         </div>
       </div>
 
-      {openModal && <OfferModal restaurantOffer={offer} setOpenModal={setOpenModal} />}
+      {isModalOpen && <OfferModal restaurantOffer={offer} setIsModalOpen={setIsModalOpen} />}
     </>
   );
 };
