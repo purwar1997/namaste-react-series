@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 import useFetchRestaurants from '../utils/useFetchRestaurants';
 import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
@@ -8,7 +8,16 @@ const Home = () => {
   const [search, setSearch] = useState('');
   const [displayedRestaurants, setDisplayedRestaurants] = useState(null);
 
+  const isOnline = useOutletContext();
   const restaurants = useFetchRestaurants();
+
+  if (!isOnline) {
+    return (
+      <h1 className='offline-message'>
+        Looks like you are offline. Please check your internet connection.
+      </h1>
+    );
+  }
 
   if (restaurants.length === 0) {
     return <Shimmer />;

@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import useOnlineStatus from '../utils/useOnlineStatus';
 import logo from '../assets/logo.png';
 
-const Header = () => {
+const Header = ({ isOnline }) => {
   const [loggedIn, setLoggedIn] = useState(false);
-  const onlineStatus = useOnlineStatus();
 
   return (
     <header className='header'>
@@ -16,6 +14,8 @@ const Header = () => {
       </div>
 
       <div className='nav-items'>
+        <li>{isOnline ? 'Online' : 'Offline'}</li>
+
         <NavLink to='/' className={({ isActive }) => (isActive ? 'active-link' : '')}>
           Home
         </NavLink>
@@ -27,8 +27,6 @@ const Header = () => {
         <NavLink to='search' className={({ isActive }) => (isActive ? 'active-link' : '')}>
           Search
         </NavLink>
-
-        <span className='online-status'>{onlineStatus}</span>
 
         <button onClick={() => setLoggedIn(!loggedIn)}>{loggedIn ? 'Logout' : 'Login'}</button>
       </div>
