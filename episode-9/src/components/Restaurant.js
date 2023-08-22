@@ -17,6 +17,7 @@ const Restaurant = () => {
   }
 
   const restaurantInfo = restaurantData?.cards[0]?.card?.card?.info;
+
   const restaurantOffers =
     restaurantData?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.offers;
 
