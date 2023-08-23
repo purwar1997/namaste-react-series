@@ -32,6 +32,10 @@ const Header = ({ isOnline }) => {
           Grocery
         </NavLink>
 
+        <NavLink to='instamart' className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          Instamart
+        </NavLink>
+
         <button onClick={() => setLoggedIn(!loggedIn)}>{loggedIn ? 'Logout' : 'Login'}</button>
       </div>
     </header>
