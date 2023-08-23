@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus';
 import Header from './Header';
+import Offline from './Offline';
 
 const AppLayout = () => {
   const isOnline = useOnlineStatus();
@@ -8,7 +9,7 @@ const AppLayout = () => {
   return (
     <>
       <Header isOnline={isOnline} />
-      <Outlet context={isOnline} />
+      {isOnline ? <Outlet /> : <Offline />}
     </>
   );
 };

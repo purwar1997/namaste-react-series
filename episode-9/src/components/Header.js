@@ -28,6 +28,10 @@ const Header = ({ isOnline }) => {
           Search
         </NavLink>
 
+        <NavLink to='grocery' className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          Grocery
+        </NavLink>
+
         <button onClick={() => setLoggedIn(!loggedIn)}>{loggedIn ? 'Logout' : 'Login'}</button>
       </div>
     </header>
