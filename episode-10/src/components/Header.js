@@ -6,10 +6,10 @@ const Header = ({ isOnline }) => {
   const [loggedIn, setLoggedIn] = useState(false);
 
   return (
-    <header className='flex justify-between items-center px-24 py-4 shadow-sm sticky top-0 bg-white'>
+    <header className='flex justify-between items-center px-24 py-4 shadow-sm sticky top-0 bg-white z-10'>
       <div>
         <Link to='/'>
-          <img className='w-8' src={logo} alt='swiggy-logo' />
+          <img className='w-8 hover:scale-110 transition-transform' src={logo} alt='swiggy-logo' />
         </Link>
       </div>
 
