@@ -1,36 +1,39 @@
+import { BsStarFill } from 'react-icons/bs';
 import { RESTAURANT_IMAGE_URL } from '../utils/constants';
 
 const RestaurantCard = ({ restaurantData }) => {
-  const {
-    name,
-    costForTwo,
-    avgRating,
-    cuisines,
-    cloudinaryImageId,
-    sla: { deliveryTime },
-  } = restaurantData?.info;
+  console.log(restaurantData?.info);
+
+  const { name, avgRating, cuisines, areaName, cloudinaryImageId, aggregatedDiscountInfoV3 } =
+    restaurantData?.info;
+
+  const { header, subHeader } = aggregatedDiscountInfoV3;
+
+  const getRatingColor = rating =>
+    rating > 4.0 ? '#13873F' : rating > 3.0 ? '#db7c38' : '#f04343';
 
   return (
-    <div className='restaurant-card'>
-      <div className='restaurant-image'>
-        <img src={RESTAURANT_IMAGE_URL + cloudinaryImageId} alt={name} />
+    <div className='w-64'>
+      <div>
+        <img className='rounded-xl' src={RESTAURANT_IMAGE_URL + cloudinaryImageId} alt={name} />
       </div>
 
-      <div className='restaurant-details'>
-        <h3 className='name'>{name}</h3>
-        <h3 className='cuisines'>{cuisines.slice(0, 5).join(', ')}</h3>
+      <div className='mt-2 flex flex-col items-start gap-0.5'>
+        <h3 className='text-lg font-medium text-gray-600'>{name}</h3>
 
-        <div>
+        <div className='flex items-center gap-2'>
           <span
-            className={`rating ${avgRating > 4.0 ? 'good' : avgRating > 3.0 ? 'average' : 'bad'}`}
+            className='w-5 h-5 rounded-full flex justify-center items-center'
+            style={{ backgroundColor: getRatingColor(avgRating) }}
           >
-            {avgRating}
+            <BsStarFill className='text-xs text-white ' />
           </span>
-          <span className='dash' />
-          <span className='delivery-time'>{deliveryTime} mins</span>
-          <span className='dash' />
-          <span className='price'>{costForTwo}</span>
+
+          <span>{avgRating}</span>
         </div>
+
+        <p>{cuisines.slice(0, 3).join(', ')}</p>
+        <p className='-mt-0.5'>{areaName}</p>
       </div>
     </div>
   );

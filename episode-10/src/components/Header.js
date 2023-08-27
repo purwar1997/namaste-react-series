@@ -6,14 +6,14 @@ const Header = ({ isOnline }) => {
   const [loggedIn, setLoggedIn] = useState(false);
 
   return (
-    <header className='flex items-center justify-between px-24 py-5'>
+    <header className='flex justify-between items-center px-24 py-4 shadow-sm sticky top-0 bg-white'>
       <div>
         <Link to='/'>
-          <img className='w-9' src={logo} alt='swiggy-logo' />
+          <img className='w-8' src={logo} alt='swiggy-logo' />
         </Link>
       </div>
 
-      <div className='flex gap-10'>
+      <nav className='flex gap-10'>
         {/* <li>{isOnline ? 'Online' : 'Offline'}</li> */}
 
         <NavLink to='/' className={({ isActive }) => (isActive ? 'active' : '')}>
@@ -28,16 +28,16 @@ const Header = ({ isOnline }) => {
           Search
         </NavLink>
 
-        <NavLink to='grocery' className={({ isActive }) => (isActive ? 'active-link' : '')}>
+        <NavLink to='grocery' className={({ isActive }) => (isActive ? 'active' : '')}>
           Grocery
         </NavLink>
 
-        <NavLink to='instamart' className={({ isActive }) => (isActive ? 'active-link' : '')}>
+        <NavLink to='instamart' className={({ isActive }) => (isActive ? 'active' : '')}>
           Instamart
         </NavLink>
 
         <button onClick={() => setLoggedIn(!loggedIn)}>{loggedIn ? 'Logout' : 'Login'}</button>
-      </div>
+      </nav>
     </header>
   );
 };

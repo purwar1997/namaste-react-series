@@ -41,7 +41,7 @@ const Home = () => {
     );
 
   return (
-    <div className='home'>
+    <div className='px-24 py-12'>
       {/* <div className='search-container'>
         <input
           className='search-input'
@@ -62,7 +62,7 @@ const Home = () => {
         </button>
       </div> */}
 
-      <div className='restaurant-list'>
+      <div className='grid grid-cols-4 gap-10'>
         {displayedRestaurants?.map(restaurant => (
           <Link to={`restaurants/${restaurant?.info?.id}`} key={restaurant?.info?.id}>
             <RestaurantCard restaurantData={restaurant} />
