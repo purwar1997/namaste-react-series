@@ -10,16 +10,14 @@ const RestaurantCard = ({ restaurantData }) => {
         <img className='rounded-xl' src={RESTAURANT_IMAGE_URL + cloudinaryImageId} alt={name} />
       </div>
 
-      <div className='mt-2 flex flex-col items-start gap-0.5'>
+      <div className='mt-2 flex flex-col items-start gap-0'>
         <h3 className='w-full text-lg font-medium text-gray-600 truncate'>{name}</h3>
 
         <div className='flex items-center gap-2'>
           <span
-            className='w-5 h-5 rounded-full flex justify-center items-center'
-            style={{
-              backgroundColor:
-                avgRating > 4.0 ? '#13873F' : avgRating > 3.0 ? '#db7c38' : '#f04343',
-            }}
+            className={`w-5 h-5 rounded-full flex justify-center items-center ${
+              avgRating > 4.0 ? 'bg-green' : avgRating > 3.0 ? 'bg-orange' : 'bg-red'
+            }`}
           >
             <BsStarFill className='text-xs text-white ' />
           </span>
@@ -27,8 +25,8 @@ const RestaurantCard = ({ restaurantData }) => {
           <span>{avgRating}</span>
         </div>
 
-        <p className='w-full truncate'>{cuisines.join(', ')}</p>
-        <p className='-mt-0.5'>{areaName}</p>
+        <p className='w-full truncate mt-0.5'>{cuisines.join(', ')}</p>
+        <p className=''>{areaName}</p>
       </div>
     </div>
   );

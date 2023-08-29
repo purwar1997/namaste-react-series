@@ -13,8 +13,8 @@ const OfferModal = ({ restaurantOffer, setIsModalOpen }) => {
   };
 
   return (
-    <div className='offer-modal-background' onClick={event => closeModal(event, setIsModalOpen)}>
-      <div className='offer-modal'>
+    <div className='modal-background' onClick={event => closeModal(event, setIsModalOpen)}>
+      <div className='bg-white'>
         <p>{couponCode}</p>
         <button onClick={() => copyToClipboard(couponCode)}>Copy</button>
         {showMessage && <div>Copied to clipboard</div>}

@@ -12,18 +12,19 @@ const OfferCard = ({ offer }) => {
   return (
     <>
       <div
-        className='restaurant-offer-card'
-        style={{ cursor: isModalOpen ? 'default' : 'pointer' }}
+        className={`border rounded-lg px-3.5 py-3 min-w-[240px] ${
+          isModalOpen ? 'cursor-auto' : 'cursor-pointer'
+        }`}
         onClick={() => openModal(setIsModalOpen)}
       >
-        <div className='offer-card-top'>
-          <img className='offer-logo' src={logoUrl} />
-          <h4 className='offer-title'>{header}</h4>
+        <div className='flex items-center gap-2.5'>
+          <img className='w-5' src={logoUrl} />
+          <h4 className='font-medium'>{header}</h4>
         </div>
 
-        <div className='offer-card-bottom'>
+        <div className='mt-2 text-xs font-medium text-gray-500 flex items-center gap-2'>
           <span>{couponCode}</span>
-          <span className='offer-text-divide' />
+          <span className='h-3 w-px bg-gray-500' />
           <span>{description}</span>
         </div>
       </div>

@@ -14,26 +14,26 @@ const OfferCarousel = ({ offers }) => {
   };
 
   useEffect(() => {
-    setCarouselBox(document.querySelector('.restaurant-offers'));
+    setCarouselBox(document.querySelector('.carousel-box'));
   }, []);
 
   return (
-    <div className='offer-carousel'>
-      <div className='offer-carousel-header'>
-        <h4>Offers for you</h4>
+    <div className='mt-5'>
+      <div className='flex justify-between items-end'>
+        <h4 className='text-xl font-semibold'>Offers for you</h4>
 
-        <div className='carousel-btns'>
-          <button className='previous-btn' onClick={showPreviousItems}>
-            <BsArrowLeft />
+        <div className='flex gap-3'>
+          <button className='carousel-btn' onClick={showPreviousItems}>
+            <BsArrowLeft className='carousel-btn-icon' />
           </button>
 
-          <button className='next-btn' onClick={showNextItems}>
-            <BsArrowRight />
+          <button className='carousel-btn' onClick={showNextItems}>
+            <BsArrowRight className='carousel-btn-icon' />
           </button>
         </div>
       </div>
 
-      <div className='restaurant-offers'>
+      <div className='carousel-box mt-6'>
         {offers.map(offer => (
           <OfferCard key={offer?.info?.offerIds[0]} offer={offer} />
         ))}
