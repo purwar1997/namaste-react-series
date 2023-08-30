@@ -6,6 +6,8 @@ import TopPickCard from './TopPickCard';
 const TopPicksCarousel = ({ topPicks }) => {
   const [carousel, setCarousel] = useState(null);
 
+  // console.log(carousel?.clientWidth, carousel?.scrollWidth);
+
   useEffect(() => {
     setCarousel(document.querySelector('#top-picks-carousel'));
   }, []);
@@ -17,7 +19,7 @@ const TopPicksCarousel = ({ topPicks }) => {
 
         {carousel?.scrollWidth > carousel?.clientWidth && (
           <div className='flex gap-3'>
-            <button className='carousel-btn' onClick={() => scrollCarouselLeft(carousel)}>
+            <button className={`carousel-btn `} onClick={() => scrollCarouselLeft(carousel)}>
               <BsArrowLeft />
             </button>
 

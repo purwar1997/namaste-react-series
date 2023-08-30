@@ -17,25 +17,24 @@ const MenuCategory = ({ menuCategory, vegFilter }) => {
 
   return (
     filteredItems.length > 0 && (
-      <div className='menu-category'>
+      <div className='py-4 border-b border-gray-300 last:border-none'>
         <div
-          className='menu-category-header'
-          style={{ cursor: itemCards ? 'pointer' : 'default' }}
+          className={`flex justify-between ${itemCards ? 'cursor-pointer' : 'cursor-auto'}`}
           onClick={() => itemCards && setShow(!show)}
         >
-          <h3>
+          <h3 className='text-lg font-medium'>
             {title} {itemCards && `(${filteredItems.length})`}
           </h3>
 
           {itemCards && (
-            <span className='accordian-toggler'>{show ? <BsChevronUp /> : <BsChevronDown />}</span>
+            <span className='relative top-1'>{show ? <BsChevronUp /> : <BsChevronDown />}</span>
           )}
         </div>
 
         {itemCards ? (
           show && <MenuCard menuItems={itemCards} vegFilter={vegFilter} />
         ) : (
-          <div className='item-categories'>
+          <div className='mt-1'>
             {categories.map((category, index) => (
               <ItemCategory key={index} category={category} vegFilter={vegFilter} />
             ))}

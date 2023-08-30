@@ -10,13 +10,13 @@ const ItemCategory = ({ category, vegFilter }) => {
 
   return (
     filteredItems.length > 0 && (
-      <div className='item-category'>
-        <div className='item-category-header' onClick={() => setShow(!show)}>
-          <h4>
+      <div className='py-4 border-b border-gray-300 last:border-none last:pb-0'>
+        <div className='flex justify-between cursor-pointer' onClick={() => setShow(!show)}>
+          <h3>
             {title} ({filteredItems.length})
-          </h4>
+          </h3>
 
-          <span className='accordian-toggler'>{show ? <BsChevronUp /> : <BsChevronDown />}</span>
+          <span className='relative top-1'>{show ? <BsChevronUp /> : <BsChevronDown />}</span>
         </div>
 
         {show && <MenuCard menuItems={itemCards} vegFilter={vegFilter} />}

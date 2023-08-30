@@ -101,7 +101,7 @@ const Restaurant = () => {
 
         {topPicks && <TopPicksCarousel topPicks={topPicks} />}
 
-        <div className='menu-categories'>
+        <div className='mt-12'>
           {restaurantMenu.map((menuCategory, index) => (
             <MenuCategory key={index} menuCategory={menuCategory} vegFilter={vegFilter} />
           ))}

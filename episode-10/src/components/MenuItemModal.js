@@ -7,10 +7,7 @@ const MenuItemModal = ({ menuItem, setIsModalOpen }) => {
   const { name, description, price, defaultPrice, isVeg, imageId } = menuItem?.card?.info;
 
   return (
-    <div
-      className='menu-item-modal-background'
-      onClick={event => closeModal(event, setIsModalOpen)}
-    >
+    <div className='modal-background' onClick={event => closeModal(event, setIsModalOpen)}>
       <div className='menu-item-modal'>
         <div
           className='menu-item-image'

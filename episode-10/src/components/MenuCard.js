@@ -6,7 +6,7 @@ const MenuCard = ({ menuItems, vegFilter }) => {
     : menuItems;
 
   return (
-    <div className='menu-card'>
+    <div>
       {displayedMenuItems.map(item => (
         <MenuItem key={item?.card?.info?.id} menuItem={item} />
       ))}
