@@ -1,8 +1,6 @@
-// Incomplete component
-
 const Search = () => {
   return (
-    <div className='search'>
+    <div>
       <input type='search' name='query' />
     </div>
   );

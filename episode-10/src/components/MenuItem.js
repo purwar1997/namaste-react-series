@@ -16,7 +16,11 @@ const MenuItem = ({ menuItem }) => {
   };
 
   return (
-    <div className='flex justify-between items-start pt-7 py-9 border-b border-gray-300 last:border-none'>
+    <div
+      className={`flex justify-between pt-7 pb-9 border-b border-gray-300 last:border-none ${
+        imageId ? 'items-start' : 'items-center'
+      }`}
+    >
       <div className='w-3/4'>
         <img className='w-4' src={isVeg ? veg : nonVeg} />
         <h4 className='mt-2 font-medium'>{name}</h4>
@@ -25,11 +29,16 @@ const MenuItem = ({ menuItem }) => {
       </div>
 
       <div
-        className='w-32 h-32 rounded-lg bg-contain bg-left-top bg-no-repeat flex justify-center items-end cursor-pointer'
-        style={background}
-        onClick={() => openModal(setIsModalOpen)}
+        className={`w-32 rounded-lg bg-cover bg-left-top bg-no-repeat flex justify-center items-end  ${
+          imageId ? 'h-32 cursor-pointer' : 'cursor-auto'
+        }`}
+        style={imageId ? background : null}
+        onClick={() => imageId && openModal(setIsModalOpen)}
       >
-        <button className='add-item-btn relative top-3' onClick={event => event.stopPropagation()}>
+        <button
+          className={`add-item-btn ${imageId && 'relative top-3'}`}
+          onClick={event => event.stopPropagation()}
+        >
           Add
         </button>
       </div>

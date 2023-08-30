@@ -6,8 +6,6 @@ import OfferCard from './OfferCard';
 const OfferCarousel = ({ offers }) => {
   const [carousel, setCarousel] = useState(null);
 
-  // console.log(carousel?.clientWidth, carousel?.scrollWidth);
-
   useEffect(() => {
     setCarousel(document.querySelector('#offer-carousel'));
   }, []);

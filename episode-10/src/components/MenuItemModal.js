@@ -8,23 +8,23 @@ const MenuItemModal = ({ menuItem, setIsModalOpen }) => {
 
   return (
     <div className='modal-background' onClick={event => closeModal(event, setIsModalOpen)}>
-      <div className='menu-item-modal'>
+      <div className='w-[500px] bg-white rounded-xl p-4'>
         <div
-          className='menu-item-image'
+          className='h-80 rounded-xl bg-cover bg-left-top bg-no-repeat'
           style={{ backgroundImage: `url(${MENU_ITEM_MODAL_IMAGE_URL + imageId})` }}
-        ></div>
+        />
 
-        <div className='menu-item-details'>
+        <div className='mt-4 flex justify-between items-start'>
           <div>
-            <img className='menu-type' src={isVeg ? veg : nonVeg} />
-            <h4 className='menu-item-name'>{name}</h4>
-            <p className='menu-item-price'>₹{(price || defaultPrice) / 100}</p>
+            <img className='h-4' src={isVeg ? veg : nonVeg} />
+            <h4 className='mt-1 text-lg font-medium'>{name}</h4>
+            <p>₹{(price || defaultPrice) / 100}</p>
           </div>
 
           <button className='add-item-btn'>Add</button>
         </div>
 
-        <p className='menu-item-description'>{description}</p>
+        <p className='mt-2 text-sm'>{description}</p>
       </div>
     </div>
   );

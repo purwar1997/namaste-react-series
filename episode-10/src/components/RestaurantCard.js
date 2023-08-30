@@ -26,7 +26,7 @@ const RestaurantCard = ({ restaurantData }) => {
         </div>
 
         <p className='w-full truncate mt-0.5'>{cuisines.join(', ')}</p>
-        <p className=''>{areaName}</p>
+        <p>{areaName}</p>
       </div>
     </div>
   );

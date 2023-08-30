@@ -62,7 +62,7 @@ const Home = () => {
         </button>
       </div> */}
 
-      <div className='grid grid-cols-4 gap-10'>
+      <div className='grid grid-cols-4 gap-10 justify-items-center'>
         {displayedRestaurants?.map(restaurant => (
           <Link to={`restaurants/${restaurant?.info?.id}`} key={restaurant?.info?.id}>
             <RestaurantCard restaurantData={restaurant} />

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
-const Header = ({ isOnline }) => {
+const Header = () => {
   const [loggedIn, setLoggedIn] = useState(false);
 
   return (
@@ -14,8 +14,6 @@ const Header = ({ isOnline }) => {
       </div>
 
       <nav className='flex gap-10'>
-        {/* <li>{isOnline ? 'Online' : 'Offline'}</li> */}
-
         <NavLink
           to='/'
           className={`hover:text-orange ${({ isActive }) => (isActive ? 'active' : '')}`}

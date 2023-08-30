@@ -8,7 +8,7 @@ const AppLayout = () => {
 
   return (
     <>
-      <Header isOnline={isOnline} />
+      <Header />
       {isOnline ? <Outlet /> : <Offline />}
     </>
   );
