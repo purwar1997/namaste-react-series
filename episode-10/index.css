@@ -1,143 +1,70 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.active {
-  color: #fc8019;
+@layer utilities {
+  .active {
+    color: #fc8019;
+  }
+
+  .carousel-btn {
+    font-size: 18px;
+    color: #1a1a1a;
+    background-color: #e1e1e1;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .modal-background {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgb(0 0 0 / 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .add-item-btn {
+    font-size: 13px;
+    font-weight: 700;
+    color: #60b246;
+    text-transform: uppercase;
+    background-color: #fff;
+    padding-block: 8px;
+    width: 80px;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .disable-scrolling {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
-.carousel-btn {
-  font-size: 20px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #414141;
-  background-color: #e1e1e1;
-  border: none;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.carousel-btn-icon {
-  font-size: 18px;
-  color: #1a1a1a;
-}
-
-.carousel-box {
-  display: flex;
-  gap: 15px;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-.modal-background {
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background-color: rgb(0 0 0 / 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-}
-
-.disable-scrolling {
-  height: 100vh;
-  overflow: hidden;
 }
 
 /* 
-.offer-modal {
-  width: 200px;
-  height: 100px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.restaurant-menu {
-  margin-top: 40px;
-}
-
-.veg-filter {
-  display: flex;
-  gap: 12px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #cdcdcd;
-}
-
-.veg-filter > input {
-  position: relative;
-  top: 2px;
-  cursor: pointer;
-}
-
-.top-picks-carousel {
-  padding-block: 40px;
-}
-
-.top-picks-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.top-picks-header > h3 {
-  font-size: 22px;
-  font-weight: 500;
-}
 
 
-
-.top-pick-items {
-  margin-top: 30px;
-  display: flex;
-  gap: 50px;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-.top-pick-item-card {
-  position: relative;
-}
-
-.top-pick-item-card > img {
-  width: 350px;
-  border-radius: 20px;
-}
-
-.item-card-bottom {
-  width: 100%;
-  position: absolute;
-  bottom: 30px;
-  padding-inline: 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.top-pick-item-card > span {
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.add-item-btn {
-  font-size: 13px;
-  font-weight: 600;
-  color: #60b246;
-  text-transform: uppercase;
-  background-color: #fff;
-  padding-block: 8px;
-  width: 80px;
-  border: 1px solid #cdcdcd;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
 .menu-category,
 .item-category {

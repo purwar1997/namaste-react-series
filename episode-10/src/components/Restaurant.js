@@ -59,7 +59,7 @@ const Restaurant = () => {
           <div className='border border-gray-200 rounded-lg px-2.5 py-2 flex flex-col items-center gap-2'>
             <div
               className={`flex items-center gap-2 ${
-                avgRating > 4.0 ? 'text-green' : avgRating > 3.0 ? 'text-orange' : 'text-red'
+                avgRating > 4.0 ? 'text-green' : avgRating > 3.0 ? 'text-yellow' : 'text-red'
               }`}
             >
               <BsStarFill />
@@ -86,10 +86,11 @@ const Restaurant = () => {
 
       {restaurantOffers && <OfferCarousel offers={restaurantOffers} />}
 
-      <div className='restaurant-menu'>
-        <div className='veg-filter'>
+      <div className='mt-7'>
+        <div className='pb-4 border-b border-gray-300'>
           <label htmlFor='veg-only'>Veg Only</label>
           <input
+            className='ml-2 relative top-px'
             type='checkbox'
             name='veg-filter'
             id='veg-only'
@@ -98,7 +99,7 @@ const Restaurant = () => {
           />
         </div>
 
-        {topPicks > 0 && <TopPicksCarousel topPicks={topPicks} />}
+        {topPicks && <TopPicksCarousel topPicks={topPicks} />}
 
         <div className='menu-categories'>
           {restaurantMenu.map((menuCategory, index) => (

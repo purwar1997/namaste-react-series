@@ -1,39 +1,34 @@
 import { useState, useEffect } from 'react';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import { scrollCarouselLeft, scrollCarouselRight } from '../utils/helpers';
 import OfferCard from './OfferCard';
 
 const OfferCarousel = ({ offers }) => {
-  const [carouselBox, setCarouselBox] = useState(null);
-
-  const showPreviousItems = () => {
-    carouselBox.scrollLeft -= carouselBox.clientWidth / 2;
-  };
-
-  const showNextItems = () => {
-    carouselBox.scrollLeft += carouselBox.clientWidth / 2;
-  };
+  const [carousel, setCarousel] = useState(null);
 
   useEffect(() => {
-    setCarouselBox(document.querySelector('.carousel-box'));
+    setCarousel(document.querySelector('#offer-carousel'));
   }, []);
 
   return (
-    <div className='mt-5'>
+    <div className='mt-7'>
       <div className='flex justify-between items-end'>
         <h4 className='text-xl font-semibold'>Offers for you</h4>
 
-        <div className='flex gap-3'>
-          <button className='carousel-btn' onClick={showPreviousItems}>
-            <BsArrowLeft className='carousel-btn-icon' />
-          </button>
+        {carousel?.scrollWidth > carousel?.clientWidth && (
+          <div className='flex gap-3'>
+            <button className='carousel-btn' onClick={() => scrollCarouselLeft(carousel)}>
+              <BsArrowLeft />
+            </button>
 
-          <button className='carousel-btn' onClick={showNextItems}>
-            <BsArrowRight className='carousel-btn-icon' />
-          </button>
-        </div>
+            <button className='carousel-btn' onClick={() => scrollCarouselRight(carousel)}>
+              <BsArrowRight />
+            </button>
+          </div>
+        )}
       </div>
 
-      <div className='carousel-box mt-6'>
+      <div id='offer-carousel' className='mt-5 flex gap-3 overflow-x-hidden scroll-smooth'>
         {offers.map(offer => (
           <OfferCard key={offer?.info?.offerIds[0]} offer={offer} />
         ))}

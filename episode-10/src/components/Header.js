@@ -16,23 +16,38 @@ const Header = ({ isOnline }) => {
       <nav className='flex gap-10'>
         {/* <li>{isOnline ? 'Online' : 'Offline'}</li> */}
 
-        <NavLink to='/' className={({ isActive }) => (isActive ? 'active' : '')}>
+        <NavLink
+          to='/'
+          className={`hover:text-orange ${({ isActive }) => (isActive ? 'active' : '')}`}
+        >
           Home
         </NavLink>
 
-        <NavLink to='about' className={({ isActive }) => (isActive ? 'active' : '')}>
+        <NavLink
+          to='about'
+          className={`hover:text-orange ${({ isActive }) => (isActive ? 'active' : '')}`}
+        >
           About
         </NavLink>
 
-        <NavLink to='search' className={({ isActive }) => (isActive ? 'active' : '')}>
+        <NavLink
+          to='search'
+          className={`hover:text-orange ${({ isActive }) => (isActive ? 'active' : '')}`}
+        >
           Search
         </NavLink>
 
-        <NavLink to='grocery' className={({ isActive }) => (isActive ? 'active' : '')}>
+        <NavLink
+          to='grocery'
+          className={`hover:text-orange ${({ isActive }) => (isActive ? 'active' : '')}`}
+        >
           Grocery
         </NavLink>
 
-        <NavLink to='instamart' className={({ isActive }) => (isActive ? 'active' : '')}>
+        <NavLink
+          to='instamart'
+          className={`hover:text-orange ${({ isActive }) => (isActive ? 'active' : '')}`}
+        >
           Instamart
         </NavLink>
 

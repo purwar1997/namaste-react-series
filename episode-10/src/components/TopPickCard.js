@@ -5,11 +5,11 @@ const TopPickCard = ({ topPick }) => {
   const { price, defaultPrice } = topPick?.dish?.info;
 
   return (
-    <div className='top-pick-item-card'>
-      <img src={TOP_PICK_IMAGE_URL + creativeId} />
+    <div className='relative'>
+      <img className='min-w-[350px] rounded-2xl' src={TOP_PICK_IMAGE_URL + creativeId} />
 
-      <div className='item-card-bottom'>
-        <span style={{ color: fontColor }}>₹{(price || defaultPrice) / 100}</span>
+      <div className='absolute bottom-5 w-full px-6 flex justify-between items-center'>
+        <span style={{ color: fontColor, fontWeight: 500 }}>₹{(price || defaultPrice) / 100}</span>
         <button className='add-item-btn'>Add</button>
       </div>
     </div>

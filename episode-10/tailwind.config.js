@@ -6,8 +6,9 @@ module.exports = {
     extend: {
       colors: {
         green: '#3D9B6D',
-        orange: '#db7c38',
+        yellow: '#db7c38',
         red: '#f04343',
+        orange: '#FC8019',
       },
       width: {
         calc: 'calc(100% - 300px)',

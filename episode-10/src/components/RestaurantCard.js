@@ -16,7 +16,7 @@ const RestaurantCard = ({ restaurantData }) => {
         <div className='flex items-center gap-2'>
           <span
             className={`w-5 h-5 rounded-full flex justify-center items-center ${
-              avgRating > 4.0 ? 'bg-green' : avgRating > 3.0 ? 'bg-orange' : 'bg-red'
+              avgRating > 4.0 ? 'bg-green' : avgRating > 3.0 ? 'bg-yellow' : 'bg-red'
             }`}
           >
             <BsStarFill className='text-xs text-white ' />
