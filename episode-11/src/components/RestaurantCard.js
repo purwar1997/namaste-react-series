@@ -1,11 +1,11 @@
 import { BsStarFill } from 'react-icons/bs';
 import { RESTAURANT_IMAGE_URL } from '../utils/constants';
 
-const RestaurantCard = ({ restaurantData }) => {
+const RestaurantCard = ({ restaurantData, isTopRated, isPromoted }) => {
   const { name, avgRating, cuisines, areaName, cloudinaryImageId } = restaurantData?.info;
 
   return (
-    <div className='w-64 hover:scale-95 transition-transform'>
+    <div className={`w-64 ${!isTopRated && 'hover:scale-95 transition-transform'}`}>
       <div>
         <img className='rounded-xl' src={RESTAURANT_IMAGE_URL + cloudinaryImageId} alt={name} />
       </div>
@@ -33,3 +33,33 @@ const RestaurantCard = ({ restaurantData }) => {
 };
 
 export default RestaurantCard;
+
+// Higher Order Components are functions which accepts component as an argument and returns a new component
+// Component returned by HOC is actually a wrapper around original component that was passed inside it
+// HOC should be pure functions which means they shouldn't modify the input component
+
+export const topRatedRestaurant = Restaurant => {
+  return props => {
+    return (
+      <div className='relative hover:scale-95 transition-transform'>
+        <label className='absolute pl-3 pr-2 py-1 text-sm text-white bg-green rounded-tl-xl z-10'>
+          Top Rated
+        </label>
+        <Restaurant {...props} isTopRated={true} />
+      </div>
+    );
+  };
+};
+
+export const promotedRestaurant = Restaurant => {
+  return props => {
+    return (
+      <div className='relative hover:scale-95 transition-transform'>
+        <label className='absolute pl-3 pr-2 py-1 text-sm text-white bg-green rounded-tl-xl z-10'>
+          Promoted
+        </label>
+        <Restaurant {...props} isPromoted={true} />
+      </div>
+    );
+  };
+};

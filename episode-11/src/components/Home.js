@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useFetchRestaurants from '../utils/useFetchRestaurants';
-import RestaurantCard from './RestaurantCard';
+import RestaurantCard, { topRatedRestaurant, promotedRestaurant } from './RestaurantCard';
 import Shimmer from './Shimmer';
 
 const Home = () => {
@@ -17,6 +17,9 @@ const Home = () => {
   if (displayedRestaurants === null) {
     setDisplayedRestaurants(restaurants);
   }
+
+  const TopRatedRestaurantCard = topRatedRestaurant(RestaurantCard);
+  const PromotedRestaurantCard = promotedRestaurant(RestaurantCard);
 
   const searchRestaurants = () => {
     const searchString = search.trim().toLowerCase();
@@ -65,7 +68,17 @@ const Home = () => {
       <div className='grid grid-cols-4 gap-10 justify-items-center'>
         {displayedRestaurants?.map(restaurant => (
           <Link to={`restaurants/${restaurant?.info?.id}`} key={restaurant?.info?.id}>
-            <RestaurantCard restaurantData={restaurant} />
+            {restaurant?.info?.avgRating > 4.0 ? (
+              <TopRatedRestaurantCard restaurantData={restaurant} />
+            ) : (
+              <RestaurantCard restaurantData={restaurant} />
+            )}
+
+            {/* {restaurant?.info?.promoted ? (
+              <PromotedRestaurantCard restaurantData={restaurant} />
+            ) : (
+              <RestaurantCard restaurantData={restaurant} />
+            )} */}
           </Link>
         ))}
       </div>
