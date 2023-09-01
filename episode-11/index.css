@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .active {
+    color: #fc8019;
+  }
+
+  .carousel-btn {
+    font-size: 18px;
+    color: #1a1a1a;
+    background-color: #e1e1e1;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .modal-background {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgb(0 0 0 / 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .add-item-btn {
+    font-size: 13px;
+    font-weight: 700;
+    color: #60b246;
+    text-transform: uppercase;
+    background-color: #fff;
+    padding-block: 8px;
+    width: 80px;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .disable-scrolling {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #515151;
+}
