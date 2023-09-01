@@ -86,8 +86,8 @@ const Restaurant = () => {
 
       {restaurantOffers && <OfferCarousel offers={restaurantOffers} />}
 
-      <div className='mt-7'>
-        <div className='pb-4 border-b border-gray-300 cursor-pointer'>
+      <div className='mt-8'>
+        <div className='pb-3 border-b border-gray-300 cursor-pointer'>
           <label htmlFor='veg-only'>Veg Only</label>
           <input
             className='ml-2 relative top-px cursor-pointer'
@@ -101,7 +101,7 @@ const Restaurant = () => {
 
         {topPicks && <TopPicksCarousel topPicks={topPicks} />}
 
-        <div className={topPicks ? 'mt-10' : 'mt-5'}>
+        <div className={topPicks ? 'mt-10' : 'mt-4'}>
           {restaurantMenu.map((menuCategory, index) => (
             <MenuCategory key={index} menuCategory={menuCategory} vegFilter={vegFilter} />
           ))}
