@@ -42,7 +42,7 @@ export const topRatedRestaurant = Restaurant => {
   return props => {
     return (
       <div className='relative hover:scale-95 transition-transform'>
-        <label className='absolute pl-3 pr-2 py-1 text-sm text-white bg-green rounded-tl-xl z-10'>
+        <label className='absolute pl-3 pr-2 py-0.5 text-sm text-white bg-green rounded-tl-xl z-10'>
           Top Rated
         </label>
         <Restaurant {...props} isTopRated={true} />
@@ -55,7 +55,7 @@ export const promotedRestaurant = Restaurant => {
   return props => {
     return (
       <div className='relative hover:scale-95 transition-transform'>
-        <label className='absolute pl-3 pr-2 py-1 text-sm text-white bg-green rounded-tl-xl z-10'>
+        <label className='absolute pl-3 pr-2 py-0.5 text-sm text-white bg-green rounded-tl-xl z-10'>
           Promoted
         </label>
         <Restaurant {...props} isPromoted={true} />

@@ -11,6 +11,8 @@ import useFetchRestaurantData from '../utils/useFetchRestaurantData';
 
 const Restaurant = () => {
   const [vegFilter, setVegFilter] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const [showMenuIndex, setShowMenuIndex] = useState(null);
   const { restaurantId } = useParams();
 
   const restaurantData = useFetchRestaurantData(restaurantId);
@@ -103,7 +105,14 @@ const Restaurant = () => {
 
         <div className={topPicks ? 'mt-10' : 'mt-4'}>
           {restaurantMenu.map((menuCategory, index) => (
-            <MenuCategory key={index} menuCategory={menuCategory} vegFilter={vegFilter} />
+            <MenuCategory
+              key={index}
+              menuCategory={menuCategory}
+              vegFilter={vegFilter}
+              showMenu={index === showMenuIndex ? showMenu : false}
+              setShowMenu={setShowMenu}
+              setShowMenuIndex={() => setShowMenuIndex(index)}
+            />
           ))}
         </div>
       </div>
