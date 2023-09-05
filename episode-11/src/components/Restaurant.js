@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { BsStarFill } from 'react-icons/bs';
 import { IoTimeOutline } from 'react-icons/io5';
@@ -14,6 +14,10 @@ const Restaurant = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showMenuIndex, setShowMenuIndex] = useState(null);
   const { restaurantId } = useParams();
+
+  useEffect(() => {
+    document.documentElement.scrollTop = 0;
+  }, []);
 
   const restaurantData = useFetchRestaurantData(restaurantId);
 

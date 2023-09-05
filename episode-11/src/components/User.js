@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import UserContext from '../context/UserContext';
 
 class User extends Component {
   constructor(props) {
@@ -55,6 +56,10 @@ class User extends Component {
         <p>Location: {location}</p>
         <p>Contact: {twitter_username || blog}</p>
         {bio && <p>Bio: {bio}</p>}
+        <h4>
+          Loggedin user:{' '}
+          <UserContext.Consumer>{({ user }) => <span>{user?.name}</span>}</UserContext.Consumer>
+        </h4>
       </div>
     );
   }

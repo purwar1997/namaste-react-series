@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import UserContext from '../context/UserContext';
 import logo from '../assets/logo.png';
 
 const Header = () => {
   const [loggedIn, setLoggedIn] = useState(false);
+  const { user } = useContext(UserContext);
 
   return (
     <header className='flex justify-between items-center px-24 py-4 shadow-sm sticky top-0 bg-white z-20'>
@@ -48,6 +50,8 @@ const Header = () => {
         >
           Instamart
         </NavLink>
+
+        <li className='list-none'>{user?.name}</li>
 
         <button onClick={() => setLoggedIn(!loggedIn)}>{loggedIn ? 'Logout' : 'Login'}</button>
       </nav>

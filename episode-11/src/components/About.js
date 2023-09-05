@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import UserContext from '../context/UserContext';
 import User from './User';
 
 class About extends Component {
@@ -36,6 +37,10 @@ class About extends Component {
     return (
       <div className='about'>
         <h1>About Us</h1>
+        <h3>
+          LoggedIn user:{' '}
+          <UserContext.Consumer>{({ user }) => <span>{user?.name}</span>}</UserContext.Consumer>
+        </h3>
         <User />
       </div>
     );

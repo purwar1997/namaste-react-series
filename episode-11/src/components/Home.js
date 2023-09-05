@@ -1,12 +1,14 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import useFetchRestaurants from '../utils/useFetchRestaurants';
 import RestaurantCard, { topRatedRestaurant, promotedRestaurant } from './RestaurantCard';
 import Shimmer from './Shimmer';
+import UserContext from '../context/UserContext';
 
 const Home = () => {
   const [search, setSearch] = useState('');
   const [displayedRestaurants, setDisplayedRestaurants] = useState(null);
+  const { user, setUser } = useContext(UserContext);
 
   const restaurants = useFetchRestaurants();
 
@@ -64,6 +66,18 @@ const Home = () => {
           Top rated
         </button>
       </div> */}
+
+      <div className='mb-8'>
+        <label htmlFor='username'>Username</label>
+        <input
+          className='ml-3 px-1 border border-gray-300 focus:outline-0'
+          type='text'
+          name='username'
+          id='username'
+          value={user.name}
+          onChange={e => setUser({ name: e.target.value })}
+        />
+      </div>
 
       <div className='grid grid-cols-4 gap-10 justify-items-center'>
         {displayedRestaurants?.map(restaurant => (

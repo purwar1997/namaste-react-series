@@ -10,7 +10,7 @@ const MenuItemModal = ({ menuItem, setIsModalOpen }) => {
     <div className='modal-background' onClick={event => closeModal(event, setIsModalOpen)}>
       <div className='w-[500px] bg-white rounded-xl p-4'>
         <div
-          className='h-80 rounded-xl bg-cover bg-left-top bg-no-repeat'
+          className='h-80 rounded-xl bg-cover bg-center bg-no-repeat'
           style={{ backgroundImage: `url(${MENU_ITEM_MODAL_IMAGE_URL + imageId})` }}
         />
 
