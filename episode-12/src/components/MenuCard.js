@@ -8,7 +8,7 @@ const MenuCard = ({ menuItems, vegFilter }) => {
   return (
     <div>
       {displayedMenuItems.map(item => (
-        <MenuItem key={item?.card?.info?.id} menuItem={item} />
+        <MenuItem key={item?.card?.info?.id} menuItem={item?.card?.info} />
       ))}
     </div>
   );

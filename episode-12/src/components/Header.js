@@ -1,7 +1,7 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import UserContext from '../context/UserContext';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleTheme } from '../utils/themeSlice';
 import logo from '../assets/logo.png';
 
 const Header = () => {
@@ -9,8 +9,12 @@ const Header = () => {
 
   // useSelector is used to read data from a redux store
   // store variable will contain state variable of every slice
-  const cartItems = useSelector(store => store.cart.items);
+  const cartItems = useSelector(store => store.cart);
   const userInfo = useSelector(store => store.user);
+  const appTheme = useSelector(store => store.theme);
+  const dispatch = useDispatch();
+
+  console.log(cartItems);
 
   return (
     <header className='flex justify-between items-center px-24 py-4 shadow-sm sticky top-0 bg-white z-20'>
@@ -56,9 +60,21 @@ const Header = () => {
           Instamart
         </NavLink>
 
-        <li className='list-none hover:text-orange'>{userInfo.name}</li>
+        <NavLink
+          to='checkout'
+          className={`hover:text-orange ${({ isActive }) => (isActive ? 'text-orange' : '')}`}
+        >
+          Cart ({cartItems.reduce((totalItems, item) => totalItems + item.quantity, 0)} items)
+        </NavLink>
 
-        <li className='list-none hover:text-orange'>Cart ({cartItems.length} items)</li>
+        {userInfo.name && <li className='list-none hover:text-orange'>{userInfo.name}</li>}
+
+        <li
+          className='list-none capitalize cursor-pointer hover:text-orange'
+          onClick={() => dispatch(toggleTheme())}
+        >
+          {appTheme} theme
+        </li>
 
         <button onClick={() => setLoggedIn(!loggedIn)}>{loggedIn ? 'Logout' : 'Login'}</button>
       </nav>

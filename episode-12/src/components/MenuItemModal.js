@@ -4,7 +4,7 @@ import veg from '../assets/veg.png';
 import nonVeg from '../assets/non-veg.png';
 
 const MenuItemModal = ({ menuItem, setIsModalOpen }) => {
-  const { name, description, price, defaultPrice, isVeg, imageId } = menuItem?.card?.info;
+  const { name, description, price, defaultPrice, isVeg, imageId } = menuItem;
 
   return (
     <div className='modal-background' onClick={event => closeModal(event, setIsModalOpen)}>

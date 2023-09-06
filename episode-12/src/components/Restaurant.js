@@ -8,6 +8,7 @@ import MenuCategory from './MenuCategory';
 import TopPicksCarousel from './TopPicksCarousel';
 import OfferCarousel from './OfferCarousel';
 import useFetchRestaurantData from '../utils/useFetchRestaurantData';
+import RestaurantContext from '../context/RestaurantContext';
 
 const Restaurant = () => {
   const [vegFilter, setVegFilter] = useState(false);
@@ -105,20 +106,22 @@ const Restaurant = () => {
           />
         </div>
 
-        {topPicks && <TopPicksCarousel topPicks={topPicks} />}
+        <RestaurantContext.Provider value={restaurantId}>
+          {topPicks && <TopPicksCarousel topPicks={topPicks} />}
 
-        <div className={topPicks ? 'mt-10' : 'mt-4'}>
-          {restaurantMenu.map((menuCategory, index) => (
-            <MenuCategory
-              key={index}
-              menuCategory={menuCategory}
-              vegFilter={vegFilter}
-              showMenu={index === showMenuIndex ? showMenu : false}
-              setShowMenu={setShowMenu}
-              setShowMenuIndex={() => setShowMenuIndex(index)}
-            />
-          ))}
-        </div>
+          <div className={topPicks ? 'mt-10' : 'mt-4'}>
+            {restaurantMenu.map((menuCategory, index) => (
+              <MenuCategory
+                key={index}
+                menuCategory={menuCategory}
+                vegFilter={vegFilter}
+                showMenu={index === showMenuIndex ? showMenu : false}
+                setShowMenu={setShowMenu}
+                setShowMenuIndex={() => setShowMenuIndex(index)}
+              />
+            ))}
+          </div>
+        </RestaurantContext.Provider>
       </div>
     </div>
   );

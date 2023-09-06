@@ -14,6 +14,7 @@ import Search from './components/Search';
 import Error from './components/Error';
 import NotFound from './components/NotFound';
 import Restaurant from './components/Restaurant';
+import Checkout from './components/Checkout';
 import Shimmer from './components/Shimmer';
 
 /**
@@ -60,6 +61,7 @@ const appRouter = createBrowserRouter(
           </Suspense>
         }
       />
+      <Route path='checkout' element={<Checkout />} />
       <Route path='*' element={<NotFound />} />
     </Route>
   )

@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import useFetchRestaurants from '../utils/useFetchRestaurants';
 import RestaurantCard, { topRatedRestaurant, promotedRestaurant } from './RestaurantCard';
+import { updateUser } from '../utils/userSlice';
 import Shimmer from './Shimmer';
 
 const Home = () => {
   const [search, setSearch] = useState('');
   const [displayedRestaurants, setDisplayedRestaurants] = useState(null);
   const userInfo = useSelector(store => store.user);
+  const dispatch = useDispatch();
 
   const restaurants = useFetchRestaurants();
 
@@ -75,7 +77,9 @@ const Home = () => {
           name='username'
           id='username'
           value={userInfo.name}
-          onChange={e => {}}
+          onChange={e =>
+            dispatch(updateUser({ type: 'UPDATE_USERNAME', userName: e.target.value }))
+          }
         />
       </div>
 
