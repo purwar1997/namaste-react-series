@@ -9,7 +9,7 @@ const ResetCartModal = ({ menuItem, closeModal }) => {
 
   const resetCart = () => {
     dispatch(clearCart());
-    dispatch(addToCart({ menuItem, quantity: 1, restaurantId }));
+    dispatch(addToCart({ menuItem, restaurantId }));
     closeModal();
   };
 

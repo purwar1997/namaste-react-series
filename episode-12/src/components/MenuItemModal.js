@@ -1,10 +1,32 @@
+import { useState, useContext } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { MENU_ITEM_MODAL_IMAGE_URL } from '../utils/constants';
 import { closeModal } from '../utils/helpers';
+import { addToCart } from '../utils/cartSlice';
 import veg from '../assets/veg.png';
 import nonVeg from '../assets/non-veg.png';
+import AddItemButton from './AddItemButton';
+import UpdateQuantityButton from './UpdateQuantityButton';
+import RestaurantContext from '../context/RestaurantContext';
+import ResetCartModal from './ResetCartModal';
 
 const MenuItemModal = ({ menuItem, setIsModalOpen }) => {
+  const [resetCart, setResetCart] = useState(false);
+  const restaurantId = useContext(RestaurantContext);
+  const cartItems = useSelector(store => store.cart);
+  const dispatch = useDispatch();
+
   const { name, description, price, defaultPrice, isVeg, imageId } = menuItem;
+
+  const addItemToCart = () => {
+    const otherRestaurantItem = cartItems.at(-1)?.restaurantId !== restaurantId;
+
+    if (otherRestaurantItem) {
+      setResetCart(true);
+    } else {
+      dispatch(addToCart({ menuItem, restaurantId }));
+    }
+  };
 
   return (
     <div className='modal-background' onClick={event => closeModal(event, setIsModalOpen)}>
@@ -21,11 +43,17 @@ const MenuItemModal = ({ menuItem, setIsModalOpen }) => {
             <p>₹{(price || defaultPrice) / 100}</p>
           </div>
 
-          <button className='add-item-btn'>Add</button>
+          {cartItems.find(item => item.menuItem.id === menuItem.id) ? (
+            <UpdateQuantityButton />
+          ) : (
+            <AddItemButton addItemToCart={addItemToCart} />
+          )}
         </div>
 
         <p className='mt-2 text-sm'>{description}</p>
       </div>
+
+      {resetCart && <ResetCartModal menuItem={menuItem} closeModal={() => setResetCart(false)} />}
     </div>
   );
 };

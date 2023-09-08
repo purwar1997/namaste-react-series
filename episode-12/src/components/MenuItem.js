@@ -8,6 +8,8 @@ import nonVeg from '../assets/non-veg.png';
 import RestaurantContext from '../context/RestaurantContext';
 import MenuItemModal from './MenuItemModal';
 import ResetCartModal from './ResetCartModal';
+import AddItemButton from './AddItemButton';
+import UpdateQuantityButton from './UpdateQuantityButton';
 
 const MenuItem = ({ menuItem }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,13 +30,12 @@ const MenuItem = ({ menuItem }) => {
   const addItemToCart = event => {
     event.stopPropagation();
 
-    const anotherRestaurantItem =
-      cartItems.length > 0 && cartItems.at(-1).restaurantId !== restaurantId;
+    const otherRestaurantItem = cartItems.at(-1)?.restaurantId !== restaurantId;
 
-    if (anotherRestaurantItem) {
+    if (otherRestaurantItem) {
       setResetCart(true);
     } else {
-      dispatch(addToCart({ menuItem, quantity: 1, restaurantId }));
+      dispatch(addToCart({ menuItem, restaurantId }));
     }
 
     // const itemAlreadyAdded = cartItems.some(item => item.info.id === menuItem?.id);
@@ -71,9 +72,13 @@ const MenuItem = ({ menuItem }) => {
         style={imageId ? imageBackground : null}
         onClick={() => imageId && openModal(setIsModalOpen)}
       >
-        <button className={`add-item-btn ${imageId && 'relative top-3'}`} onClick={addItemToCart}>
-          Add
-        </button>
+        {cartItems.find(item => item.menuItem.id === menuItem.id) ? (
+          <UpdateQuantityButton />
+        ) : (
+          <div className={imageId && 'relative top-3'}>
+            <AddItemButton addItemToCart={addItemToCart} />
+          </div>
+        )}
       </div>
 
       {isModalOpen && <MenuItemModal menuItem={menuItem} setIsModalOpen={setIsModalOpen} />}
