@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux/lib/index';
+import { useSelector } from 'react-redux';
 import Cart from './Cart';
 import EmptyCart from './EmptyCart';
 

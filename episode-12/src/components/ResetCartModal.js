@@ -8,10 +8,8 @@ const ResetCartModal = ({ menuItem, closeModal }) => {
   const dispatch = useDispatch();
 
   const resetCart = () => {
-    dispatch(clearCart({ type: 'CLEAR_CART' }));
-    dispatch(
-      addToCart({ type: 'ADD_TO_CART', menuItem: { info: menuItem, quantity: 1, restaurantId } })
-    );
+    dispatch(clearCart());
+    dispatch(addToCart({ menuItem, quantity: 1, restaurantId }));
     closeModal();
   };
 

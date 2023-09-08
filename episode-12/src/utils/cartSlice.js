@@ -6,22 +6,24 @@ const cartSlice = createSlice({
 
   reducers: {
     addToCart(state, action) {
-      return [...state, action.payload.menuItem];
-    },
-    removeFromCart(state, action) {
-      return state.filter(item => item.info.id !== action.payload.itemId);
-    },
-    clearCart() {
-      return [];
-    },
-    increaseQuantity(state, action) {
-      return state.map(item =>
-        item.info.id === action.payload.itemId ? { ...item, quantity: item.quantity + 1 } : item
+      const cartItem = state.find(({ menuItem }) => menuItem.id === action.payload.menuItem.id);
+      const cartItemIndex = state.findIndex(
+        ({ menuItem }) => menuItem.id === action.payload.menuItem.id
       );
+
+      if (cartItem) {
+        cartItem.quantity = cartItem.quantity + 1;
+        state.splice(cartItemIndex, 1, cartItem);
+      } else {
+        state.push(action.payload);
+      }
     },
-    decreaseQuantity(state, action) {
-      const cartItem = state.find(item => item.info.id === action.payload.itemId);
-      const cartItemIndex = state.findIndex(item => item.info.id === action.payload.itemId);
+
+    removeFromCart(state, action) {
+      const cartItem = state.find(({ menuItem }) => menuItem.id === action.payload.menuItem.id);
+      const cartItemIndex = state.findIndex(
+        ({ menuItem }) => menuItem.id === action.payload.menuItem.id
+      );
 
       if (cartItem.quantity > 1) {
         cartItem.quantity = cartItem.quantity - 1;
@@ -30,6 +32,26 @@ const cartSlice = createSlice({
         state.splice(cartItemIndex, 1);
       }
     },
+
+    clearCart(state) {
+      state.length = 0;
+    },
+    // increaseQuantity(state, action) {
+    //   return state.map(menuItem =>
+    //     menuItem.info.id === action.payload.itemId ? { ...menuItem, quantity: menuItem.quantity + 1 } : menuItem
+    //   );
+    // },
+    // decreaseQuantity(state, action) {
+    //   const cartItem = state.find(menuItem => menuItem.info.id === action.payload.itemId);
+    //   const cartItemIndex = state.findIndex(menuItem => menuItem.info.id === action.payload.itemId);
+
+    //   if (cartItem.quantity > 1) {
+    //     cartItem.quantity = cartItem.quantity - 1;
+    //     state.splice(cartItemIndex, 1, cartItem);
+    //   } else {
+    //     state.splice(cartItemIndex, 1);
+    //   }
+    // },
   },
 });
 

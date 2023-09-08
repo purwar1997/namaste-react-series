@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react';
-import { useDispatch, useSelector } from 'react-redux/lib/index';
+import { useDispatch, useSelector } from 'react-redux';
 import { MENU_ITEM_IMAGE_URL } from '../utils/constants';
 import { openModal } from '../utils/helpers';
 import { addToCart, increaseQuantity } from '../utils/cartSlice';
@@ -33,20 +33,22 @@ const MenuItem = ({ menuItem }) => {
 
     if (anotherRestaurantItem) {
       setResetCart(true);
-    }
-
-    const itemAlreadyAdded = cartItems.some(item => item.info.id === menuItem?.id);
-
-    if (itemAlreadyAdded) {
-      dispatch(increaseQuantity({ type: 'INCREASE_QUANTITY', itemId: menuItem?.id }));
     } else {
-      dispatch(
-        addToCart({
-          type: 'ADD_TO_CART',
-          menuItem: { info: menuItem, quantity: 1, restaurantId },
-        })
-      );
+      dispatch(addToCart({ menuItem, quantity: 1, restaurantId }));
     }
+
+    // const itemAlreadyAdded = cartItems.some(item => item.info.id === menuItem?.id);
+
+    // if (itemAlreadyAdded) {
+    //   dispatch(increaseQuantity({ type: 'INCREASE_QUANTITY', itemId: menuItem?.id }));
+    // } else {
+    //   dispatch(
+    //     addToCart({
+    //       type: 'ADD_TO_CART',
+    //       menuItem: { info: menuItem, quantity: 1, restaurantId },
+    //     })
+    //   );
+    // }
   };
 
   return (
