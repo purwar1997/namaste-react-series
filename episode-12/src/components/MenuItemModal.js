@@ -19,7 +19,8 @@ const MenuItemModal = ({ menuItem, setIsModalOpen }) => {
   const { name, description, price, defaultPrice, isVeg, imageId } = menuItem;
 
   const addItemToCart = () => {
-    const otherRestaurantItem = cartItems.at(-1)?.restaurantId !== restaurantId;
+    const otherRestaurantItem =
+      cartItems.length > 0 && cartItems.at(-1).restaurantId !== restaurantId;
 
     if (otherRestaurantItem) {
       setResetCart(true);
@@ -37,14 +38,14 @@ const MenuItemModal = ({ menuItem, setIsModalOpen }) => {
         />
 
         <div className='mt-4 flex justify-between items-start'>
-          <div>
+          <div className='w-2/3'>
             <img className='h-4' src={isVeg ? veg : nonVeg} />
-            <h4 className='mt-1 text-lg font-medium'>{name}</h4>
+            <h4 className='mt-1 text-lg font-medium truncate'>{name}</h4>
             <p>₹{(price || defaultPrice) / 100}</p>
           </div>
 
           {cartItems.find(item => item.menuItem.id === menuItem.id) ? (
-            <UpdateQuantityButton />
+            <UpdateQuantityButton menuItem={menuItem} />
           ) : (
             <AddItemButton addItemToCart={addItemToCart} />
           )}

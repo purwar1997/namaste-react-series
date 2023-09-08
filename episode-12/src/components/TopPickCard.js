@@ -13,12 +13,12 @@ const TopPickCard = ({ topPick }) => {
   const cartItems = useSelector(store => store.cart);
   const dispatch = useDispatch();
 
-  console.log(topPick);
   const { creativeId, fontColor } = topPick;
   const { price, defaultPrice } = topPick?.dish?.info;
 
   const addItemToCart = () => {
-    const otherRestaurantItem = cartItems.at(-1)?.restaurantId !== restaurantId;
+    const otherRestaurantItem =
+      cartItems.length > 0 && cartItems.at(-1).restaurantId !== restaurantId;
 
     if (otherRestaurantItem) {
       setResetCart(true);
@@ -35,7 +35,7 @@ const TopPickCard = ({ topPick }) => {
         <span style={{ color: fontColor, fontWeight: 500 }}>₹{(price || defaultPrice) / 100}</span>
 
         {cartItems.find(item => item.menuItem.id === topPick?.dish?.info?.id) ? (
-          <UpdateQuantityButton />
+          <UpdateQuantityButton menuItem={topPick?.dish?.info} />
         ) : (
           <AddItemButton addItemToCart={addItemToCart} />
         )}

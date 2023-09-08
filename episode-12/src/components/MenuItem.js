@@ -2,7 +2,7 @@ import { useState, useContext } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { MENU_ITEM_IMAGE_URL } from '../utils/constants';
 import { openModal } from '../utils/helpers';
-import { addToCart, increaseQuantity } from '../utils/cartSlice';
+import { addToCart } from '../utils/cartSlice';
 import veg from '../assets/veg.png';
 import nonVeg from '../assets/non-veg.png';
 import RestaurantContext from '../context/RestaurantContext';
@@ -30,26 +30,14 @@ const MenuItem = ({ menuItem }) => {
   const addItemToCart = event => {
     event.stopPropagation();
 
-    const otherRestaurantItem = cartItems.at(-1)?.restaurantId !== restaurantId;
+    const otherRestaurantItem =
+      cartItems.length > 0 && cartItems.at(-1).restaurantId !== restaurantId;
 
     if (otherRestaurantItem) {
       setResetCart(true);
     } else {
       dispatch(addToCart({ menuItem, restaurantId }));
     }
-
-    // const itemAlreadyAdded = cartItems.some(item => item.info.id === menuItem?.id);
-
-    // if (itemAlreadyAdded) {
-    //   dispatch(increaseQuantity({ type: 'INCREASE_QUANTITY', itemId: menuItem?.id }));
-    // } else {
-    //   dispatch(
-    //     addToCart({
-    //       type: 'ADD_TO_CART',
-    //       menuItem: { info: menuItem, quantity: 1, restaurantId },
-    //     })
-    //   );
-    // }
   };
 
   return (
@@ -72,13 +60,13 @@ const MenuItem = ({ menuItem }) => {
         style={imageId ? imageBackground : null}
         onClick={() => imageId && openModal(setIsModalOpen)}
       >
-        {cartItems.find(item => item.menuItem.id === menuItem.id) ? (
-          <UpdateQuantityButton />
-        ) : (
-          <div className={imageId && 'relative top-3'}>
+        <div className={imageId && 'relative top-3'}>
+          {cartItems.find(item => item.menuItem.id === menuItem.id) ? (
+            <UpdateQuantityButton menuItem={menuItem} />
+          ) : (
             <AddItemButton addItemToCart={addItemToCart} />
-          </div>
-        )}
+          )}
+        </div>
       </div>
 
       {isModalOpen && <MenuItemModal menuItem={menuItem} setIsModalOpen={setIsModalOpen} />}

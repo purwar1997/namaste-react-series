@@ -14,8 +14,6 @@ const Header = () => {
   const appTheme = useSelector(store => store.theme);
   const dispatch = useDispatch();
 
-  console.log(cartItems);
-
   return (
     <header className='flex justify-between items-center px-24 py-4 shadow-sm sticky top-0 bg-white z-20'>
       <div>
