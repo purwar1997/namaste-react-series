@@ -21,3 +21,9 @@ export const CUSTOM_OFFER_LOGO_URL =
 
 export const MENU_ITEM_MODAL_IMAGE_URL =
   'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/';
+
+export const CART_IMAGE_URL =
+  'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_100,h_100,c_fill/';
+
+export const CART_HOVER_CARD_IMAGE_URL =
+  'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_132,h_132,c_fill/';

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { BiSolidOffer } from 'react-icons/bi';
-import { MENU_ITEM_IMAGE_URL } from '../utils/constants';
+import { CART_IMAGE_URL } from '../utils/constants';
 import { calculateCartTotal } from '../utils/helpers';
 import useFetchRestaurantData from '../utils/useFetchRestaurantData';
 import Shimmer from './Shimmer';
@@ -35,10 +35,7 @@ const Cart = ({ cartItems }) => {
     <div className='bg-white w-2/5 max-h-[520px] flex flex-col justify-between'>
       <Link to={`/restaurants/${restaurantId}`}>
         <div className='cart-header px-6 py-4 flex gap-4'>
-          <div
-            className='w-14 h-14 bg-cover bg-center bg-no-repeat'
-            style={{ backgroundImage: `url(${MENU_ITEM_IMAGE_URL + cloudinaryImageId})` }}
-          />
+          <img className='h-14 w-14' src={CART_IMAGE_URL + cloudinaryImageId} />
 
           <div className='relative'>
             <h3 className='font-medium'>{name}</h3>

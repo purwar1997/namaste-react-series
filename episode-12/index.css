@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @layer utilities {
-  .active {
-    color: #fc8019;
-  }
-
   .carousel-btn {
     font-size: 18px;
     color: #1a1a1a;
