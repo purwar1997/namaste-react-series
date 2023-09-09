@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import { BsStarFill } from 'react-icons/bs';
 import { IoTimeOutline } from 'react-icons/io5';
 import { HiOutlineCurrencyRupee } from 'react-icons/hi2';
@@ -7,6 +8,7 @@ import Shimmer from './Shimmer';
 import MenuCategory from './MenuCategory';
 import TopPicksCarousel from './TopPicksCarousel';
 import OfferCarousel from './OfferCarousel';
+import ViewCartBar from './ViewCartBar';
 import useFetchRestaurantData from '../utils/useFetchRestaurantData';
 import RestaurantContext from '../context/RestaurantContext';
 
@@ -14,6 +16,7 @@ const Restaurant = () => {
   const [vegFilter, setVegFilter] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [showMenuIndex, setShowMenuIndex] = useState(null);
+  const cartItems = useSelector(store => store.cart);
   const { restaurantId } = useParams();
 
   useEffect(() => {
@@ -123,6 +126,8 @@ const Restaurant = () => {
           </div>
         </RestaurantContext.Provider>
       </div>
+
+      {cartItems.length > 0 && <ViewCartBar cartItems={cartItems} />}
     </div>
   );
 };

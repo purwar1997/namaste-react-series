@@ -17,3 +17,10 @@ export const scrollCarouselLeft = carousel => {
 export const scrollCarouselRight = carousel => {
   carousel.scrollLeft = carousel.scrollLeft + carousel.clientWidth / 2;
 };
+
+export const calculateCartTotal = items =>
+  items.reduce(
+    (total, { menuItem, quantity }) =>
+      total + ((menuItem.price || menuItem.defaultPrice) / 100) * quantity,
+    0
+  );

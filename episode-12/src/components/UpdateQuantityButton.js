@@ -12,7 +12,7 @@ const UpdateQuantityButton = ({ menuItem, id }) => {
   return (
     <div
       className={`text-sm font-bold text-lightGreen px-2.5 py-2 w-20 bg-white border border-gray-200 shadow-lg rounded-md cursor-pointer flex justify-between items-center ${
-        id && 'px-1.5 py-1.5 w-[70px] shadow-none rounded-none'
+        id && 'px-[6px] py-[5px] w-[70px] shadow-none rounded-none'
       }`}
       onClick={event => event.stopPropagation()}
     >

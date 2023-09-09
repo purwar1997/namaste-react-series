@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { BiSolidOffer } from 'react-icons/bi';
 import { MENU_ITEM_IMAGE_URL } from '../utils/constants';
+import { calculateCartTotal } from '../utils/helpers';
 import useFetchRestaurantData from '../utils/useFetchRestaurantData';
 import Shimmer from './Shimmer';
 import CartItem from './CartItem';
@@ -16,14 +17,9 @@ const Cart = ({ cartItems }) => {
   const restaurantInfo = restaurantData?.cards[0]?.card?.card?.info;
   const { name, areaName, cloudinaryImageId } = restaurantInfo;
 
-  const itemTotal = cartItems.reduce(
-    (total, { menuItem, quantity }) =>
-      total + ((menuItem.price || menuItem.defaultPrice) / 100) * quantity,
-    0
-  );
-
-  const deliveryFee = itemTotal > 500 ? 50 : 70;
-  const gstCharges = itemTotal > 700 ? 150 : 100;
+  const cartTotal = calculateCartTotal(cartItems);
+  const deliveryFee = cartTotal > 500 ? 50 : 70;
+  const gstCharges = cartTotal > 700 ? 150 : 100;
 
   const handleScroll = event => {
     const cartHeader = document.querySelector('.cart-header');
@@ -36,7 +32,7 @@ const Cart = ({ cartItems }) => {
   };
 
   return (
-    <div className='bg-white w-2/5 h-[520px] flex flex-col justify-between'>
+    <div className='bg-white w-2/5 max-h-[520px] flex flex-col justify-between'>
       <Link to={`/restaurants/${restaurantId}`}>
         <div className='cart-header px-6 py-4 flex gap-4'>
           <div
@@ -52,7 +48,7 @@ const Cart = ({ cartItems }) => {
         </div>
       </Link>
 
-      <div className='mt-2.5 px-6 flex-1 overflow-auto' onScroll={handleScroll}>
+      <div className='pt-2.5 pb-5 px-6 flex-1 overflow-auto' onScroll={handleScroll}>
         <div>
           {cartItems.map((item, index) => (
             <CartItem key={index} cartItem={item} />
@@ -64,12 +60,12 @@ const Cart = ({ cartItems }) => {
           <span className='text-sm'>Apply Coupon</span>
         </div>
 
-        <div className="mt-6 text-sm flex flex-col gap-2.5 after:content-[''] after:block after:w-full after:h-0.5 after:bg-black after:mt-2.5">
+        <div className='mt-6 text-sm flex flex-col gap-2.5'>
           <h4 className='font-medium'>Bill Details</h4>
 
           <div className='flex justify-between'>
             <span>Item Total</span>
-            <span>₹{itemTotal}</span>
+            <span>₹{cartTotal}</span>
           </div>
 
           <div className='flex justify-between'>
@@ -91,7 +87,7 @@ const Cart = ({ cartItems }) => {
 
       <div className='px-6 py-4 flex justify-between items-center border-t text-sm font-medium'>
         <span className='uppercase'>To Pay</span>
-        <span>₹{itemTotal + deliveryFee - 300 + gstCharges}</span>
+        <span>₹{cartTotal + deliveryFee - 300 + gstCharges}</span>
       </div>
     </div>
   );
