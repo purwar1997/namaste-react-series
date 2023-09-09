@@ -16,7 +16,7 @@ const ResetCartModal = ({ menuItem, closeModal }) => {
   return (
     <div
       className='modal-background'
-      id='reset-cart'
+      style={{ backgroundColor: 'transparent', alignItems: 'flex-end' }}
       onClick={e => e.target === e.currentTarget && closeModal()}
     >
       <div className='bg-white w-2/5 px-8 py-7 border relative bottom-12 shadow-modal'>

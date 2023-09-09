@@ -6,7 +6,7 @@ const Checkout = () => {
   const cartItems = useSelector(store => store.cart);
 
   return (
-    <div className='px-24 py-10'>
+    <div className='px-24 pt-8 pb-12 bg-gray-100 flex justify-center items-center'>
       {cartItems.length > 0 ? <Cart cartItems={cartItems} /> : <EmptyCart />}
     </div>
   );
