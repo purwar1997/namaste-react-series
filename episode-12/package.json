@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Episode-12 of Namaste React series by Akshay Saini",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel index.html --no-cache",
     "dev": "parcel build index.html",
     "test": "jest"
   },

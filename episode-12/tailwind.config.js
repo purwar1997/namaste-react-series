@@ -10,6 +10,7 @@ module.exports = {
         red: '#f04343',
         orange: '#FC8019',
         lightGreen: '#60B246',
+        lightOrange: '#FFFAE6',
       },
       width: {
         calc: 'calc(100% - 300px)',

@@ -1,12 +1,17 @@
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { BiSolidOffer } from 'react-icons/bi';
 import { CART_IMAGE_URL } from '../utils/constants';
 import { calculateCartTotal } from '../utils/helpers';
 import CartItem from './CartItem';
+import ApplyCoupon from './ApplyCoupon';
 
 const Cart = ({ cartItems }) => {
+  const [applyCoupon, setAppyCoupon] = useState(false);
+  const [couponCode, setCouponCode] = useState(null);
   const cart = useSelector(store => store.cart);
+
   const { name, areaName, cloudinaryImageId, id } = cart.restaurant;
 
   const cartTotal = calculateCartTotal(cartItems);
@@ -22,6 +27,8 @@ const Cart = ({ cartItems }) => {
       cartHeader.classList.remove('on-scroll');
     }
   };
+
+  const closeCouponList = () => setAppyCoupon(false);
 
   return (
     <div className='bg-white w-2/5 max-h-[520px] flex flex-col justify-between'>
@@ -44,7 +51,10 @@ const Cart = ({ cartItems }) => {
           ))}
         </div>
 
-        <div className='mt-6 p-4 flex items-center gap-4 border border-dashed border-gray-400 cursor-pointer hover:shadow-lg'>
+        <div
+          className='mt-6 p-4 flex items-center gap-4 border border-dashed border-gray-400 cursor-pointer hover:shadow-lg'
+          onClick={() => setAppyCoupon(true)}
+        >
           <BiSolidOffer className='text-2xl text-gray-700' />
           <span className='text-sm'>Apply Coupon</span>
         </div>
@@ -78,6 +88,15 @@ const Cart = ({ cartItems }) => {
         <span className='uppercase'>To Pay</span>
         <span>₹{cartTotal + deliveryFee - 300 + gstCharges}</span>
       </div>
+
+      {applyCoupon && (
+        <ApplyCoupon
+          restaurantId={id}
+          couponCode={couponCode}
+          setCouponCode={setCouponCode}
+          closeCouponList={closeCouponList}
+        />
+      )}
     </div>
   );
 };
