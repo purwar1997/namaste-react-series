@@ -1,21 +1,13 @@
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { BiSolidOffer } from 'react-icons/bi';
 import { CART_IMAGE_URL } from '../utils/constants';
 import { calculateCartTotal } from '../utils/helpers';
-import useFetchRestaurantData from '../utils/useFetchRestaurantData';
-import Shimmer from './Shimmer';
 import CartItem from './CartItem';
 
 const Cart = ({ cartItems }) => {
-  const { restaurantId } = cartItems[0];
-  const restaurantData = useFetchRestaurantData(restaurantId);
-
-  if (restaurantData === null) {
-    return <Shimmer />;
-  }
-
-  const restaurantInfo = restaurantData?.cards[0]?.card?.card?.info;
-  const { name, areaName, cloudinaryImageId } = restaurantInfo;
+  const cart = useSelector(store => store.cart);
+  const { name, areaName, cloudinaryImageId, id } = cart.restaurant;
 
   const cartTotal = calculateCartTotal(cartItems);
   const deliveryFee = cartTotal > 500 ? 50 : 70;
@@ -33,7 +25,7 @@ const Cart = ({ cartItems }) => {
 
   return (
     <div className='bg-white w-2/5 max-h-[520px] flex flex-col justify-between'>
-      <Link to={`/restaurants/${restaurantId}`}>
+      <Link to={`/restaurants/${id}`}>
         <div className='cart-header px-6 py-4 flex gap-4'>
           <img className='h-14 w-14' src={CART_IMAGE_URL + cloudinaryImageId} />
 

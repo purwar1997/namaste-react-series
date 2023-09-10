@@ -109,7 +109,7 @@ const Restaurant = () => {
           />
         </div>
 
-        <RestaurantContext.Provider value={restaurantId}>
+        <RestaurantContext.Provider value={restaurantInfo}>
           {topPicks && <TopPicksCarousel topPicks={topPicks} />}
 
           <div className={topPicks ? 'mt-10' : 'mt-4'}>

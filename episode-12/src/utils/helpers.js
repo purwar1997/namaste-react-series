@@ -21,6 +21,6 @@ export const scrollCarouselRight = carousel => {
 export const calculateCartTotal = items =>
   items.reduce(
     (total, { menuItem, quantity }) =>
-      total + ((menuItem.price || menuItem.defaultPrice) / 100) * quantity,
+      total + ((menuItem.price || menuItem.defaultPrice) * quantity) / 100,
     0
   );

@@ -1,9 +1,13 @@
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { CART_HOVER_CARD_IMAGE_URL } from '../utils/constants';
 import { calculateCartTotal } from '../utils/helpers';
 import CartHoverCardItem from './CartHoverCardItem';
 
 const CartHoverCard = ({ cartItems, closeCartCard }) => {
+  const cart = useSelector(store => store.cart);
+  const { name, areaName, cloudinaryImageId } = cart.restaurant;
+
   const handleClick = event => {
     event.preventDefault();
     event.stopPropagation();
@@ -15,11 +19,11 @@ const CartHoverCard = ({ cartItems, closeCartCard }) => {
       onClick={handleClick}
     >
       <div className='flex gap-4 pb-5 border-b border-gray-300'>
-        <img className='h-16 w-16' src={CART_HOVER_CARD_IMAGE_URL + 'd3to7amcs0pu8jwauayb'} />
+        <img className='h-16 w-16' src={CART_HOVER_CARD_IMAGE_URL + cloudinaryImageId} />
 
         <div>
-          <h3 className='font-medium'>Simple Burger</h3>
-          <h4 className='text-sm'>Sector 51</h4>
+          <h3 className='font-medium'>{name}</h3>
+          <h4 className='text-sm'>{areaName}</h4>
         </div>
       </div>
 

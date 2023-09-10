@@ -1,13 +1,22 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { setPath } from '../utils/pathSlice';
 import Cart from './Cart';
 import EmptyCart from './EmptyCart';
 
 const Checkout = () => {
-  const cartItems = useSelector(store => store.cart);
+  const cart = useSelector(store => store.cart);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setPath('/checkout'));
+
+    return () => dispatch(setPath(window.location.pathname));
+  }, []);
 
   return (
     <div className='px-24 pt-8 pb-12 bg-gray-100 flex justify-center items-center'>
-      {cartItems.length > 0 ? <Cart cartItems={cartItems} /> : <EmptyCart />}
+      {cart.items.length > 0 ? <Cart cartItems={cart.items} /> : <EmptyCart />}
     </div>
   );
 };

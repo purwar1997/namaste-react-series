@@ -11,7 +11,8 @@ const Header = () => {
 
   // useSelector is used to read data from a redux store
   // store variable will contain state variable of every slice
-  const cartItems = useSelector(store => store.cart);
+  const cart = useSelector(store => store.cart);
+  const path = useSelector(store => store.path);
   const userInfo = useSelector(store => store.user);
   const appTheme = useSelector(store => store.theme);
   const dispatch = useDispatch();
@@ -30,7 +31,7 @@ const Header = () => {
         <NavLink
           to='/'
           className='flex items-center hover:text-orange'
-          style={({ isActive }) => ({ color: isActive ? 'text-orange' : '' })}
+          style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
         >
           Home
         </NavLink>
@@ -38,7 +39,7 @@ const Header = () => {
         <NavLink
           to='about'
           className='flex items-center hover:text-orange'
-          style={({ isActive }) => ({ color: isActive ? 'text-orange' : '' })}
+          style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
         >
           About
         </NavLink>
@@ -46,7 +47,7 @@ const Header = () => {
         <NavLink
           to='search'
           className='flex items-center hover:text-orange'
-          style={({ isActive }) => ({ color: isActive ? 'text-orange' : '' })}
+          style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
         >
           Search
         </NavLink>
@@ -54,7 +55,7 @@ const Header = () => {
         <NavLink
           to='grocery'
           className='flex items-center hover:text-orange'
-          style={({ isActive }) => ({ color: isActive ? 'text-orange' : '' })}
+          style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
         >
           Grocery
         </NavLink>
@@ -62,27 +63,29 @@ const Header = () => {
         <NavLink
           to='instamart'
           className='flex items-center hover:text-orange'
-          style={({ isActive }) => ({ color: isActive ? 'text-orange' : '' })}
+          style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
         >
           Instamart
         </NavLink>
 
-        <NavLink
-          to='checkout'
-          className='flex items-center hover:text-orange relative'
-          style={({ isActive }) => ({ color: isActive ? 'text-orange' : '' })}
-          onMouseOver={() => setCartHover(true)}
-          onMouseLeave={closeCartCard}
-          onClick={closeCartCard}
-        >
-          Cart ({cartItems.reduce((totalItems, item) => totalItems + item.quantity, 0)})
-          {cartHover &&
-            (cartItems.length > 0 ? (
-              <CartHoverCard cartItems={cartItems} closeCartCard={closeCartCard} />
-            ) : (
-              <EmptyCartHoverCard />
-            ))}
-        </NavLink>
+        {path !== '/checkout' && (
+          <NavLink
+            to='checkout'
+            className='flex items-center hover:text-orange relative'
+            style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
+            onMouseOver={() => setCartHover(true)}
+            onMouseLeave={closeCartCard}
+            onClick={closeCartCard}
+          >
+            Cart ({cart.items.reduce((totalItems, item) => totalItems + item.quantity, 0)})
+            {cartHover &&
+              (cart.items.length > 0 ? (
+                <CartHoverCard cartItems={cart.items} closeCartCard={closeCartCard} />
+              ) : (
+                <EmptyCartHoverCard />
+              ))}
+          </NavLink>
+        )}
 
         {userInfo.name && <li className='list-none flex items-center'>{userInfo.name}</li>}
 

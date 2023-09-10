@@ -14,9 +14,9 @@ import UpdateQuantityButton from './UpdateQuantityButton';
 const MenuItem = ({ menuItem }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [resetCart, setResetCart] = useState(false);
-  const restaurantId = useContext(RestaurantContext);
+  const restaurant = useContext(RestaurantContext);
 
-  const cartItems = useSelector(store => store.cart);
+  const cart = useSelector(store => store.cart);
   const dispatch = useDispatch();
 
   const { name, description, price, defaultPrice, isVeg, imageId } = menuItem;
@@ -30,13 +30,12 @@ const MenuItem = ({ menuItem }) => {
   const addItemToCart = event => {
     event.stopPropagation();
 
-    const otherRestaurantItem =
-      cartItems.length > 0 && cartItems.at(-1).restaurantId !== restaurantId;
+    const otherRestaurantItem = cart.items.length > 0 && cart.restaurant.id !== restaurant.id;
 
     if (otherRestaurantItem) {
       setResetCart(true);
     } else {
-      dispatch(addToCart({ menuItem, restaurantId }));
+      dispatch(addToCart({ menuItem, restaurant }));
     }
   };
 
@@ -61,7 +60,7 @@ const MenuItem = ({ menuItem }) => {
         onClick={() => imageId && openModal(setIsModalOpen)}
       >
         <div className={imageId && 'relative top-3'}>
-          {cartItems.find(item => item.menuItem.id === menuItem.id) ? (
+          {cart.items.find(item => item.menuItem.id === menuItem.id) ? (
             <UpdateQuantityButton menuItem={menuItem} />
           ) : (
             <AddItemButton addItemToCart={addItemToCart} />

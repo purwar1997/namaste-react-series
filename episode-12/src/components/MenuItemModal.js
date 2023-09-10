@@ -12,20 +12,19 @@ import ResetCartModal from './ResetCartModal';
 
 const MenuItemModal = ({ menuItem, setIsModalOpen }) => {
   const [resetCart, setResetCart] = useState(false);
-  const restaurantId = useContext(RestaurantContext);
-  const cartItems = useSelector(store => store.cart);
+  const restaurant = useContext(RestaurantContext);
+  const cart = useSelector(store => store.cart);
   const dispatch = useDispatch();
 
   const { name, description, price, defaultPrice, isVeg, imageId } = menuItem;
 
   const addItemToCart = () => {
-    const otherRestaurantItem =
-      cartItems.length > 0 && cartItems.at(-1).restaurantId !== restaurantId;
+    const otherRestaurantItem = cart.items.length > 0 && cart.restaurant.id !== restaurant.id;
 
     if (otherRestaurantItem) {
       setResetCart(true);
     } else {
-      dispatch(addToCart({ menuItem, restaurantId }));
+      dispatch(addToCart({ menuItem, restaurant }));
     }
   };
 
@@ -44,7 +43,7 @@ const MenuItemModal = ({ menuItem, setIsModalOpen }) => {
             <p>₹{(price || defaultPrice) / 100}</p>
           </div>
 
-          {cartItems.find(item => item.menuItem.id === menuItem.id) ? (
+          {cart.items.find(item => item.menuItem.id === menuItem.id) ? (
             <UpdateQuantityButton menuItem={menuItem} />
           ) : (
             <AddItemButton addItemToCart={addItemToCart} />

@@ -1,8 +1,200 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const cartSlice = createSlice({
-  name: 'cart',
-  initialState: [
+const initialState = {
+  restaurant: {
+    id: '596007',
+    name: 'Big Bowl',
+    city: 'Noida 1',
+    slugs: {
+      restaurant: 'big-bowl-company-golf-course-golf-course',
+      city: 'noida-1',
+    },
+    uniqueId: 'fdb85b43-44af-46d1-8c9c-29bed9fc2c3c',
+    cloudinaryImageId: '992f217c2f122c0d8fc385855ca30722',
+    locality: 'Tulip Mall',
+    areaName: 'Sector 48',
+    costForTwo: '25000',
+    costForTwoMessage: '₹250 for two',
+    cuisines: ['North Indian', 'Chinese'],
+    avgRating: 3.8,
+    feeDetails: {
+      restaurantId: '596007',
+      fees: [
+        {
+          name: 'distance',
+          fee: 5300,
+        },
+        {
+          name: 'time',
+        },
+        {
+          name: 'special',
+        },
+      ],
+      totalFee: 5300,
+      title: 'Delivery Charge',
+      amount: '5300',
+    },
+    parentId: '434792',
+    avgRatingString: '3.8',
+    totalRatingsString: '100+ ratings',
+    sla: {
+      restaurantId: '596007',
+      deliveryTime: 31,
+      minDeliveryTime: 31,
+      maxDeliveryTime: 31,
+      lastMileTravel: 5.8,
+      serviceability: 'SERVICEABLE',
+      stressFactor: 0.6399017,
+      rainMode: 'RAIN_MODE_NONE',
+      longDistance: 'LONG_DISTANCE_NOT_LONG_DISTANCE',
+      zoneId: 2831,
+      slaString: '31 MINS',
+      lastMileTravelString: '5.8 km',
+      iconType: 'ICON_TYPE_EMPTY',
+    },
+    availability: {
+      nextCloseTime: '2023-09-11 01:00:00',
+      visibility: true,
+      opened: true,
+      restaurantClosedMeta: {},
+    },
+    aggregatedDiscountInfo: {
+      header: '60% off',
+      shortDescriptionList: [
+        {
+          meta: '60% off | Use TRYNEW',
+          discountType: 'Percentage',
+          operationType: 'RESTAURANT',
+        },
+        {
+          meta: 'Flat ₹125 off on orders above ₹399',
+          discountType: 'Flat',
+          operationType: 'RESTAURANT',
+        },
+      ],
+      descriptionList: [
+        {
+          meta: '60% off up to ₹120 | Use code TRYNEW',
+          discountType: 'Percentage',
+          operationType: 'RESTAURANT',
+        },
+        {
+          meta: 'Flat ₹125 off on orders above ₹399 | Use code WEEKENDS',
+          discountType: 'Flat',
+          operationType: 'RESTAURANT',
+        },
+      ],
+      visible: true,
+    },
+    badges: {},
+    slugString: 'big-bowl-company-golf-course-golf-course',
+    multiOutlet: true,
+    isOpen: true,
+    labels: [
+      {
+        title: 'Timings',
+        message: 'null',
+      },
+      {
+        title: 'Address',
+        message:
+          'Shop No- F-9 & F-10, First Floor, Tulip Malls, Plot No- B-156A, Sector- 46, Noida, NOIDA CITY ZONE-2, Gautam Buddha Nagar , Uttar Pradesh',
+      },
+      {
+        title: 'Cuisines',
+        message: 'North Indian,Chinese',
+      },
+    ],
+    totalRatings: 100,
+    aggregatedDiscountInfoV2: {
+      header: '60% off',
+      shortDescriptionList: [
+        {
+          meta: '60% off | Use TRYNEW',
+          discountType: 'Percentage',
+          operationType: 'RESTAURANT',
+        },
+        {
+          meta: 'Flat ₹125 off on orders above ₹399',
+          discountType: 'Flat',
+          operationType: 'RESTAURANT',
+        },
+      ],
+      descriptionList: [
+        {
+          meta: '60% off up to ₹120 | Use code TRYNEW',
+          discountType: 'Percentage',
+          operationType: 'RESTAURANT',
+        },
+        {
+          meta: 'Flat ₹125 off on orders above ₹399 | Use code WEEKENDS',
+          discountType: 'Flat',
+          operationType: 'RESTAURANT',
+        },
+      ],
+      couponDetailsCta: 'View coupon details',
+    },
+    type: 'F',
+    nudgeBanners: [
+      {
+        minValue: 279,
+        maxValue: 399,
+        priority: 84,
+        couponCode: 'WEEKENDS',
+        discountInfo: {
+          discountType: 'Flat',
+          value: 125,
+        },
+        lockedMessage: 'Add items worth ₹<amount> to save ₹125 | Code WEEKENDS',
+        unlockedMessage: 'WEEKENDS Coupon Unlocked! Use it to save ₹125',
+        logoCtx: {},
+      },
+      {
+        minValue: 420,
+        maxValue: 600,
+        priority: 85,
+        couponCode: 'PARTY',
+        discountInfo: {
+          discountType: 'Percentage',
+          value: 25,
+        },
+        lockedMessage: 'Add items worth ₹<amount> to unlock flat 25% off | Code PARTY',
+        unlockedMessage: 'PARTY Coupon Unlocked! Use it to save flat 25% off',
+        logoCtx: {},
+      },
+    ],
+    headerBanner: {
+      url: 'swiggy://webview?is_external=false&webview_url=https://www.swiggy.com/restaurant-info/596007',
+    },
+    expectationNotifiers: [
+      {
+        icon: {},
+        popup: {
+          cta: {},
+        },
+        type: 'DISTANCE_FEE_NON_FOOD_LM',
+        halfCardPopup: {
+          halfCardPopupHeader: {},
+        },
+      },
+    ],
+    ratingSlab: 'RATING_SLAB_4',
+    orderabilityCommunication: {
+      title: {},
+      subTitle: {},
+      message: {},
+      customIcon: {},
+    },
+    hasBestsellerItems: true,
+    hasGuiltfreeItems: true,
+    cartOrderabilityNudgeBanner: {
+      parameters: {},
+      presentation: {},
+    },
+    latLong: '28.549166,77.362825',
+  },
+  items: [
     {
       menuItem: {
         id: '113294801',
@@ -72,7 +264,6 @@ const cartSlice = createSlice({
           },
         },
       },
-      restaurantId: '583088',
       quantity: 3,
     },
     {
@@ -140,7 +331,6 @@ const cartSlice = createSlice({
           aggregatedRating: {},
         },
       },
-      restaurantId: '583088',
       quantity: 2,
     },
     {
@@ -208,7 +398,6 @@ const cartSlice = createSlice({
           },
         },
       },
-      restaurantId: '583088',
       quantity: 1,
     },
     {
@@ -260,44 +449,54 @@ const cartSlice = createSlice({
           },
         },
       },
-      restaurantId: '583088',
       quantity: 4,
     },
   ],
+};
 
+const cartSlice = createSlice({
+  name: 'cart',
+  initialState,
   reducers: {
     addToCart(state, action) {
-      const cartItem = state.find(({ menuItem }) => menuItem.id === action.payload.menuItem.id);
-      const cartItemIndex = state.findIndex(
-        ({ menuItem }) => menuItem.id === action.payload.menuItem.id
-      );
+      const { menuItem, restaurant } = action.payload;
+
+      if (state.items.length === 0) {
+        state.restaurant = restaurant;
+      }
+
+      const cartItem = state.items.find(item => item.menuItem.id === menuItem.id);
+      const index = state.items.findIndex(item => item.menuItem.id === menuItem.id);
 
       if (cartItem) {
-        cartItem.quantity = cartItem.quantity + 1;
-        state.splice(cartItemIndex, 1, cartItem);
+        state.items.splice(index, 1, { ...cartItem, quantity: cartItem.quantity + 1 });
       } else {
-        state.push({ ...action.payload, quantity: 1 });
+        state.items.push({ menuItem, quantity: 1 });
       }
     },
 
     removeFromCart(state, action) {
-      const cartItem = state.find(({ menuItem }) => menuItem.id === action.payload);
-      const cartItemIndex = state.findIndex(({ menuItem }) => menuItem.id === action.payload);
+      const itemId = action.payload;
+      const cartItem = state.items.find(item => item.menuItem.id === itemId);
+      const index = state.items.findIndex(item => item.menuItem.id === itemId);
 
       if (cartItem.quantity > 1) {
-        cartItem.quantity = cartItem.quantity - 1;
-        state.splice(cartItemIndex, 1, cartItem);
+        state.items.splice(index, 1, { ...cartItem, quantity: cartItem.quantity - 1 });
       } else {
-        state.splice(cartItemIndex, 1);
+        state.items.splice(index, 1);
+      }
+
+      if (state.items.length === 0) {
+        state.restaurant = null;
       }
     },
 
     clearCart(state) {
-      state.length = 0;
+      state.items.length = 0;
+      state.restaurant = null;
     },
   },
 });
 
 export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
-
 export default cartSlice.reducer;

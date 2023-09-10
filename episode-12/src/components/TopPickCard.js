@@ -9,21 +9,20 @@ import ResetCartModal from './ResetCartModal';
 
 const TopPickCard = ({ topPick }) => {
   const [resetCart, setResetCart] = useState(false);
-  const restaurantId = useContext(RestaurantContext);
-  const cartItems = useSelector(store => store.cart);
+  const restaurant = useContext(RestaurantContext);
+  const cart = useSelector(store => store.cart);
   const dispatch = useDispatch();
 
   const { creativeId, fontColor } = topPick;
   const { price, defaultPrice } = topPick?.dish?.info;
 
   const addItemToCart = () => {
-    const otherRestaurantItem =
-      cartItems.length > 0 && cartItems.at(-1).restaurantId !== restaurantId;
+    const otherRestaurantItem = cart.items.length > 0 && cart.restaurant.id !== restaurant.id;
 
     if (otherRestaurantItem) {
       setResetCart(true);
     } else {
-      dispatch(addToCart({ menuItem: topPick?.dish?.info, restaurantId }));
+      dispatch(addToCart({ menuItem: topPick?.dish?.info, restaurant }));
     }
   };
 
@@ -34,7 +33,7 @@ const TopPickCard = ({ topPick }) => {
       <div className='absolute bottom-5 w-full px-6 flex justify-between items-center'>
         <span style={{ color: fontColor, fontWeight: 500 }}>₹{(price || defaultPrice) / 100}</span>
 
-        {cartItems.find(item => item.menuItem.id === topPick?.dish?.info?.id) ? (
+        {cart.items.find(item => item.menuItem.id === topPick?.dish?.info?.id) ? (
           <UpdateQuantityButton menuItem={topPick?.dish?.info} />
         ) : (
           <AddItemButton addItemToCart={addItemToCart} />

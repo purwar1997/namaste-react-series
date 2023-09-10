@@ -4,12 +4,12 @@ import { addToCart, clearCart } from '../utils/cartSlice';
 import RestaurantContext from '../context/RestaurantContext';
 
 const ResetCartModal = ({ menuItem, closeModal }) => {
-  const restaurantId = useContext(RestaurantContext);
+  const restaurant = useContext(RestaurantContext);
   const dispatch = useDispatch();
 
   const resetCart = () => {
     dispatch(clearCart());
-    dispatch(addToCart({ menuItem, restaurantId }));
+    dispatch(addToCart({ menuItem, restaurant }));
     closeModal();
   };
 
