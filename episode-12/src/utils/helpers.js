@@ -1,12 +1,12 @@
 export const openModal = setIsModalOpen => {
   setIsModalOpen(true);
-  document.body.classList.add('disable-scrolling');
+  document.body.classList.add('disable-scroll');
 };
 
 export const closeModal = (event, setIsModalOpen) => {
   if (event.target === event.currentTarget) {
     setIsModalOpen(false);
-    document.body.classList.remove('disable-scrolling');
+    document.body.classList.remove('disable-scroll');
   }
 };
 

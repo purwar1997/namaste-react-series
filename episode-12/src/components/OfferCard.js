@@ -9,8 +9,6 @@ const OfferCard = ({ offer }) => {
   const { header, couponCode, description, logoBottom } = offer?.info;
   const logoUrl = logoBottom ? CUSTOM_OFFER_LOGO_URL + logoBottom : DEFAULT_OFFER_LOGO_URL;
 
-  console.log(offer);
-
   return (
     <>
       <div

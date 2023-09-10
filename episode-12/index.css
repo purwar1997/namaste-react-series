@@ -30,7 +30,7 @@
     z-index: 100;
   }
 
-  .disable-scrolling {
+  .disable-scroll {
     height: 100vh;
     overflow: hidden;
   }

@@ -16,14 +16,14 @@ const Restaurant = () => {
   const [vegFilter, setVegFilter] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [showMenuIndex, setShowMenuIndex] = useState(null);
-  const cartItems = useSelector(store => store.cart);
+  const cart = useSelector(store => store.cart);
+
   const { restaurantId } = useParams();
+  const restaurantData = useFetchRestaurantData(restaurantId);
 
   useEffect(() => {
     document.documentElement.scrollTop = 0;
   }, []);
-
-  const restaurantData = useFetchRestaurantData(restaurantId);
 
   if (restaurantData === null) {
     return <Shimmer />;
@@ -127,7 +127,7 @@ const Restaurant = () => {
         </RestaurantContext.Provider>
       </div>
 
-      {cartItems.length > 0 && <ViewCartBar cartItems={cartItems} />}
+      {cart.items.length > 0 && <ViewCartBar cartItems={cart.items} />}
     </div>
   );
 };

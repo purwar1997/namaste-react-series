@@ -18,6 +18,20 @@ module.exports = {
       boxShadow: {
         modal: '0px 0px 10px 5px rgb(0 0 0 / 0.1)',
       },
+      keyframes: {
+        slideLeft: {
+          '0%': { right: '-500px' },
+          '100%': { right: '0px' },
+        },
+        slideRight: {
+          '0%': { right: '0px' },
+          '100%': { right: '-500px' },
+        },
+      },
+      animation: {
+        'card-slide-left': 'slideLeft .5s ease',
+        'card-slide-right': 'slideRight .5s ease',
+      },
     },
   },
   plugins: [],

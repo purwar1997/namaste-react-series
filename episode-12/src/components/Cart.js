@@ -8,7 +8,7 @@ import CartItem from './CartItem';
 import ApplyCoupon from './ApplyCoupon';
 
 const Cart = ({ cartItems }) => {
-  const [applyCoupon, setAppyCoupon] = useState(false);
+  const [applyCoupon, setApplyCoupon] = useState(false);
   const [couponCode, setCouponCode] = useState(null);
   const cart = useSelector(store => store.cart);
 
@@ -19,7 +19,7 @@ const Cart = ({ cartItems }) => {
   const gstCharges = cartTotal > 700 ? 150 : 100;
 
   const handleScroll = event => {
-    const cartHeader = document.querySelector('.cart-header');
+    const cartHeader = document.querySelector('#cart-header');
 
     if (event.target.scrollTop > 0) {
       cartHeader.classList.add('on-scroll');
@@ -28,12 +28,20 @@ const Cart = ({ cartItems }) => {
     }
   };
 
-  const closeCouponList = () => setAppyCoupon(false);
+  const openCouponList = () => {
+    setApplyCoupon(true);
+    document.body.classList.add('disable-scroll');
+  };
+
+  const closeCouponList = () => {
+    setApplyCoupon(false);
+    document.body.classList.remove('disable-scroll');
+  };
 
   return (
     <div className='bg-white w-2/5 max-h-[520px] flex flex-col justify-between'>
       <Link to={`/restaurants/${id}`}>
-        <div className='cart-header px-6 py-4 flex gap-4'>
+        <div className='px-6 py-4 flex gap-4' id='cart-header'>
           <img className='h-14 w-14' src={CART_IMAGE_URL + cloudinaryImageId} />
 
           <div className='relative'>
@@ -52,11 +60,31 @@ const Cart = ({ cartItems }) => {
         </div>
 
         <div
-          className='mt-6 p-4 flex items-center gap-4 border border-dashed border-gray-400 cursor-pointer hover:shadow-lg'
-          onClick={() => setAppyCoupon(true)}
+          className={`mt-6 px-5 py-3.5 flex items-center gap-3 border border-dashed border-gray-400 cursor-pointer hover:shadow-lg ${
+            couponCode && 'justify-between cursor-auto hover:shadow-none'
+          }`}
+          onClick={couponCode === null && openCouponList}
         >
-          <BiSolidOffer className='text-2xl text-gray-700' />
-          <span className='text-sm'>Apply Coupon</span>
+          {couponCode ? (
+            <>
+              <div>
+                <h4 className='text-black uppercase'>{couponCode}</h4>
+                <p className='mt-px text-sm text-gray-500'>Coupon applied on the bill</p>
+              </div>
+
+              <button
+                className='text-sm font-medium uppercase hover:text-orange'
+                onClick={() => setCouponCode(null)}
+              >
+                Remove
+              </button>
+            </>
+          ) : (
+            <>
+              <BiSolidOffer className='text-2xl text-gray-700' />
+              <span className='text-sm'>Apply Coupon</span>
+            </>
+          )}
         </div>
 
         <div className='mt-6 text-sm flex flex-col gap-2.5'>
@@ -72,10 +100,12 @@ const Cart = ({ cartItems }) => {
             <span>₹{deliveryFee}</span>
           </div>
 
-          <div className='flex justify-between text-lightGreen'>
-            <span>Item Discount</span>
-            <span>- ₹300</span>
-          </div>
+          {couponCode && (
+            <div className='flex justify-between text-lightGreen'>
+              <span>Item Discount</span>
+              <span>- ₹300</span>
+            </div>
+          )}
 
           <div className='flex justify-between'>
             <span>GST and Restaurant Charges</span>
@@ -92,7 +122,6 @@ const Cart = ({ cartItems }) => {
       {applyCoupon && (
         <ApplyCoupon
           restaurantId={id}
-          couponCode={couponCode}
           setCouponCode={setCouponCode}
           closeCouponList={closeCouponList}
         />

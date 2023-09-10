@@ -12,7 +12,7 @@ const useFetchRestaurants = () => {
     try {
       const response = await fetch(RESTAURANTS_URL);
       const json = await response.json();
-      setRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      setRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     } catch (err) {
       console.log(err.message);
     }
