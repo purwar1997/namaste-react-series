@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { RxCross1 } from 'react-icons/rx';
+import { openModal } from '../utils/helpers';
 import useFetchRestaurantData from '../utils/useFetchRestaurantData';
 import CouponCard from './CouponCard';
 import Spinner from './Spinner';
 
-const ApplyCoupon = ({ restaurantId, setCouponCode, closeCouponList }) => {
+const ApplyCouponCard = ({ restaurantId, setCouponCode, setOpenCouponModal, closeCouponList }) => {
   const [couponInput, setCouponInput] = useState('');
   const [error, setError] = useState(null);
   const restaurant = useFetchRestaurantData(restaurantId);
@@ -19,6 +20,7 @@ const ApplyCoupon = ({ restaurantId, setCouponCode, closeCouponList }) => {
     if (isCouponValid) {
       setCouponCode(couponInput);
       closeCouponList();
+      openModal(setOpenCouponModal);
     } else {
       setError('Coupon does not exist');
     }
@@ -85,6 +87,7 @@ const ApplyCoupon = ({ restaurantId, setCouponCode, closeCouponList }) => {
                 key={offer?.info?.offerIds[0]}
                 couponInfo={offer?.info}
                 setCouponCode={setCouponCode}
+                setOpenCouponModal={setOpenCouponModal}
                 closeCouponList={closeCouponList}
               />
             ))}
@@ -95,4 +98,4 @@ const ApplyCoupon = ({ restaurantId, setCouponCode, closeCouponList }) => {
   );
 };
 
-export default ApplyCoupon;
+export default ApplyCouponCard;

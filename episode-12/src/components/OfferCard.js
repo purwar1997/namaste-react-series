@@ -12,9 +12,7 @@ const OfferCard = ({ offer }) => {
   return (
     <>
       <div
-        className={`border rounded-lg px-3.5 py-3 min-w-[240px]  ${
-          isModalOpen ? 'cursor-auto' : 'cursor-pointer'
-        }`}
+        className='border rounded-lg px-3.5 py-3 min-w-[240px] cursor-pointer'
         onClick={() => openModal(setIsModalOpen)}
       >
         <div className='flex items-center gap-2.5'>

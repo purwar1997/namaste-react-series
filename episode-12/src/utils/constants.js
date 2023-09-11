@@ -27,3 +27,6 @@ export const CART_IMAGE_URL =
 
 export const CART_HOVER_CARD_IMAGE_URL =
   'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_132,h_132,c_fill/';
+
+export const COUPON_MODAL_IMAGE_URL =
+  'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_144/unified-discounting/CouponCartToast';

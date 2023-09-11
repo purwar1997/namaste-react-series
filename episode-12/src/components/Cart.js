@@ -5,11 +5,13 @@ import { BiSolidOffer } from 'react-icons/bi';
 import { CART_IMAGE_URL } from '../utils/constants';
 import { calculateCartTotal } from '../utils/helpers';
 import CartItem from './CartItem';
-import ApplyCoupon from './ApplyCoupon';
+import ApplyCouponCard from './ApplyCouponCard';
+import CouponAppliedModal from './CouponAppliedModal';
 
 const Cart = ({ cartItems }) => {
   const [applyCoupon, setApplyCoupon] = useState(false);
   const [couponCode, setCouponCode] = useState(null);
+  const [openCouponModal, setOpenCouponModal] = useState(false);
   const cart = useSelector(store => store.cart);
 
   const { name, areaName, cloudinaryImageId, id } = cart.restaurant;
@@ -120,11 +122,16 @@ const Cart = ({ cartItems }) => {
       </div>
 
       {applyCoupon && (
-        <ApplyCoupon
+        <ApplyCouponCard
           restaurantId={id}
           setCouponCode={setCouponCode}
+          setOpenCouponModal={setOpenCouponModal}
           closeCouponList={closeCouponList}
         />
+      )}
+
+      {openCouponModal && (
+        <CouponAppliedModal couponCode={couponCode} setOpenCouponModal={setOpenCouponModal} />
       )}
     </div>
   );
