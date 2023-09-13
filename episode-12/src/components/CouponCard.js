@@ -5,7 +5,7 @@ import { DEFAULT_OFFER_LOGO_URL } from '../utils/constants';
 
 const CouponCard = ({ couponInfo, setCouponCode, setOpenCouponModal, closeCouponList }) => {
   const [showMore, setShowMore] = useState(false);
-  const { couponCode = 'USE TRYNEW', header, description } = couponInfo;
+  const { couponCode, header, description } = couponInfo;
 
   const applyCoupon = couponCode => {
     setCouponCode(couponCode);

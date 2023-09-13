@@ -6345,8 +6345,8 @@ const cartSlice = createSlice({
     },
 
     clearCart(state) {
-      state.items.length = 0;
       state.restaurant = null;
+      state.items.length = 0;
     },
   },
 });

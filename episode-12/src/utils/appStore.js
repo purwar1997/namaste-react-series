@@ -5,6 +5,7 @@ import themeReducer from './themeSlice';
 import pathReducer from './pathSlice';
 
 const appStore = configureStore({
+  // reducer for the whole application
   reducer: {
     cart: cartReducer,
     user: userReducer,
