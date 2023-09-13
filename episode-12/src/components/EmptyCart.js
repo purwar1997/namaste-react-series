@@ -7,9 +7,12 @@ const EmptyCart = () => {
       <img className='w-80' src={emptyCart} />
       <h2 className='-mt-3 text-2xl'>Your cart is empty</h2>
       <p className='mt-3 text-gray-600'>You can go to home page to view more restaurants</p>
-      <button className='mt-8 bg-orange text-white font-medium uppercase px-5 py-2 rounded hover:opacity-90'>
-        <Link to='/'>See Restaurants</Link>
-      </button>
+      <Link
+        to='/'
+        className='inline-block mt-8 px-5 py-2.5 bg-orange text-white font-medium uppercase rounded hover:opacity-90'
+      >
+        See Restaurants
+      </Link>
     </div>
   );
 };

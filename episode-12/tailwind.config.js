@@ -13,7 +13,10 @@ module.exports = {
         lightOrange: '#FFFAE6',
       },
       width: {
-        calc: 'calc(100% - 300px)',
+        calc: 'calc(100vw - 300px)',
+      },
+      height: {
+        calc: 'calc(100vh - 79px)',
       },
       boxShadow: {
         modal: '0px 0px 10px 5px rgb(0 0 0 / 0.1)',

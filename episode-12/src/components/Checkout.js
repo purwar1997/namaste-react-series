@@ -15,7 +15,7 @@ const Checkout = () => {
   }, []);
 
   return (
-    <div className='px-24 pt-8 pb-12 bg-gray-100 flex justify-center items-center'>
+    <div className='px-24 py-10 bg-gray-100 flex justify-center items-center'>
       {cart.items.length > 0 ? <Cart cartItems={cart.items} /> : <EmptyCart />}
     </div>
   );
