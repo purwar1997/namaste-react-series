@@ -53,7 +53,7 @@ const MenuItem = ({ menuItem }) => {
       </div>
 
       <div
-        className={`w-32 rounded-lg bg-cover bg-center bg-no-repeat flex justify-center items-end  ${
+        className={`w-32 rounded-lg bg-cover bg-center bg-no-repeat flex justify-center items-end ${
           imageId ? 'h-32 cursor-pointer' : 'cursor-auto'
         }`}
         style={imageId ? imageBackground : null}
