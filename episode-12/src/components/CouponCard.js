@@ -3,13 +3,13 @@ import { AiOutlinePlus } from 'react-icons/ai';
 import { openModal } from '../utils/helpers';
 import { DEFAULT_OFFER_LOGO_URL } from '../utils/constants';
 
-const CouponCard = ({ couponInfo, setCouponCode, setOpenCouponModal, closeCouponList }) => {
+const CouponCard = ({ couponInfo, setCouponCode, setOpenCouponModal, closeCouponDrawer }) => {
   const [showMore, setShowMore] = useState(false);
   const { couponCode, header, description } = couponInfo;
 
   const applyCoupon = couponCode => {
     setCouponCode(couponCode);
-    closeCouponList();
+    closeCouponDrawer();
     openModal(setOpenCouponModal);
   };
 

@@ -28,7 +28,7 @@ const TopPickCard = ({ topPick }) => {
 
   return (
     <div className='relative'>
-      <img className='min-w-[350px] rounded-2xl' src={TOP_PICK_IMAGE_URL + creativeId} />
+      <img className='w-[350px] rounded-2xl' src={TOP_PICK_IMAGE_URL + creativeId} />
 
       <div className='absolute bottom-5 w-full px-6 flex justify-between items-center'>
         <span style={{ color: fontColor, fontWeight: 500 }}>₹{(price || defaultPrice) / 100}</span>

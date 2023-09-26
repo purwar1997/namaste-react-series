@@ -1,22 +1,21 @@
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { BiSolidOffer } from 'react-icons/bi';
 import { CART_IMAGE_URL } from '../utils/constants';
 import { calculateCartTotal } from '../utils/helpers';
 import CartItem from './CartItem';
-import ApplyCouponCard from './ApplyCouponCard';
+import Backdrop from './Backdrop';
+import ApplyCouponDrawer from './ApplyCouponDrawer';
 import CouponAppliedModal from './CouponAppliedModal';
 
-const Cart = ({ cartItems }) => {
-  const [applyCoupon, setApplyCoupon] = useState(false);
+const Cart = ({ cartInfo }) => {
+  const [openDrawer, setOpenDrawer] = useState(false);
   const [couponCode, setCouponCode] = useState(null);
   const [openCouponModal, setOpenCouponModal] = useState(false);
-  const cart = useSelector(store => store.cart);
 
-  const { name, areaName, cloudinaryImageId, id } = cart.restaurant;
+  const { name, areaName, cloudinaryImageId, id } = cartInfo.restaurant;
 
-  const cartTotal = calculateCartTotal(cartItems);
+  const cartTotal = calculateCartTotal(cartInfo.items);
   const deliveryFee = cartTotal > 500 ? 50 : 70;
   const gstCharges = cartTotal > 700 ? 150 : 100;
 
@@ -30,13 +29,13 @@ const Cart = ({ cartItems }) => {
     }
   };
 
-  const openCouponList = () => {
-    setApplyCoupon(true);
+  const openCouponDrawer = () => {
+    setOpenDrawer(true);
     document.body.classList.add('disable-scroll');
   };
 
-  const closeCouponList = () => {
-    setApplyCoupon(false);
+  const closeCouponDrawer = () => {
+    setOpenDrawer(false);
     document.body.classList.remove('disable-scroll');
   };
 
@@ -56,16 +55,16 @@ const Cart = ({ cartItems }) => {
 
       <div className='pt-2.5 pb-5 px-6 flex-1 overflow-auto' onScroll={handleScroll}>
         <div>
-          {cartItems.map((item, index) => (
+          {cartInfo.items.map((item, index) => (
             <CartItem key={index} cartItem={item} />
           ))}
         </div>
 
         <div
           className={`mt-6 px-5 py-3.5 flex items-center gap-3 border border-dashed border-gray-400 cursor-pointer hover:shadow-lg ${
-            couponCode && 'justify-between cursor-auto hover:shadow-none'
+            couponCode && 'justify-between cursor-default hover:shadow-none'
           }`}
-          onClick={couponCode === null && openCouponList}
+          onClick={() => couponCode === null && openCouponDrawer()}
         >
           {couponCode ? (
             <>
@@ -121,14 +120,15 @@ const Cart = ({ cartItems }) => {
         <span>₹{cartTotal + deliveryFee - 300 + gstCharges}</span>
       </div>
 
-      {applyCoupon && (
-        <ApplyCouponCard
-          restaurantId={id}
-          setCouponCode={setCouponCode}
-          setOpenCouponModal={setOpenCouponModal}
-          closeCouponList={closeCouponList}
-        />
-      )}
+      {openDrawer && <Backdrop closeCouponDrawer={closeCouponDrawer} />}
+
+      <ApplyCouponDrawer
+        restaurantId={id}
+        setCouponCode={setCouponCode}
+        setOpenCouponModal={setOpenCouponModal}
+        closeCouponDrawer={closeCouponDrawer}
+        openDrawer={openDrawer}
+      />
 
       {openCouponModal && (
         <CouponAppliedModal couponCode={couponCode} setOpenCouponModal={setOpenCouponModal} />

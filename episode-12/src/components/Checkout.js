@@ -16,7 +16,7 @@ const Checkout = () => {
 
   return (
     <div className='px-24 py-10 bg-gray-100 flex justify-center items-center'>
-      {cart.items.length > 0 ? <Cart cartItems={cart.items} /> : <EmptyCart />}
+      {cart.items.length > 0 ? <Cart cartInfo={cart} /> : <EmptyCart />}
     </div>
   );
 };

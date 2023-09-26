@@ -17,7 +17,7 @@ const Header = () => {
   const appTheme = useSelector(store => store.theme);
   const dispatch = useDispatch();
 
-  closeCartCard = () => setCartHover(false);
+  const closeCartCard = () => setCartHover(false);
 
   return (
     <header className='px-24 flex justify-between shadow-sm sticky top-0 bg-white z-20'>
