@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer utilities {
+  .carousel-btn {
+    font-size: 18px;
+    color: #1a1a1a;
+    background-color: #e1e1e1;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .modal-background {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgb(0 0 0 / 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .disable-scroll {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .on-scroll {
+    box-shadow: 0px 2px 10px rgb(0 0 0 / 0.1);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #515151;
+}
