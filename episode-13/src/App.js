@@ -11,6 +11,7 @@ import {
 import AppLayout from './components/AppLayout';
 import Home from './components/Home';
 import Search from './components/Search';
+import Contact from './components/Contact';
 import Error from './components/Error';
 import NotFound from './components/NotFound';
 import Restaurant from './components/Restaurant';
@@ -44,6 +45,7 @@ const appRouter = createBrowserRouter(
         }
       />
       <Route path='search' element={<Search />} />
+      <Route path='contact' element={<Contact />} />
       <Route path='restaurants/:restaurantId' element={<Restaurant />} />
       <Route
         path='grocery'

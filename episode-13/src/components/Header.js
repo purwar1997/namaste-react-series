@@ -30,40 +30,48 @@ const Header = () => {
       <nav className='flex gap-10'>
         <NavLink
           to='/'
-          className='flex items-center hover:text-orange'
-          style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
+          className={`flex items-center hover:text-orange ${({ isActive }) =>
+            isActive ? 'active' : ''}`}
         >
           Home
         </NavLink>
 
         <NavLink
           to='about'
-          className='flex items-center hover:text-orange'
-          style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
+          className={`flex items-center hover:text-orange ${({ isActive }) =>
+            isActive ? 'active' : ''}`}
         >
           About
         </NavLink>
 
         <NavLink
           to='search'
-          className='flex items-center hover:text-orange'
-          style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
+          className={`flex items-center hover:text-orange ${({ isActive }) =>
+            isActive ? 'active' : ''}`}
         >
           Search
         </NavLink>
 
         <NavLink
+          to='contact'
+          className={`flex items-center hover:text-orange ${({ isActive }) =>
+            isActive ? 'active' : ''}`}
+        >
+          Contact Us
+        </NavLink>
+
+        <NavLink
           to='grocery'
-          className='flex items-center hover:text-orange'
-          style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
+          className={`flex items-center hover:text-orange ${({ isActive }) =>
+            isActive ? 'active' : ''}`}
         >
           Grocery
         </NavLink>
 
         <NavLink
           to='instamart'
-          className='flex items-center hover:text-orange'
-          style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
+          className={`flex items-center hover:text-orange ${({ isActive }) =>
+            isActive ? 'active' : ''}`}
         >
           Instamart
         </NavLink>
@@ -71,8 +79,8 @@ const Header = () => {
         {path !== '/checkout' && (
           <NavLink
             to='checkout'
-            className='flex items-center hover:text-orange relative'
-            style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
+            className={`flex items-center hover:text-orange relative ${({ isActive }) =>
+              isActive ? 'active' : ''}`}
             onMouseOver={() => setCartHover(true)}
             onMouseLeave={closeCartCard}
             onClick={closeCartCard}

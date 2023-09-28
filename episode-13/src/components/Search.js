@@ -1,9 +1,5 @@
 const Search = () => {
-  return (
-    <div>
-      <input type='search' name='query' />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Search;
